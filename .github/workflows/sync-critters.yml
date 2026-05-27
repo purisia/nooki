@@ -1,0 +1,58 @@
+name: Sync critters from Nookipedia
+
+on:
+  schedule:
+    # Daily at 18:00 UTC == 03:00 KST
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run sync script
+        id: sync
+        run: |
+          node scripts/sync-critters.mjs | tee /tmp/sync.log
+          if git diff --quiet -- src/data/critters.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create Pull Request
+        if: steps.sync.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'data: sync new critters from Nookipedia'
+          branch: bot/sync-critters
+          delete-branch: true
+          title: '🐛🐟 Sync new critters from Nookipedia'
+          body: |
+            Nookipedia Cargo extension에서 신규 종 자동 감지.
+
+            **검수 포인트:**
+            - `needsKoreanName: true` 항목은 영문명이 그대로 들어가 있음 — `scripts/name-map.json`에 매핑 추가 후 한국어 이름으로 교체.
+            - `condition` 필드는 'none' 기본값으로 들어감 — 특수 출현 조건(교배꽃 / 바위치기 등)이 있으면 수동 설정.
+            - `desc` 필드는 비어 있음 — 한국어 가이드 코멘트 추가 가능.
+
+            <details>
+            <summary>스크립트 로그</summary>
+
+            ```
+            $(cat /tmp/sync.log 2>/dev/null || echo "no log")
+            ```
+            </details>
+          labels: |
+            data
+            automated
