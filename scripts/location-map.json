@@ -1,0 +1,42 @@
+{
+  "_comment": "Nookipedia 영문 location → critters.json의 한국어 location. 시드의 기존 한국어 표기와 통일되도록 매핑.",
+
+  "fish": {
+    "Pier": "부두 (데크)",
+    "Pond": "연못",
+    "River": "강",
+    "River (clifftop)": "강 (절벽 위)",
+    "River (mouth)": "강 하구",
+    "Sea": "바다"
+  },
+
+  "bugs": {
+    "Flying": "공중",
+    "Flying near flowers": "공중 (꽃 주변)",
+    "Flying near hybrid flowers": "공중 (교배꽃 주변)",
+    "Flying near water": "공중 (물가 근처)",
+    "Flying near light": "전등이나 야간 불빛 주변 공중",
+    "On flowers": "꽃 위",
+    "On white flowers": "흰 꽃 위",
+    "On the ground": "땅 위",
+    "Underground": "땅속 (삽질)",
+    "On rocks": "바위 위",
+    "On beach rocks": "해안 바위 위",
+    "On rivers and ponds": "강과 연못 위",
+    "On palm trees": "야자수 나무",
+    "On trees": "나무 기둥",
+    "On trees (any kind)": "나무 기둥",
+    "On trees (hardwood and cedar)": "나무 기둥",
+    "On tree stumps": "나무 그루터기",
+    "Hitting rocks": "바위 치기",
+    "Shaking trees": "나무 흔들기",
+    "Shaking trees (hardwood and cedar)": "나무 흔들기",
+    "Shaking non-fruit hardwood trees or cedar trees": "나무 흔들기",
+    "From rotten turnips": "썩은 무 주변",
+    "From trash": "쓰레기 주변",
+    "On villagers": "주민 주변",
+    "Pushing snowballs": "눈덩이 굴리는 곳",
+    "Disguised on shoreline": "해안가 위장",
+    "Disguised under trees": "나무 아래 위장"
+  }
+}

@@ -17,6 +17,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const CRITTERS_PATH = resolve(ROOT, 'src/data/critters.json');
 const NAME_MAP_PATH = resolve(__dirname, 'name-map.json');
+const LOCATION_MAP_PATH = resolve(__dirname, 'location-map.json');
 
 const USER_AGENT =
   'nooki-sync/1.0 (https://github.com/purisia/nooki; +https://purisia.github.io/nooki/)';
@@ -168,12 +169,14 @@ function buildIdFromExisting(seed, category) {
 }
 
 async function main() {
-  const [crittersRaw, nameMapRaw] = await Promise.all([
+  const [crittersRaw, nameMapRaw, locMapRaw] = await Promise.all([
     readFile(CRITTERS_PATH, 'utf-8'),
     readFile(NAME_MAP_PATH, 'utf-8'),
+    readFile(LOCATION_MAP_PATH, 'utf-8'),
   ]);
   const critters = JSON.parse(crittersRaw);
   const nameMap = JSON.parse(nameMapRaw);
+  const locMap = JSON.parse(locMapRaw);
 
   const changes = { bugs: [], fish: [], seafood: [] };
 
@@ -230,7 +233,11 @@ async function main() {
         months,
       };
 
-      if (row.location) item.location = String(row.location).trim();
+      if (row.location) {
+        const locRaw = String(row.location).trim();
+        const locKo = (locMap[category] ?? {})[locRaw];
+        item.location = locKo ?? locRaw;
+      }
       if (row.shadow) item.size = String(row.shadow).trim();
       if (row.speed) item.speed = String(row.speed).trim();
       if (!koreanName) item.needsKoreanName = true;

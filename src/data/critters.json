@@ -552,7 +552,7 @@
         11,
         12
       ],
-      "location": "Shaking trees (hardwood and cedar)",
+      "location": "나무 흔들기",
       "englishName": "bagworm"
     },
     {
@@ -570,7 +570,7 @@
         9,
         10
       ],
-      "location": "Flying near water",
+      "location": "공중 (물가 근처)",
       "englishName": "banded dragonfly"
     },
     {
@@ -584,7 +584,7 @@
         9,
         10
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "bell cricket"
     },
     {
@@ -598,7 +598,7 @@
         7,
         8
       ],
-      "location": "On trees (hardwood and cedar)",
+      "location": "나무 기둥",
       "englishName": "brown cicada"
     },
     {
@@ -612,7 +612,7 @@
         7,
         8
       ],
-      "location": "On trees (hardwood and cedar)",
+      "location": "나무 기둥",
       "englishName": "cicada shell"
     },
     {
@@ -627,7 +627,7 @@
         10,
         11
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "cricket"
     },
     {
@@ -643,7 +643,7 @@
         11,
         12
       ],
-      "location": "Flying near water",
+      "location": "공중 (물가 근처)",
       "englishName": "damselfly"
     },
     {
@@ -662,7 +662,7 @@
         9,
         10
       ],
-      "location": "Flying near water",
+      "location": "공중 (물가 근처)",
       "englishName": "darner dragonfly"
     },
     {
@@ -679,7 +679,7 @@
         8,
         9
       ],
-      "location": "On rivers and ponds",
+      "location": "강과 연못 위",
       "englishName": "diving beetle"
     },
     {
@@ -694,7 +694,7 @@
         7,
         8
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "drone beetle"
     },
     {
@@ -709,7 +709,7 @@
         2,
         12
       ],
-      "location": "Pushing snowballs",
+      "location": "눈덩이 굴리는 곳",
       "englishName": "dung beetle"
     },
     {
@@ -724,7 +724,7 @@
         8,
         9
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "earth-boring dung beetle"
     },
     {
@@ -738,7 +738,7 @@
         7,
         8
       ],
-      "location": "On trees (hardwood and cedar)",
+      "location": "나무 기둥",
       "englishName": "evening cicada"
     },
     {
@@ -751,7 +751,7 @@
       "months": [
         6
       ],
-      "location": "Flying near water",
+      "location": "공중 (물가 근처)",
       "englishName": "firefly"
     },
     {
@@ -771,7 +771,7 @@
         10,
         11
       ],
-      "location": "On villagers",
+      "location": "주민 주변",
       "englishName": "flea"
     },
     {
@@ -785,7 +785,7 @@
         7,
         8
       ],
-      "location": "On trees (hardwood and cedar)",
+      "location": "나무 기둥",
       "englishName": "giant cicada"
     },
     {
@@ -799,7 +799,7 @@
         7,
         8
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "giant stag"
     },
     {
@@ -817,7 +817,7 @@
         8,
         9
       ],
-      "location": "On rivers and ponds",
+      "location": "강과 연못 위",
       "englishName": "giant water bug"
     },
     {
@@ -831,7 +831,7 @@
         7,
         8
       ],
-      "location": "On palm trees",
+      "location": "야자수 나무",
       "englishName": "giraffe stag"
     },
     {
@@ -847,7 +847,7 @@
         8,
         9
       ],
-      "location": "On palm trees",
+      "location": "야자수 나무",
       "englishName": "goliath beetle"
     },
     {
@@ -862,7 +862,7 @@
         8,
         9
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "grasshopper"
     },
     {
@@ -886,7 +886,7 @@
         11,
         12
       ],
-      "location": "Disguised on shoreline",
+      "location": "해안가 위장",
       "englishName": "hermit crab"
     },
     {
@@ -903,7 +903,7 @@
         6,
         7
       ],
-      "location": "Flying near flowers",
+      "location": "공중 (꽃 주변)",
       "englishName": "honeybee"
     },
     {
@@ -917,7 +917,7 @@
         7,
         8
       ],
-      "location": "On palm trees",
+      "location": "야자수 나무",
       "englishName": "horned atlas"
     },
     {
@@ -931,7 +931,7 @@
         7,
         8
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "horned dynastid"
     },
     {
@@ -945,7 +945,7 @@
         7,
         8
       ],
-      "location": "On palm trees",
+      "location": "야자수 나무",
       "englishName": "horned elephant"
     },
     {
@@ -959,7 +959,7 @@
         7,
         8
       ],
-      "location": "On palm trees",
+      "location": "야자수 나무",
       "englishName": "horned hercules"
     },
     {
@@ -976,7 +976,7 @@
         6,
         10
       ],
-      "location": "On flowers",
+      "location": "꽃 위",
       "englishName": "ladybug"
     },
     {
@@ -996,7 +996,7 @@
         10,
         11
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "long locust"
     },
     {
@@ -1016,7 +1016,7 @@
         9,
         10
       ],
-      "location": "On flowers",
+      "location": "꽃 위",
       "englishName": "man-faced stink bug"
     },
     {
@@ -1037,7 +1037,7 @@
         10,
         11
       ],
-      "location": "On flowers",
+      "location": "꽃 위",
       "englishName": "mantis"
     },
     {
@@ -1053,7 +1053,7 @@
         10,
         11
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "migratory locust"
     },
     {
@@ -1067,7 +1067,7 @@
         7,
         8
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "miyama stag"
     },
     {
@@ -1083,7 +1083,7 @@
         8,
         9
       ],
-      "location": "Flying",
+      "location": "공중",
       "englishName": "mosquito"
     },
     {
@@ -1104,7 +1104,7 @@
         10,
         11
       ],
-      "location": "On white flowers",
+      "location": "흰 꽃 위",
       "englishName": "orchid mantis"
     },
     {
@@ -1121,7 +1121,7 @@
         8,
         9
       ],
-      "location": "On rivers and ponds",
+      "location": "강과 연못 위",
       "englishName": "pondskater"
     },
     {
@@ -1137,7 +1137,7 @@
         8,
         9
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "rainbow stag"
     },
     {
@@ -1151,7 +1151,7 @@
         9,
         10
       ],
-      "location": "Flying near water",
+      "location": "공중 (물가 근처)",
       "englishName": "red dragonfly"
     },
     {
@@ -1167,7 +1167,7 @@
         10,
         11
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "rice grasshopper"
     },
     {
@@ -1181,7 +1181,7 @@
         7,
         8
       ],
-      "location": "On trees (hardwood and cedar)",
+      "location": "나무 기둥",
       "englishName": "robust cicada"
     },
     {
@@ -1195,7 +1195,7 @@
         7,
         8
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "saw stag"
     },
     {
@@ -1209,7 +1209,7 @@
         7,
         8
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "scarab beetle"
     },
     {
@@ -1233,7 +1233,7 @@
         11,
         12
       ],
-      "location": "Shaking trees",
+      "location": "나무 흔들기",
       "englishName": "spider"
     },
     {
@@ -1253,7 +1253,7 @@
         9,
         10
       ],
-      "location": "On flowers",
+      "location": "꽃 위",
       "englishName": "stinkbug"
     },
     {
@@ -1274,7 +1274,7 @@
         9,
         10
       ],
-      "location": "On the ground",
+      "location": "땅 위",
       "englishName": "tiger beetle"
     },
     {
@@ -1288,7 +1288,7 @@
         8,
         9
       ],
-      "location": "On trees (hardwood and cedar)",
+      "location": "나무 기둥",
       "englishName": "walker cicada"
     },
     {
@@ -1303,7 +1303,7 @@
         8,
         9
       ],
-      "location": "Disguised under trees",
+      "location": "나무 아래 위장",
       "englishName": "walking leaf"
     },
     {
@@ -1320,7 +1320,7 @@
         10,
         11
       ],
-      "location": "On trees (any kind)",
+      "location": "나무 기둥",
       "englishName": "walking stick"
     },
     {
@@ -1344,7 +1344,7 @@
         11,
         12
       ],
-      "location": "Shaking non-fruit hardwood trees or cedar trees",
+      "location": "나무 흔들기",
       "englishName": "wasp"
     },
     {
@@ -1368,7 +1368,7 @@
         11,
         12
       ],
-      "location": "On beach rocks",
+      "location": "해안 바위 위",
       "englishName": "wharf roach"
     }
   ],
@@ -1905,7 +1905,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Small",
       "englishName": "Anchovy"
     },
@@ -1924,7 +1924,7 @@
         9,
         10
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Angelfish"
     },
@@ -1941,7 +1941,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Huge",
       "englishName": "Arapaima"
     },
@@ -1958,7 +1958,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Large",
       "englishName": "Arowana"
     },
@@ -1980,7 +1980,7 @@
         10,
         11
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Medium",
       "englishName": "Barred knifejaw"
     },
@@ -2005,7 +2005,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Small",
       "englishName": "Barreleye"
     },
@@ -2024,7 +2024,7 @@
         9,
         10
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Betta"
     },
@@ -2049,7 +2049,7 @@
         11,
         12
       ],
-      "location": "River",
+      "location": "강",
       "size": "Large",
       "englishName": "Black bass"
     },
@@ -2066,7 +2066,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Medium",
       "englishName": "Blowfish"
     },
@@ -2091,7 +2091,7 @@
         11,
         12
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Bluegill"
     },
@@ -2110,7 +2110,7 @@
         8,
         9
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Small",
       "englishName": "Crawfish"
     },
@@ -2130,7 +2130,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Medium",
       "englishName": "Dab"
     },
@@ -2147,7 +2147,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Very large",
       "englishName": "Dorado"
     },
@@ -2172,7 +2172,7 @@
         11,
         12
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Freshwater goby"
     },
@@ -2189,7 +2189,7 @@
         8,
         9
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Very large",
       "englishName": "Gar"
     },
@@ -2205,7 +2205,7 @@
         7,
         8
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Large",
       "englishName": "Giant snakehead"
     },
@@ -2230,7 +2230,7 @@
         11,
         12
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Tiny",
       "englishName": "Goldfish"
     },
@@ -2251,7 +2251,7 @@
         10,
         11
       ],
-      "location": "River",
+      "location": "강",
       "size": "Tiny",
       "englishName": "Guppy"
     },
@@ -2268,7 +2268,7 @@
         8,
         9
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large (finned)",
       "englishName": "Hammerhead shark"
     },
@@ -2293,7 +2293,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Small",
       "englishName": "Horse mackerel"
     },
@@ -2311,7 +2311,7 @@
         7,
         8
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Tiny",
       "englishName": "Killifish"
     },
@@ -2327,7 +2327,7 @@
         10,
         11
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Mitten crab"
     },
@@ -2343,7 +2343,7 @@
         9,
         10
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Long",
       "englishName": "Moray eel"
     },
@@ -2358,7 +2358,7 @@
         7,
         8
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Huge",
       "englishName": "Napoleonfish"
     },
@@ -2379,7 +2379,7 @@
         10,
         11
       ],
-      "location": "River",
+      "location": "강",
       "size": "Tiny",
       "englishName": "Neon tetra"
     },
@@ -2397,7 +2397,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Tiny",
       "englishName": "Nibble fish"
     },
@@ -2413,7 +2413,7 @@
         8,
         9
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large (finned)",
       "englishName": "Ocean sunfish"
     },
@@ -2438,7 +2438,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large",
       "englishName": "Olive flounder"
     },
@@ -2455,7 +2455,7 @@
         11,
         12
       ],
-      "location": "River",
+      "location": "강",
       "size": "Very large",
       "englishName": "Pike"
     },
@@ -2472,7 +2472,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Piranha"
     },
@@ -2488,7 +2488,7 @@
         2,
         12
       ],
-      "location": "River",
+      "location": "강",
       "size": "Small",
       "englishName": "Pond smelt"
     },
@@ -2513,7 +2513,7 @@
         11,
         12
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Tiny",
       "englishName": "Pop-eyed goldfish"
     },
@@ -2529,7 +2529,7 @@
         8,
         9
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Medium",
       "englishName": "Puffer fish"
     },
@@ -2548,7 +2548,7 @@
         9,
         10
       ],
-      "location": "River",
+      "location": "강",
       "size": "Tiny",
       "englishName": "Rainbowfish"
     },
@@ -2573,7 +2573,7 @@
         11,
         12
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Small",
       "englishName": "Ranchu goldfish"
     },
@@ -2590,7 +2590,7 @@
         10,
         11
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large",
       "englishName": "Ray"
     },
@@ -2615,7 +2615,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Large",
       "englishName": "Red snapper"
     },
@@ -2633,7 +2633,7 @@
         9,
         10
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Long",
       "englishName": "Ribbon eel"
     },
@@ -2650,7 +2650,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Large",
       "englishName": "Saddled bichir"
     },
@@ -2667,7 +2667,7 @@
         8,
         9
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large (finned)",
       "englishName": "Saw shark"
     },
@@ -2692,7 +2692,7 @@
         11,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large",
       "englishName": "Sea bass"
     },
@@ -2709,7 +2709,7 @@
         3,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Tiny",
       "englishName": "Sea butterfly"
     },
@@ -2730,7 +2730,7 @@
         10,
         11
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Tiny",
       "englishName": "Sea horse"
     },
@@ -2750,7 +2750,7 @@
         9,
         10
       ],
-      "location": "River",
+      "location": "강",
       "size": "Large",
       "englishName": "Snapping turtle"
     },
@@ -2765,7 +2765,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Large",
       "englishName": "Soft-shelled turtle"
     },
@@ -2787,7 +2787,7 @@
         8,
         12
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Medium",
       "englishName": "Squid"
     },
@@ -2804,7 +2804,7 @@
         3,
         12
       ],
-      "location": "River (clifftop)",
+      "location": "강 (절벽 위)",
       "size": "Very large",
       "englishName": "Stringfish"
     },
@@ -2824,7 +2824,7 @@
         11,
         12
       ],
-      "location": "River (mouth)",
+      "location": "강 하구",
       "size": "Huge",
       "englishName": "Sturgeon"
     },
@@ -2841,7 +2841,7 @@
         8,
         9
       ],
-      "location": "Sea",
+      "location": "바다",
       "size": "Very large (finned)",
       "englishName": "Suckerfish"
     },
@@ -2857,7 +2857,7 @@
         8,
         9
       ],
-      "location": "River",
+      "location": "강",
       "size": "Medium",
       "englishName": "Sweetfish"
     },
@@ -2875,7 +2875,7 @@
         6,
         7
       ],
-      "location": "Pond",
+      "location": "연못",
       "size": "Tiny",
       "englishName": "Tadpole"
     },
@@ -2893,7 +2893,7 @@
         9,
         10
       ],
-      "location": "River",
+      "location": "강",
       "size": "Medium",
       "englishName": "Tilapia"
     },
@@ -2912,7 +2912,7 @@
         11,
         12
       ],
-      "location": "Pier",
+      "location": "부두 (데크)",
       "size": "Huge",
       "englishName": "Tuna"
     },
@@ -2931,7 +2931,7 @@
         11,
         12
       ],
-      "location": "River",
+      "location": "강",
       "size": "Medium",
       "englishName": "Yellow perch"
     }
