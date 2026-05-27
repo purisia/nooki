@@ -8,6 +8,7 @@ import {
   Sprout,
   Trash2,
   Anchor,
+  Circle,
 } from 'lucide-react';
 import type { CritterCategory } from '../lib/critterAvailability';
 import { getLocations } from '../lib/critterAvailability';
@@ -23,6 +24,8 @@ interface FilterPanelProps {
   onNewToggle: () => void;
   showLeavingOnly: boolean;
   onLeavingToggle: () => void;
+  showUndonatedOnly: boolean;
+  onUndonatedToggle: () => void;
   selectedEnvironment: string;
   onEnvironmentChange: (e: string) => void;
   selectedLocation: string;
@@ -41,6 +44,8 @@ export function FilterPanel(props: FilterPanelProps) {
     onNewToggle,
     showLeavingOnly,
     onLeavingToggle,
+    showUndonatedOnly,
+    onUndonatedToggle,
     selectedEnvironment,
     onEnvironmentChange,
     selectedLocation,
@@ -207,6 +212,18 @@ export function FilterPanel(props: FilterPanelProps) {
         >
           <CloudRain size={14} />
           🌧️ 날씨(비/눈) 기후 한정
+        </button>
+
+        <button
+          onClick={onUndonatedToggle}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+            showUndonatedOnly
+              ? 'bg-emerald-100 text-emerald-800 border-2 border-emerald-400'
+              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+          }`}
+        >
+          <Circle size={14} />
+          🏛️ 미기증만 보기
         </button>
 
         {selectedMonth && (

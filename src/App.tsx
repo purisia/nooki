@@ -29,6 +29,7 @@ function App() {
   const [showRainOnly, setShowRainOnly] = useState(false);
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [showLeavingOnly, setShowLeavingOnly] = useState(false);
+  const [showUndonatedOnly, setShowUndonatedOnly] = useState(false);
   const [selectedEnvironment, setSelectedEnvironment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('전체');
 
@@ -51,6 +52,7 @@ function App() {
       list = list.filter((item) => checkIfNew(item, selectedMonth));
     if (showLeavingOnly && selectedMonth)
       list = list.filter((item) => checkIfLeaving(item, selectedMonth));
+    if (showUndonatedOnly) list = list.filter((item) => !donated[item.id]);
 
     if (selectedEnvironment !== 'all') {
       list = list.filter((item) => item.condition === selectedEnvironment);
@@ -68,8 +70,10 @@ function App() {
     showRainOnly,
     showNewOnly,
     showLeavingOnly,
+    showUndonatedOnly,
     selectedEnvironment,
     selectedLocation,
+    donated,
   ]);
 
   const progress = useMemo(
@@ -81,6 +85,7 @@ function App() {
     showRainOnly ||
     showNewOnly ||
     showLeavingOnly ||
+    showUndonatedOnly ||
     searchQuery !== '' ||
     selectedLocation !== '전체' ||
     selectedEnvironment !== 'all';
@@ -90,6 +95,7 @@ function App() {
     setShowRainOnly(false);
     setShowNewOnly(false);
     setShowLeavingOnly(false);
+    setShowUndonatedOnly(false);
     setSelectedLocation('전체');
     setSelectedEnvironment('all');
   };
@@ -135,6 +141,8 @@ function App() {
           onNewToggle={() => setShowNewOnly((v) => !v)}
           showLeavingOnly={showLeavingOnly}
           onLeavingToggle={() => setShowLeavingOnly((v) => !v)}
+          showUndonatedOnly={showUndonatedOnly}
+          onUndonatedToggle={() => setShowUndonatedOnly((v) => !v)}
           selectedEnvironment={selectedEnvironment}
           onEnvironmentChange={setSelectedEnvironment}
           selectedLocation={selectedLocation}

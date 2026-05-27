@@ -1,0 +1,2851 @@
+{
+  "bugs": [
+    {
+      "id": "b1",
+      "name": "배추흰나비",
+      "price": 160,
+      "time": "04:00 - 19:00",
+      "location": "공중 (꽃 주변)",
+      "rainOnly": false,
+      "condition": "flower",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "b2",
+      "name": "노랑나비",
+      "price": 160,
+      "time": "04:00 - 19:00",
+      "location": "공중",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "b3",
+      "name": "호랑나비",
+      "price": 240,
+      "time": "04:00 - 19:00",
+      "location": "공중 (꽃 주변)",
+      "rainOnly": false,
+      "condition": "flower",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b4",
+      "name": "제비나비",
+      "price": 2500,
+      "time": "04:00 - 19:00",
+      "location": "공중 (교배꽃 주변)",
+      "rainOnly": false,
+      "condition": "hybridFlower",
+      "months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "desc": "검정, 파랑, 보라색 등 교배꽃 주변에 나타납니다."
+    },
+    {
+      "id": "b5",
+      "name": "청띠제비나비",
+      "price": 300,
+      "time": "04:00 - 19:00",
+      "location": "공중 (꽃 주변)",
+      "rainOnly": false,
+      "condition": "flower",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "b6",
+      "name": "왕오색나비",
+      "price": 3000,
+      "time": "04:00 - 19:00",
+      "location": "공중",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b7",
+      "name": "몰포나비",
+      "price": 4000,
+      "time": "17:00 - 08:00",
+      "location": "공중 (교배꽃 주변)",
+      "rainOnly": false,
+      "condition": "hybridFlower",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        1,
+        2,
+        3
+      ],
+      "desc": "푸른빛의 아름다운 나비로 교배꽃 주변에서 발견됩니다."
+    },
+    {
+      "id": "b8",
+      "name": "유라시아황제나비",
+      "price": 3000,
+      "time": "04:00 - 19:00",
+      "location": "공중",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b9",
+      "name": "아그리아스나비",
+      "price": 3000,
+      "time": "08:00 - 17:00",
+      "location": "공중",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "b10",
+      "name": "붉은목도리비단나비",
+      "price": 2500,
+      "time": "08:00 - 17:00",
+      "location": "공중 (꽃 주변)",
+      "rainOnly": false,
+      "condition": "flower",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        1,
+        2
+      ]
+    },
+    {
+      "id": "b11",
+      "name": "마다가스카르비단나비",
+      "price": 2500,
+      "time": "08:00 - 16:00",
+      "location": "공중 (꽃 주변)",
+      "rainOnly": false,
+      "condition": "flower",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b12",
+      "name": "알렉산드라제비나비",
+      "price": 4000,
+      "time": "08:00 - 16:00",
+      "location": "공중 (꽃 주변)",
+      "rainOnly": false,
+      "condition": "flower",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b13",
+      "name": "나방",
+      "price": 130,
+      "time": "19:00 - 04:00",
+      "location": "전등이나 야간 불빛 주변 공중",
+      "rainOnly": false,
+      "condition": "light",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "b14",
+      "name": "아틀라스나방",
+      "price": 3000,
+      "time": "19:00 - 04:00",
+      "location": "나무 기둥",
+      "rainOnly": false,
+      "condition": "tree",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b15",
+      "name": "참나무누에나방",
+      "price": 1200,
+      "time": "19:00 - 04:00",
+      "location": "나무 기둥",
+      "rainOnly": false,
+      "condition": "tree",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "b16",
+      "name": "달팽이",
+      "price": 250,
+      "time": "24시간",
+      "location": "바위, 저목(부시) 위",
+      "rainOnly": true,
+      "condition": "rain",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "desc": "비가 올 때 나무 수풀이나 바위 위에 출현합니다."
+    },
+    {
+      "id": "b17",
+      "name": "공벌레",
+      "price": 250,
+      "time": "23:00 - 16:00",
+      "location": "바위 치기",
+      "rainOnly": false,
+      "condition": "hitRock",
+      "months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "desc": "삽으로 섬의 바위를 치면 튀어나옵니다."
+    },
+    {
+      "id": "b18",
+      "name": "지네",
+      "price": 300,
+      "time": "16:00 - 23:00",
+      "location": "바위 치기",
+      "rainOnly": false,
+      "condition": "hitRock",
+      "months": [
+        9,
+        10,
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "b19",
+      "name": "비단벌레",
+      "price": 2400,
+      "time": "24시간",
+      "location": "나무 그루터기",
+      "rainOnly": false,
+      "condition": "stump",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "desc": "도끼로 벤 그루터기 위에서만 발견됩니다."
+    },
+    {
+      "id": "b20",
+      "name": "바이올린벌레",
+      "price": 450,
+      "time": "24시간",
+      "location": "나무 그루터기",
+      "rainOnly": false,
+      "condition": "stump",
+      "months": [
+        5,
+        6,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "b21",
+      "name": "알락하늘소",
+      "price": 350,
+      "time": "24시간",
+      "location": "나무 그루터기",
+      "rainOnly": false,
+      "condition": "stump",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "b22",
+      "name": "루리하늘소",
+      "price": 3000,
+      "time": "24시간",
+      "location": "나무 그루터기",
+      "rainOnly": false,
+      "condition": "stump",
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "b23",
+      "name": "엘라푸스가위사슴벌레",
+      "price": 8000,
+      "time": "17:00 - 08:00",
+      "location": "야자수 나무",
+      "rainOnly": false,
+      "condition": "palmTree",
+      "months": [
+        7,
+        8
+      ],
+      "desc": "해변에 있는 야자수 줄기에서 발견됩니다."
+    },
+    {
+      "id": "b24",
+      "name": "황금사슴벌레",
+      "price": 12000,
+      "time": "17:00 - 08:00",
+      "location": "야자수 나무",
+      "rainOnly": false,
+      "condition": "palmTree",
+      "months": [
+        7,
+        8
+      ],
+      "desc": "초희귀 곤충으로, 살금살금 아주 느리게 다가가야 잡힙니다."
+    },
+    {
+      "id": "b25",
+      "name": "개미",
+      "price": 80,
+      "time": "24시간",
+      "location": "썩은 무 주변",
+      "rainOnly": false,
+      "condition": "rottenTurnip",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "desc": "바닥에 썩은 무를 두면 개미 떼가 줄지어 나타납니다."
+    },
+    {
+      "id": "b26",
+      "name": "초파리",
+      "price": 60,
+      "time": "24시간",
+      "location": "쓰레기 주변",
+      "rainOnly": false,
+      "condition": "trash",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "desc": "낚시로 잡은 빈 캔, 장화 등을 방치하면 발생합니다."
+    },
+    {
+      "id": "b27",
+      "name": "전갈",
+      "price": 8000,
+      "time": "19:00 - 04:00",
+      "location": "땅 위",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "b28",
+      "name": "타란툴라",
+      "price": 8000,
+      "time": "19:00 - 04:00",
+      "location": "땅 위",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "b29",
+      "name": "땅강아지",
+      "price": 500,
+      "time": "24시간",
+      "location": "땅속 (삽질)",
+      "rainOnly": false,
+      "condition": "digGround",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "desc": "소리가 나는 위치 근처를 삽으로 파내면 출현합니다."
+    }
+  ],
+  "fish": [
+    {
+      "id": "f1",
+      "name": "납줄개",
+      "price": 900,
+      "time": "24시간",
+      "location": "강",
+      "size": "1단계",
+      "rainOnly": false,
+      "condition": "river",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "f2",
+      "name": "피라미",
+      "price": 200,
+      "time": "09:00 - 16:00",
+      "location": "강",
+      "size": "1단계",
+      "rainOnly": false,
+      "condition": "river",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "f3",
+      "name": "붕어",
+      "price": 160,
+      "time": "24시간",
+      "location": "강",
+      "size": "2단계",
+      "rainOnly": false,
+      "condition": "river",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "f4",
+      "name": "황어",
+      "price": 240,
+      "time": "16:00 - 09:00",
+      "location": "강",
+      "size": "3단계",
+      "rainOnly": false,
+      "condition": "river",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "f5",
+      "name": "잉어",
+      "price": 300,
+      "time": "24시간",
+      "location": "연못",
+      "size": "4단계",
+      "rainOnly": false,
+      "condition": "pond",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "f6",
+      "name": "비단잉어",
+      "price": 4000,
+      "time": "16:00 - 09:00",
+      "location": "연못",
+      "size": "4단계",
+      "rainOnly": false,
+      "condition": "pond",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "f7",
+      "name": "개구리",
+      "price": 120,
+      "time": "24시간",
+      "location": "연못",
+      "size": "2단계",
+      "rainOnly": false,
+      "condition": "pond",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "f8",
+      "name": "미꾸라지",
+      "price": 400,
+      "time": "24시간",
+      "location": "강",
+      "size": "2단계",
+      "rainOnly": false,
+      "condition": "river",
+      "months": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "f9",
+      "name": "메기",
+      "price": 800,
+      "time": "16:00 - 09:00",
+      "location": "연못",
+      "size": "4단계",
+      "rainOnly": false,
+      "condition": "pond",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "f10",
+      "name": "산천어",
+      "price": 1000,
+      "time": "16:00 - 09:00",
+      "location": "강 (절벽 위)",
+      "size": "3단계",
+      "rainOnly": false,
+      "condition": "waterfall",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "desc": "폭포 위쪽 고지대 하천에서만 잡힙니다."
+    },
+    {
+      "id": "f11",
+      "name": "열목어",
+      "price": 3800,
+      "time": "16:00 - 09:00",
+      "location": "강 (절벽 위)",
+      "size": "3단계",
+      "rainOnly": false,
+      "condition": "waterfall",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "f12",
+      "name": "금송어",
+      "price": 15000,
+      "time": "16:00 - 09:00",
+      "location": "강 (절벽 위)",
+      "size": "3단계",
+      "rainOnly": false,
+      "condition": "waterfall",
+      "months": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "desc": "절벽 폭포 위 수역의 최고가 타깃입니다."
+    },
+    {
+      "id": "f13",
+      "name": "연어",
+      "price": 700,
+      "time": "24시간",
+      "location": "강 하구",
+      "size": "4단계",
+      "rainOnly": false,
+      "condition": "riverMouth",
+      "months": [
+        9
+      ],
+      "desc": "오직 9월, 바다와 강이 교차하는 지점에서만 잡힙니다."
+    },
+    {
+      "id": "f14",
+      "name": "왕연어",
+      "price": 1800,
+      "time": "24시간",
+      "location": "강 하구",
+      "size": "5단계",
+      "rainOnly": false,
+      "condition": "riverMouth",
+      "months": [
+        9
+      ]
+    },
+    {
+      "id": "f15",
+      "name": "청새치",
+      "price": 10000,
+      "time": "24시간",
+      "location": "부두 (데크)",
+      "size": "6단계",
+      "rainOnly": false,
+      "condition": "pier",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "desc": "해안가의 목재 부시 데크 근처 바다에 등장합니다."
+    },
+    {
+      "id": "f16",
+      "name": "만새기",
+      "price": 6000,
+      "time": "24시간",
+      "location": "부두 (데크)",
+      "size": "5단계",
+      "rainOnly": false,
+      "condition": "pier",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "f17",
+      "name": "무명갈전갱이",
+      "price": 4500,
+      "time": "24시간",
+      "location": "부두 (데크)",
+      "size": "5단계",
+      "rainOnly": false,
+      "condition": "pier",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "f18",
+      "name": "블루탱",
+      "price": 1000,
+      "time": "24시간",
+      "location": "바다",
+      "size": "2단계",
+      "rainOnly": false,
+      "condition": "sea",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "desc": "아름다운 푸른 빛을 내는 대표적인 산호초 열대어입니다."
+    },
+    {
+      "id": "f19",
+      "name": "흰동가리",
+      "price": 650,
+      "time": "24시간",
+      "location": "바다",
+      "size": "1단계",
+      "rainOnly": false,
+      "condition": "sea",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "f20",
+      "name": "나비고기",
+      "price": 1000,
+      "time": "24시간",
+      "location": "바다",
+      "size": "2단계",
+      "rainOnly": false,
+      "condition": "sea",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "f21",
+      "name": "쏠배감펭",
+      "price": 500,
+      "time": "24시간",
+      "location": "바다",
+      "size": "3단계",
+      "rainOnly": false,
+      "condition": "sea",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "f22",
+      "name": "상어",
+      "price": 15000,
+      "time": "16:00 - 09:00",
+      "location": "바다 (등지느러미)",
+      "size": "6단계(등지느러미)",
+      "rainOnly": false,
+      "condition": "fin",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "desc": "수면에 등지느러미가 삐죽 솟아있는 특수 그림자 어종입니다."
+    },
+    {
+      "id": "f23",
+      "name": "고래상어",
+      "price": 13000,
+      "time": "24시간",
+      "location": "바다 (등지느러미)",
+      "size": "6단계(등지느러미)",
+      "rainOnly": false,
+      "condition": "fin",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "f24",
+      "name": "산갈치",
+      "price": 9000,
+      "time": "24시간",
+      "location": "바다",
+      "size": "6단계",
+      "rainOnly": false,
+      "condition": "sea",
+      "months": [
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "f25",
+      "name": "데메니기",
+      "price": 15000,
+      "time": "21:00 - 04:00",
+      "location": "바다",
+      "size": "1단계",
+      "rainOnly": false,
+      "condition": "sea",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "f26",
+      "name": "실라캔스",
+      "price": 15000,
+      "time": "24시간",
+      "location": "바다 (비 올 때)",
+      "size": "6단계",
+      "rainOnly": true,
+      "condition": "rain",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "desc": "비나 눈이 내리는 날에만 등장하는 전설의 심해어입니다."
+    },
+    {
+      "id": "f27",
+      "name": "멸치",
+      "price": 200,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "englishName": "Anchovy"
+    },
+    {
+      "id": "f28",
+      "name": "천사어",
+      "price": 3000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Angelfish"
+    },
+    {
+      "id": "f29",
+      "name": "피라루쿠",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Huge",
+      "englishName": "Arapaima"
+    },
+    {
+      "id": "f30",
+      "name": "아로와나",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Large",
+      "englishName": "Arowana"
+    },
+    {
+      "id": "f31",
+      "name": "돌돔",
+      "price": 5000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "englishName": "Barred knifejaw"
+    },
+    {
+      "id": "f32",
+      "name": "데메니기스",
+      "price": 15000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "englishName": "Barreleye"
+    },
+    {
+      "id": "f33",
+      "name": "베타",
+      "price": 2500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Betta"
+    },
+    {
+      "id": "f34",
+      "name": "큰입배스",
+      "price": 400,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Large",
+      "englishName": "Black bass"
+    },
+    {
+      "id": "f35",
+      "name": "복어",
+      "price": 5000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "englishName": "Blowfish"
+    },
+    {
+      "id": "f36",
+      "name": "블루길",
+      "price": 180,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Bluegill"
+    },
+    {
+      "id": "f37",
+      "name": "가재",
+      "price": 200,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Pond",
+      "size": "Small",
+      "englishName": "Crawfish"
+    },
+    {
+      "id": "f38",
+      "name": "가자미",
+      "price": 300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "englishName": "Dab"
+    },
+    {
+      "id": "f39",
+      "name": "황금연어",
+      "price": 15000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Very large",
+      "englishName": "Dorado"
+    },
+    {
+      "id": "f40",
+      "name": "동사리",
+      "price": 400,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Freshwater goby"
+    },
+    {
+      "id": "f41",
+      "name": "가아",
+      "price": 6000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Pond",
+      "size": "Very large",
+      "englishName": "Gar"
+    },
+    {
+      "id": "f42",
+      "name": "가물치",
+      "price": 5500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "location": "Pond",
+      "size": "Large",
+      "englishName": "Giant snakehead"
+    },
+    {
+      "id": "f43",
+      "name": "금붕어",
+      "price": 1300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "englishName": "Goldfish"
+    },
+    {
+      "id": "f44",
+      "name": "구피",
+      "price": 1300,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "englishName": "Guppy"
+    },
+    {
+      "id": "f45",
+      "name": "귀상어",
+      "price": 8000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "englishName": "Hammerhead shark"
+    },
+    {
+      "id": "f46",
+      "name": "전갱이",
+      "price": 150,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "englishName": "Horse mackerel"
+    },
+    {
+      "id": "f47",
+      "name": "송사리",
+      "price": 300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "englishName": "Killifish"
+    },
+    {
+      "id": "f48",
+      "name": "참게",
+      "price": 2000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Mitten crab"
+    },
+    {
+      "id": "f49",
+      "name": "곰치",
+      "price": 2000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "location": "Sea",
+      "size": "Long",
+      "englishName": "Moray eel"
+    },
+    {
+      "id": "f50",
+      "name": "나폴레옹피시",
+      "price": 10000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8
+      ],
+      "location": "Sea",
+      "size": "Huge",
+      "englishName": "Napoleonfish"
+    },
+    {
+      "id": "f51",
+      "name": "네온테트라",
+      "price": 500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "englishName": "Neon tetra"
+    },
+    {
+      "id": "f52",
+      "name": "닥터피시",
+      "price": 1500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "englishName": "Nibble fish"
+    },
+    {
+      "id": "f53",
+      "name": "개복치",
+      "price": 4000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "englishName": "Ocean sunfish"
+    },
+    {
+      "id": "f54",
+      "name": "넙치",
+      "price": 800,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Very large",
+      "englishName": "Olive flounder"
+    },
+    {
+      "id": "f55",
+      "name": "강꼬치고기",
+      "price": 1800,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Very large",
+      "englishName": "Pike"
+    },
+    {
+      "id": "f56",
+      "name": "피라니아",
+      "price": 2500,
+      "time": "09:00 - 16:00, 21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Piranha"
+    },
+    {
+      "id": "f57",
+      "name": "빙어",
+      "price": 400,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        12
+      ],
+      "location": "River",
+      "size": "Small",
+      "englishName": "Pond smelt"
+    },
+    {
+      "id": "f58",
+      "name": "툭눈금붕어",
+      "price": 1300,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "englishName": "Pop-eyed goldfish"
+    },
+    {
+      "id": "f59",
+      "name": "가시복",
+      "price": 250,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "englishName": "Puffer fish"
+    },
+    {
+      "id": "f60",
+      "name": "레인보우피시",
+      "price": 800,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "englishName": "Rainbowfish"
+    },
+    {
+      "id": "f61",
+      "name": "난주",
+      "price": 4500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Pond",
+      "size": "Small",
+      "englishName": "Ranchu goldfish"
+    },
+    {
+      "id": "f62",
+      "name": "가오리",
+      "price": 3000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "Sea",
+      "size": "Very large",
+      "englishName": "Ray"
+    },
+    {
+      "id": "f63",
+      "name": "도미",
+      "price": 3000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Large",
+      "englishName": "Red snapper"
+    },
+    {
+      "id": "f64",
+      "name": "리본장어",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "Sea",
+      "size": "Long",
+      "englishName": "Ribbon eel"
+    },
+    {
+      "id": "f65",
+      "name": "엔드리케리",
+      "price": 4000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Large",
+      "englishName": "Saddled bichir"
+    },
+    {
+      "id": "f66",
+      "name": "톱상어",
+      "price": 12000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "englishName": "Saw shark"
+    },
+    {
+      "id": "f67",
+      "name": "농어",
+      "price": 400,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Very large",
+      "englishName": "Sea bass"
+    },
+    {
+      "id": "f68",
+      "name": "클리오네",
+      "price": 1000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "location": "Sea",
+      "size": "Tiny",
+      "englishName": "Sea butterfly"
+    },
+    {
+      "id": "f69",
+      "name": "해마",
+      "price": 1100,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "Sea",
+      "size": "Tiny",
+      "englishName": "Sea horse"
+    },
+    {
+      "id": "f70",
+      "name": "늑대거북",
+      "price": 5000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Large",
+      "englishName": "Snapping turtle"
+    },
+    {
+      "id": "f71",
+      "name": "자라",
+      "price": 3750,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Large",
+      "englishName": "Soft-shelled turtle"
+    },
+    {
+      "id": "f72",
+      "name": "오징어",
+      "price": 500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "englishName": "Squid"
+    },
+    {
+      "id": "f73",
+      "name": "일본연어",
+      "price": 15000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "location": "River (clifftop)",
+      "size": "Very large",
+      "englishName": "Stringfish"
+    },
+    {
+      "id": "f74",
+      "name": "철갑상어",
+      "price": 10000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River (mouth)",
+      "size": "Huge",
+      "englishName": "Sturgeon"
+    },
+    {
+      "id": "f75",
+      "name": "빨판상어",
+      "price": 1500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "englishName": "Suckerfish"
+    },
+    {
+      "id": "f76",
+      "name": "은어",
+      "price": 900,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Medium",
+      "englishName": "Sweetfish"
+    },
+    {
+      "id": "f77",
+      "name": "올챙이",
+      "price": 100,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "englishName": "Tadpole"
+    },
+    {
+      "id": "f78",
+      "name": "틸라피아",
+      "price": 800,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Medium",
+      "englishName": "Tilapia"
+    },
+    {
+      "id": "f79",
+      "name": "다랑어",
+      "price": 7000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "location": "Pier",
+      "size": "Huge",
+      "englishName": "Tuna"
+    },
+    {
+      "id": "f80",
+      "name": "옐로우퍼치",
+      "price": 300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Medium",
+      "englishName": "Yellow perch"
+    }
+  ],
+  "seafood": [
+    {
+      "id": "s1",
+      "name": "미역",
+      "price": 600,
+      "time": "24시간",
+      "speed": "대 / 고정형",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "바다포도",
+      "price": 600,
+      "time": "24시간",
+      "speed": "소 / 고정형",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "s3",
+      "name": "진주조개",
+      "price": 2800,
+      "time": "24시간",
+      "speed": "소 / 보통",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "id": "s4",
+      "name": "가리비",
+      "price": 1250,
+      "time": "24시간",
+      "speed": "중 / 보통",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "desc": "캘 때 옹기종기 귀여운 해탈한이 나타나 레시피와 교환해 줍니다."
+    },
+    {
+      "id": "s5",
+      "name": "멍게",
+      "price": 1500,
+      "time": "24시간",
+      "speed": "중 / 보통",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "desc": "한국 식용으로 흔히 접하는 붉은색 멍게(Sea Squirt)입니다."
+    },
+    {
+      "id": "s6",
+      "name": "바다의 파인애플",
+      "price": 1500,
+      "time": "24시간",
+      "speed": "중 / 보통",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "desc": "모동숲 내에서 멍게와는 완전히 다른 독립 조우 기증품입니다."
+    },
+    {
+      "id": "s7",
+      "name": "대왕오징어",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "speed": "대 / 매우 빠름",
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "s8",
+      "name": "가시파브르게",
+      "price": 12000,
+      "time": "21:00 - 04:00",
+      "speed": "대 / 매우 빠름",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "s9",
+      "name": "키다리게",
+      "price": 12000,
+      "time": "24시간",
+      "speed": "대 / 매우 빠름",
+      "months": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "id": "s10",
+      "name": "성게",
+      "price": 1700,
+      "time": "24시간",
+      "speed": "소 / 느림",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "s11",
+      "name": "연필성게",
+      "price": 2000,
+      "time": "16:00 - 09:00",
+      "speed": "중 / 보통",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "id": "s12",
+      "name": "자이언트 이소포드",
+      "price": 12000,
+      "time": "09:00 - 16:00, 21:00 - 04:00",
+      "speed": "대 / 매우 빠름",
+      "months": [
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "s13",
+      "name": "해삼",
+      "price": 500,
+      "time": "24시간",
+      "speed": "대 / 느림",
+      "months": [
+        11,
+        12,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": "s14",
+      "name": "바다반딧불이",
+      "price": 600,
+      "time": "19:00 - 04:00",
+      "speed": "소 / 매우 느림",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "id": "s15",
+      "name": "대왕거거",
+      "price": 15000,
+      "time": "24시간",
+      "speed": "대 / 초고속 빠름",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "desc": "매우 잽싸게 질주하므로 기포를 막아서 퇴로를 차단해야 잡기 편합니다."
+    },
+    {
+      "id": "s16",
+      "name": "전복",
+      "price": 2000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Medium",
+      "englishName": "abalone"
+    },
+    {
+      "id": "s17",
+      "name": "따개비",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Stationary",
+      "englishName": "acorn barnacle"
+    },
+    {
+      "id": "s18",
+      "name": "앵무조개",
+      "price": 1800,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "speed": "Medium",
+      "englishName": "chambered nautilus"
+    },
+    {
+      "id": "s19",
+      "name": "던지니스크랩",
+      "price": 1900,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12
+      ],
+      "speed": "Medium",
+      "englishName": "Dungeness crab"
+    },
+    {
+      "id": "s20",
+      "name": "반딧불오징어",
+      "price": 1400,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "speed": "Slow",
+      "englishName": "firefly squid"
+    },
+    {
+      "id": "s21",
+      "name": "납작벌레",
+      "price": 700,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9
+      ],
+      "speed": "Very slow",
+      "englishName": "flatworm"
+    },
+    {
+      "id": "s22",
+      "name": "꽃게",
+      "price": 2200,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "speed": "Medium",
+      "englishName": "gazami crab"
+    },
+    {
+      "id": "s23",
+      "name": "투구게",
+      "price": 2500,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "speed": "Medium",
+      "englishName": "horseshoe crab"
+    },
+    {
+      "id": "s24",
+      "name": "바닷가재",
+      "price": 4500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        4,
+        5,
+        6,
+        12
+      ],
+      "speed": "Fast",
+      "englishName": "lobster"
+    },
+    {
+      "id": "s25",
+      "name": "갯가재",
+      "price": 2500,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Medium",
+      "englishName": "mantis shrimp"
+    },
+    {
+      "id": "s26",
+      "name": "보름달물해파리",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "speed": "Very slow",
+      "englishName": "moon jellyfish"
+    },
+    {
+      "id": "s27",
+      "name": "지중해담치",
+      "price": 1500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "englishName": "mussel"
+    },
+    {
+      "id": "s28",
+      "name": "문어",
+      "price": 1200,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "englishName": "octopus"
+    },
+    {
+      "id": "s29",
+      "name": "굴",
+      "price": 1100,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "englishName": "oyster"
+    },
+    {
+      "id": "s30",
+      "name": "왕게",
+      "price": 8000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "speed": "Very fast",
+      "englishName": "red king crab"
+    },
+    {
+      "id": "s31",
+      "name": "말미잘",
+      "price": 500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Stationary",
+      "englishName": "sea anemone"
+    },
+    {
+      "id": "s32",
+      "name": "바다돼지",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "speed": "Very fast",
+      "englishName": "sea pig"
+    },
+    {
+      "id": "s33",
+      "name": "갯민숭달팽이",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Very slow",
+      "englishName": "sea slug"
+    },
+    {
+      "id": "s34",
+      "name": "불가사리",
+      "price": 500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Very slow",
+      "englishName": "sea star"
+    },
+    {
+      "id": "s35",
+      "name": "가든일",
+      "price": 1100,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "speed": "Slow",
+      "englishName": "spotted garden eel"
+    },
+    {
+      "id": "s36",
+      "name": "북쪽분홍새우",
+      "price": 1400,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "englishName": "sweet shrimp"
+    },
+    {
+      "id": "s37",
+      "name": "보리새우",
+      "price": 3000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "speed": "Medium",
+      "englishName": "tiger prawn"
+    },
+    {
+      "id": "s38",
+      "name": "소라",
+      "price": 1000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "englishName": "turban shell"
+    },
+    {
+      "id": "s39",
+      "name": "우무문어",
+      "price": 6000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "speed": "Fast",
+      "englishName": "umbrella octopus"
+    },
+    {
+      "id": "s40",
+      "name": "흡혈오징어",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "speed": "Very fast",
+      "englishName": "vampire squid"
+    },
+    {
+      "id": "s41",
+      "name": "해로동혈",
+      "price": 5000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        10,
+        11,
+        12
+      ],
+      "speed": "Fast",
+      "englishName": "Venus' flower basket"
+    },
+    {
+      "id": "s42",
+      "name": "수랑",
+      "price": 1000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "englishName": "whelk"
+    }
+  ]
+}
