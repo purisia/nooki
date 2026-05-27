@@ -1043,6 +1043,1129 @@
         12
       ],
       "desc": "비나 눈이 내리는 날에만 등장하는 전설의 심해어입니다."
+    },
+    {
+      "id": "f27",
+      "name": "Anchovy",
+      "price": 200,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Anchovy"
+    },
+    {
+      "id": "f28",
+      "name": "Angelfish",
+      "price": 3000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Angelfish"
+    },
+    {
+      "id": "f29",
+      "name": "Arapaima",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Huge",
+      "needsKoreanName": true,
+      "englishName": "Arapaima"
+    },
+    {
+      "id": "f30",
+      "name": "Arowana",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Arowana"
+    },
+    {
+      "id": "f31",
+      "name": "Barred knifejaw",
+      "price": 5000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Barred knifejaw"
+    },
+    {
+      "id": "f32",
+      "name": "Barreleye",
+      "price": 15000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Barreleye"
+    },
+    {
+      "id": "f33",
+      "name": "Betta",
+      "price": 2500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Betta"
+    },
+    {
+      "id": "f34",
+      "name": "Black bass",
+      "price": 400,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Black bass"
+    },
+    {
+      "id": "f35",
+      "name": "Blowfish",
+      "price": 5000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Blowfish"
+    },
+    {
+      "id": "f36",
+      "name": "Bluegill",
+      "price": 180,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Bluegill"
+    },
+    {
+      "id": "f37",
+      "name": "Crawfish",
+      "price": 200,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Pond",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Crawfish"
+    },
+    {
+      "id": "f38",
+      "name": "Dab",
+      "price": 300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Dab"
+    },
+    {
+      "id": "f39",
+      "name": "Dorado",
+      "price": 15000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Dorado"
+    },
+    {
+      "id": "f40",
+      "name": "Freshwater goby",
+      "price": 400,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Freshwater goby"
+    },
+    {
+      "id": "f41",
+      "name": "Gar",
+      "price": 6000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Pond",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Gar"
+    },
+    {
+      "id": "f42",
+      "name": "Giant snakehead",
+      "price": 5500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "location": "Pond",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Giant snakehead"
+    },
+    {
+      "id": "f43",
+      "name": "Goldfish",
+      "price": 1300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Goldfish"
+    },
+    {
+      "id": "f44",
+      "name": "Great white shark",
+      "price": 15000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "needsKoreanName": true,
+      "englishName": "Great white shark"
+    },
+    {
+      "id": "f45",
+      "name": "Guppy",
+      "price": 1300,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Guppy"
+    },
+    {
+      "id": "f46",
+      "name": "Hammerhead shark",
+      "price": 8000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "needsKoreanName": true,
+      "englishName": "Hammerhead shark"
+    },
+    {
+      "id": "f47",
+      "name": "Horse mackerel",
+      "price": 150,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Horse mackerel"
+    },
+    {
+      "id": "f48",
+      "name": "Killifish",
+      "price": 300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Killifish"
+    },
+    {
+      "id": "f49",
+      "name": "Mitten crab",
+      "price": 2000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        9,
+        10,
+        11
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Mitten crab"
+    },
+    {
+      "id": "f50",
+      "name": "Moray eel",
+      "price": 2000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9,
+        10
+      ],
+      "location": "Sea",
+      "size": "Long",
+      "needsKoreanName": true,
+      "englishName": "Moray eel"
+    },
+    {
+      "id": "f51",
+      "name": "Napoleonfish",
+      "price": 10000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8
+      ],
+      "location": "Sea",
+      "size": "Huge",
+      "needsKoreanName": true,
+      "englishName": "Napoleonfish"
+    },
+    {
+      "id": "f52",
+      "name": "Neon tetra",
+      "price": 500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Neon tetra"
+    },
+    {
+      "id": "f53",
+      "name": "Nibble fish",
+      "price": 1500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Nibble fish"
+    },
+    {
+      "id": "f54",
+      "name": "Ocean sunfish",
+      "price": 4000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "needsKoreanName": true,
+      "englishName": "Ocean sunfish"
+    },
+    {
+      "id": "f55",
+      "name": "Olive flounder",
+      "price": 800,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Olive flounder"
+    },
+    {
+      "id": "f56",
+      "name": "Pike",
+      "price": 1800,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Pike"
+    },
+    {
+      "id": "f57",
+      "name": "Piranha",
+      "price": 2500,
+      "time": "09:00 - 16:00, 21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Piranha"
+    },
+    {
+      "id": "f58",
+      "name": "Pond smelt",
+      "price": 400,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        12
+      ],
+      "location": "River",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Pond smelt"
+    },
+    {
+      "id": "f59",
+      "name": "Pop-eyed goldfish",
+      "price": 1300,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Pop-eyed goldfish"
+    },
+    {
+      "id": "f60",
+      "name": "Puffer fish",
+      "price": 250,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Puffer fish"
+    },
+    {
+      "id": "f61",
+      "name": "Rainbowfish",
+      "price": 800,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Rainbowfish"
+    },
+    {
+      "id": "f62",
+      "name": "Ranchu goldfish",
+      "price": 4500,
+      "time": "09:00 - 16:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Pond",
+      "size": "Small",
+      "needsKoreanName": true,
+      "englishName": "Ranchu goldfish"
+    },
+    {
+      "id": "f63",
+      "name": "Ray",
+      "price": 3000,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "Sea",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Ray"
+    },
+    {
+      "id": "f64",
+      "name": "Red snapper",
+      "price": 3000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Red snapper"
+    },
+    {
+      "id": "f65",
+      "name": "Ribbon eel",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "Sea",
+      "size": "Long",
+      "needsKoreanName": true,
+      "englishName": "Ribbon eel"
+    },
+    {
+      "id": "f66",
+      "name": "Saddled bichir",
+      "price": 4000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Saddled bichir"
+    },
+    {
+      "id": "f67",
+      "name": "Saw shark",
+      "price": 12000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "needsKoreanName": true,
+      "englishName": "Saw shark"
+    },
+    {
+      "id": "f68",
+      "name": "Sea bass",
+      "price": 400,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Sea bass"
+    },
+    {
+      "id": "f69",
+      "name": "Sea butterfly",
+      "price": 1000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "location": "Sea",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Sea butterfly"
+    },
+    {
+      "id": "f70",
+      "name": "Sea horse",
+      "price": 1100,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "location": "Sea",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Sea horse"
+    },
+    {
+      "id": "f71",
+      "name": "Snapping turtle",
+      "price": 5000,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Snapping turtle"
+    },
+    {
+      "id": "f72",
+      "name": "Soft-shelled turtle",
+      "price": 3750,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Large",
+      "needsKoreanName": true,
+      "englishName": "Soft-shelled turtle"
+    },
+    {
+      "id": "f73",
+      "name": "Squid",
+      "price": 500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Squid"
+    },
+    {
+      "id": "f74",
+      "name": "Stringfish",
+      "price": 15000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        12
+      ],
+      "location": "River (clifftop)",
+      "size": "Very large",
+      "needsKoreanName": true,
+      "englishName": "Stringfish"
+    },
+    {
+      "id": "f75",
+      "name": "Sturgeon",
+      "price": 10000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "River (mouth)",
+      "size": "Huge",
+      "needsKoreanName": true,
+      "englishName": "Sturgeon"
+    },
+    {
+      "id": "f76",
+      "name": "Suckerfish",
+      "price": 1500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "needsKoreanName": true,
+      "englishName": "Suckerfish"
+    },
+    {
+      "id": "f77",
+      "name": "Sweetfish",
+      "price": 900,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "location": "River",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Sweetfish"
+    },
+    {
+      "id": "f78",
+      "name": "Tadpole",
+      "price": 100,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "location": "Pond",
+      "size": "Tiny",
+      "needsKoreanName": true,
+      "englishName": "Tadpole"
+    },
+    {
+      "id": "f79",
+      "name": "Tilapia",
+      "price": 800,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "location": "River",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Tilapia"
+    },
+    {
+      "id": "f80",
+      "name": "Tuna",
+      "price": 7000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "location": "Pier",
+      "size": "Huge",
+      "needsKoreanName": true,
+      "englishName": "Tuna"
+    },
+    {
+      "id": "f81",
+      "name": "Yellow perch",
+      "price": 300,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Yellow perch"
     }
   ],
   "seafood": [
@@ -1282,6 +2405,561 @@
         9
       ],
       "desc": "매우 잽싸게 질주하므로 기포를 막아서 퇴로를 차단해야 잡기 편합니다."
+    },
+    {
+      "id": "s16",
+      "name": "abalone",
+      "price": 2000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "abalone"
+    },
+    {
+      "id": "s17",
+      "name": "acorn barnacle",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Stationary",
+      "needsKoreanName": true,
+      "englishName": "acorn barnacle"
+    },
+    {
+      "id": "s18",
+      "name": "chambered nautilus",
+      "price": 1800,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        9,
+        10,
+        11
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "chambered nautilus"
+    },
+    {
+      "id": "s19",
+      "name": "Dungeness crab",
+      "price": 1900,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        11,
+        12
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "Dungeness crab"
+    },
+    {
+      "id": "s20",
+      "name": "firefly squid",
+      "price": 1400,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "firefly squid"
+    },
+    {
+      "id": "s21",
+      "name": "flatworm",
+      "price": 700,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        8,
+        9
+      ],
+      "speed": "Very slow",
+      "needsKoreanName": true,
+      "englishName": "flatworm"
+    },
+    {
+      "id": "s22",
+      "name": "gazami crab",
+      "price": 2200,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "gazami crab"
+    },
+    {
+      "id": "s23",
+      "name": "horseshoe crab",
+      "price": 2500,
+      "time": "21:00 - 04:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "horseshoe crab"
+    },
+    {
+      "id": "s24",
+      "name": "lobster",
+      "price": 4500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        4,
+        5,
+        6,
+        12
+      ],
+      "speed": "Fast",
+      "needsKoreanName": true,
+      "englishName": "lobster"
+    },
+    {
+      "id": "s25",
+      "name": "mantis shrimp",
+      "price": 2500,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "mantis shrimp"
+    },
+    {
+      "id": "s26",
+      "name": "moon jellyfish",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        7,
+        8,
+        9
+      ],
+      "speed": "Very slow",
+      "needsKoreanName": true,
+      "englishName": "moon jellyfish"
+    },
+    {
+      "id": "s27",
+      "name": "mussel",
+      "price": 1500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "mussel"
+    },
+    {
+      "id": "s28",
+      "name": "octopus",
+      "price": 1200,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "octopus"
+    },
+    {
+      "id": "s29",
+      "name": "oyster",
+      "price": 1100,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "oyster"
+    },
+    {
+      "id": "s30",
+      "name": "red king crab",
+      "price": 8000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "speed": "Very fast",
+      "needsKoreanName": true,
+      "englishName": "red king crab"
+    },
+    {
+      "id": "s31",
+      "name": "sea anemone",
+      "price": 500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Stationary",
+      "needsKoreanName": true,
+      "englishName": "sea anemone"
+    },
+    {
+      "id": "s32",
+      "name": "sea pig",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        11,
+        12
+      ],
+      "speed": "Very fast",
+      "needsKoreanName": true,
+      "englishName": "sea pig"
+    },
+    {
+      "id": "s33",
+      "name": "sea slug",
+      "price": 600,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Very slow",
+      "needsKoreanName": true,
+      "englishName": "sea slug"
+    },
+    {
+      "id": "s34",
+      "name": "sea star",
+      "price": 500,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Very slow",
+      "needsKoreanName": true,
+      "englishName": "sea star"
+    },
+    {
+      "id": "s35",
+      "name": "spider crab",
+      "price": 12000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4
+      ],
+      "speed": "Very fast",
+      "needsKoreanName": true,
+      "englishName": "spider crab"
+    },
+    {
+      "id": "s36",
+      "name": "spotted garden eel",
+      "price": 1100,
+      "time": "04:00 - 21:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "spotted garden eel"
+    },
+    {
+      "id": "s37",
+      "name": "sweet shrimp",
+      "price": 1400,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "sweet shrimp"
+    },
+    {
+      "id": "s38",
+      "name": "tiger prawn",
+      "price": 3000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "speed": "Medium",
+      "needsKoreanName": true,
+      "englishName": "tiger prawn"
+    },
+    {
+      "id": "s39",
+      "name": "turban shell",
+      "price": 1000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "turban shell"
+    },
+    {
+      "id": "s40",
+      "name": "umbrella octopus",
+      "price": 6000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        3,
+        4,
+        5,
+        9,
+        10,
+        11
+      ],
+      "speed": "Fast",
+      "needsKoreanName": true,
+      "englishName": "umbrella octopus"
+    },
+    {
+      "id": "s41",
+      "name": "vampire squid",
+      "price": 10000,
+      "time": "16:00 - 09:00",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "speed": "Very fast",
+      "needsKoreanName": true,
+      "englishName": "vampire squid"
+    },
+    {
+      "id": "s42",
+      "name": "Venus' flower basket",
+      "price": 5000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        10,
+        11,
+        12
+      ],
+      "speed": "Fast",
+      "needsKoreanName": true,
+      "englishName": "Venus' flower basket"
+    },
+    {
+      "id": "s43",
+      "name": "whelk",
+      "price": 1000,
+      "time": "24시간",
+      "rainOnly": false,
+      "condition": "none",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "speed": "Slow",
+      "needsKoreanName": true,
+      "englishName": "whelk"
     }
   ]
 }
