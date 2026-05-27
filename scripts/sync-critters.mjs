@@ -84,12 +84,18 @@ async function cargoQuery(category) {
   url.searchParams.set('limit', '500');
 
   let lastErr;
-  for (let attempt = 0; attempt < 2; attempt++) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) {
+      const backoff = 5000 * attempt;
+      console.error(`[${category}] backoff ${backoff}ms before retry ${attempt + 1}`);
+      await new Promise((r) => setTimeout(r, backoff));
+    }
     try {
       const res = await fetchWithTimeout(url.toString());
       if (res.status === 403) {
-        console.error(`[${category}] 403 Forbidden — User-Agent or bot policy may have changed`);
-        return null;
+        console.error(`[${category}] 403 Forbidden — likely transient throttle on this IP`);
+        lastErr = new Error('HTTP 403');
+        continue;
       }
       if (!res.ok) {
         lastErr = new Error(`HTTP ${res.status}`);
@@ -171,7 +177,10 @@ async function main() {
 
   const changes = { bugs: [], fish: [], seafood: [] };
 
-  for (const category of /** @type {const} */ (['bugs', 'fish', 'seafood'])) {
+  const categories = /** @type {const} */ (['bugs', 'fish', 'seafood']);
+  for (let i = 0; i < categories.length; i++) {
+    const category = categories[i];
+    if (i > 0) await new Promise((r) => setTimeout(r, 3000));
     const rows = await cargoQuery(category);
     if (rows === null) {
       console.error(`[${category}] skip — using existing data`);
