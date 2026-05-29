@@ -34,8 +34,12 @@ Firebase 키가 없으면 로그인 UI는 "로컬 쿠키 모드" 뱃지로 비�
 node scripts/sync-critters.mjs
 ```
 
-매핑 보강이 필요하면 `scripts/name-map.json` (영문 종 → 한국어 이름) 또는
-`scripts/location-map.json` (영문 location → 한국어 location)을 직접 편집하세요.
+데이터 구조:
+- `src/data/critters.json` — Nookipedia에서 받은 영문 canonical. sync가 매번 덮어쓰며 수동 편집 비권장.
+- `src/data/overlay.json` — 손으로 관리하는 한국어 이름/메타(condition, rainOnly, desc, location 오버라이드). 영문명 → 한국어 매핑이 필요한 종을 추가합니다. sync는 절대 안 건드립니다.
+- `src/data/location-map.json` — 영문 location → 한국어 location 일괄 번역 fallback.
+
+새 종이 위키에 추가되면 sync가 영문 그대로 등재합니다. UI에 "⚠️ 영문명" 뱃지가 뜨므로 그 종의 영문명을 `overlay.json`에 추가해 한국어로 바꾸세요.
 
 ---
 

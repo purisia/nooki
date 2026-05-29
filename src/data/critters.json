@@ -2,32 +2,30 @@
   "bugs": [
     {
       "id": "b1",
-      "name": "배추흰나비",
+      "englishName": "common butterfly",
       "price": 160,
       "time": "04:00 - 19:00",
-      "location": "공중 (꽃 주변)",
-      "rainOnly": false,
-      "condition": "flower",
       "months": [
+        1,
+        2,
         3,
         4,
         5,
         6,
-        7,
-        8,
         9,
         10,
-        11
-      ]
+        11,
+        12
+      ],
+      "location": "Flying",
+      "image": "https://dodo.ac/np/images/f/f8/Common_Butterfly_NH_Icon.png",
+      "number": 1
     },
     {
       "id": "b2",
-      "name": "노랑나비",
+      "englishName": "yellow butterfly",
       "price": 160,
       "time": "04:00 - 19:00",
-      "location": "공중",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -35,16 +33,17 @@
         6,
         9,
         10
-      ]
+      ],
+      "location": "Flying",
+      "image": "https://dodo.ac/np/images/4/43/Yellow_Butterfly_NH_Icon.png",
+      "number": 2,
+      "rarity": "Very Common"
     },
     {
       "id": "b3",
-      "name": "호랑나비",
+      "englishName": "tiger butterfly",
       "price": 240,
       "time": "04:00 - 19:00",
-      "location": "공중 (꽃 주변)",
-      "rainOnly": false,
-      "condition": "flower",
       "months": [
         3,
         4,
@@ -53,140 +52,132 @@
         7,
         8,
         9
-      ]
+      ],
+      "location": "Flying",
+      "image": "https://dodo.ac/np/images/b/b6/Tiger_Butterfly_NH_Icon.png",
+      "number": 3
     },
     {
       "id": "b4",
-      "name": "제비나비",
+      "englishName": "peacock butterfly",
       "price": 2500,
       "time": "04:00 - 19:00",
-      "location": "공중 (교배꽃 주변)",
-      "rainOnly": false,
-      "condition": "hybridFlower",
       "months": [
         3,
         4,
         5,
         6
       ],
-      "desc": "검정, 파랑, 보라색 등 교배꽃 주변에 나타납니다."
+      "location": "Flying near blue, purple, and black flowers",
+      "image": "https://dodo.ac/np/images/7/77/Peacock_Butterfly_NH_Icon.png",
+      "number": 4
     },
     {
       "id": "b5",
-      "name": "청띠제비나비",
+      "englishName": "common bluebottle",
       "price": 300,
       "time": "04:00 - 19:00",
-      "location": "공중 (꽃 주변)",
-      "rainOnly": false,
-      "condition": "flower",
       "months": [
         4,
         5,
         6,
         7,
-        8,
-        9,
-        10
-      ]
+        8
+      ],
+      "location": "Flying",
+      "image": "https://dodo.ac/np/images/2/21/Common_Bluebottle_NH_Icon.png",
+      "number": 5
     },
     {
       "id": "b6",
-      "name": "왕오색나비",
+      "englishName": "great purple emperor",
       "price": 3000,
       "time": "04:00 - 19:00",
-      "location": "공중",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
         7,
-        8,
-        9
-      ]
+        8
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/8/81/Great_Purple_Emperor_NH_Icon.png",
+      "number": 7
     },
     {
       "id": "b7",
-      "name": "몰포나비",
+      "englishName": "emperor butterfly",
       "price": 4000,
       "time": "17:00 - 08:00",
-      "location": "공중 (교배꽃 주변)",
-      "rainOnly": false,
-      "condition": "hybridFlower",
       "months": [
+        1,
+        2,
+        3,
         6,
         7,
         8,
         9,
-        12,
-        1,
-        2,
-        3
+        12
       ],
-      "desc": "푸른빛의 아름다운 나비로 교배꽃 주변에서 발견됩니다."
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/c/cf/Emperor_Butterfly_NH_Icon.png",
+      "number": 9
     },
     {
       "id": "b8",
-      "name": "유라시아황제나비",
-      "price": 3000,
-      "time": "04:00 - 19:00",
-      "location": "공중",
-      "rainOnly": false,
-      "condition": "none",
+      "englishName": "monarch butterfly",
+      "price": 140,
+      "time": "04:00 - 17:00",
       "months": [
-        5,
-        6,
-        7,
-        8,
-        9
-      ]
+        9,
+        10,
+        11
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/3/38/Monarch_Butterfly_NH_Icon.png",
+      "number": 8
     },
     {
       "id": "b9",
-      "name": "아그리아스나비",
+      "englishName": "agrias butterfly",
       "price": 3000,
       "time": "08:00 - 17:00",
-      "location": "공중",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
         6,
         7,
         8,
-        9,
-        11
-      ]
+        9
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/6/60/Agrias_Butterfly_NH_Icon.png",
+      "number": 10
     },
     {
       "id": "b10",
-      "name": "붉은목도리비단나비",
+      "englishName": "Rajah Brooke's birdwing",
       "price": 2500,
       "time": "08:00 - 17:00",
-      "location": "공중 (꽃 주변)",
-      "rainOnly": false,
-      "condition": "flower",
       "months": [
+        1,
+        2,
+        4,
         5,
         6,
         7,
         8,
         9,
-        11,
-        12,
-        1,
-        2
-      ]
+        12
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/8/81/Rajah_Brooke's_Birdwing_NH_Icon.png",
+      "number": 11
     },
     {
       "id": "b11",
-      "name": "마다가스카르비단나비",
+      "englishName": "Madagascan sunset moth",
       "price": 2500,
       "time": "08:00 - 16:00",
-      "location": "공중 (꽃 주변)",
-      "rainOnly": false,
-      "condition": "flower",
       "months": [
         4,
         5,
@@ -194,32 +185,32 @@
         7,
         8,
         9
-      ]
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/6/69/Madagascan_Sunset_Moth_NH_Icon.png",
+      "number": 15
     },
     {
       "id": "b12",
-      "name": "알렉산드라제비나비",
+      "englishName": "Queen Alexandra's birdwing",
       "price": 4000,
       "time": "08:00 - 16:00",
-      "location": "공중 (꽃 주변)",
-      "rainOnly": false,
-      "condition": "flower",
       "months": [
         5,
         6,
         7,
         8,
         9
-      ]
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/b/bb/Queen_Alexandra's_Birdwing_NH_Icon.png",
+      "number": 12
     },
     {
       "id": "b13",
-      "name": "나방",
+      "englishName": "moth",
       "price": 130,
       "time": "19:00 - 04:00",
-      "location": "전등이나 야간 불빛 주변 공중",
-      "rainOnly": false,
-      "condition": "light",
       "months": [
         1,
         2,
@@ -233,16 +224,16 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "Flying near light sources",
+      "image": "https://dodo.ac/np/images/a/a0/Moth_NH_Icon.png",
+      "number": 13
     },
     {
       "id": "b14",
-      "name": "아틀라스나방",
+      "englishName": "Atlas moth",
       "price": 3000,
       "time": "19:00 - 04:00",
-      "location": "나무 기둥",
-      "rainOnly": false,
-      "condition": "tree",
       "months": [
         4,
         5,
@@ -250,32 +241,20 @@
         7,
         8,
         9
-      ]
-    },
-    {
-      "id": "b15",
-      "name": "참나무누에나방",
-      "price": 1200,
-      "time": "19:00 - 04:00",
-      "location": "나무 기둥",
-      "rainOnly": false,
-      "condition": "tree",
-      "months": [
-        6,
-        7,
-        8,
-        9
-      ]
+      ],
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/7/7f/Atlas_Moth_NH_Icon.png",
+      "number": 14,
+      "rarity": "Rare"
     },
     {
       "id": "b16",
-      "name": "달팽이",
+      "englishName": "snail",
       "price": 250,
       "time": "24시간",
-      "location": "바위, 저목(부시) 위",
-      "rainOnly": true,
-      "condition": "rain",
       "months": [
+        1,
+        2,
         3,
         4,
         5,
@@ -284,61 +263,60 @@
         8,
         9,
         10,
-        11
+        11,
+        12
       ],
-      "desc": "비가 올 때 나무 수풀이나 바위 위에 출현합니다."
+      "location": "On rocks and bushes",
+      "image": "https://dodo.ac/np/images/e/e9/Snail_NH_Icon.png",
+      "number": 75
     },
     {
       "id": "b17",
-      "name": "공벌레",
+      "englishName": "pill bug",
       "price": 250,
       "time": "23:00 - 16:00",
-      "location": "바위 치기",
-      "rainOnly": false,
-      "condition": "hitRock",
       "months": [
-        9,
-        10,
-        11,
-        12,
         1,
         2,
         3,
         4,
         5,
-        6
+        6,
+        9,
+        10,
+        11,
+        12
       ],
-      "desc": "삽으로 섬의 바위를 치면 튀어나옵니다."
+      "location": "From hitting rocks",
+      "image": "https://dodo.ac/np/images/b/b9/Pill_Bug_NH_Icon.png",
+      "number": 76
     },
     {
       "id": "b18",
-      "name": "지네",
+      "englishName": "centipede",
       "price": 300,
       "time": "16:00 - 23:00",
-      "location": "바위 치기",
-      "rainOnly": false,
-      "condition": "hitRock",
       "months": [
-        9,
-        10,
-        11,
-        12,
         1,
         2,
         3,
         4,
         5,
-        6
-      ]
+        6,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "From hitting rocks",
+      "image": "https://dodo.ac/np/images/d/d2/Centipede_NH_Icon.png",
+      "number": 77
     },
     {
       "id": "b19",
-      "name": "비단벌레",
+      "englishName": "jewel beetle",
       "price": 2400,
       "time": "24시간",
-      "location": "나무 그루터기",
-      "rainOnly": false,
-      "condition": "stump",
       "months": [
         4,
         5,
@@ -346,32 +324,31 @@
         7,
         8
       ],
-      "desc": "도끼로 벤 그루터기 위에서만 발견됩니다."
+      "location": "On tree stumps",
+      "image": "https://dodo.ac/np/images/4/43/Jewel_Beetle_NH_Icon.png",
+      "number": 45
     },
     {
       "id": "b20",
-      "name": "바이올린벌레",
+      "englishName": "violin beetle",
       "price": 450,
       "time": "24시간",
-      "location": "나무 그루터기",
-      "rainOnly": false,
-      "condition": "stump",
       "months": [
         5,
         6,
         9,
         10,
         11
-      ]
+      ],
+      "location": "On tree stumps",
+      "image": "https://dodo.ac/np/images/8/86/Violin_Beetle_NH_Icon.png",
+      "number": 46
     },
     {
       "id": "b21",
-      "name": "알락하늘소",
+      "englishName": "citrus long-horned beetle",
       "price": 350,
       "time": "24시간",
-      "location": "나무 그루터기",
-      "rainOnly": false,
-      "condition": "stump",
       "months": [
         1,
         2,
@@ -385,59 +362,58 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "On tree stumps",
+      "image": "https://dodo.ac/np/images/9/9a/Citrus_Long-Horned_Beetle_NH_Icon.png",
+      "number": 47
     },
     {
       "id": "b22",
-      "name": "루리하늘소",
+      "englishName": "rosalia batesi beetle",
       "price": 3000,
       "time": "24시간",
-      "location": "나무 그루터기",
-      "rainOnly": false,
-      "condition": "stump",
       "months": [
         5,
         6,
         7,
-        8
-      ]
+        8,
+        9
+      ],
+      "location": "On tree stumps",
+      "image": "https://dodo.ac/np/images/7/7c/Rosalia_Batesi_Beetle_NH_Icon.png",
+      "number": 48
     },
     {
       "id": "b23",
-      "name": "엘라푸스가위사슴벌레",
+      "englishName": "cyclommatus stag",
       "price": 8000,
       "time": "17:00 - 08:00",
-      "location": "야자수 나무",
-      "rainOnly": false,
-      "condition": "palmTree",
       "months": [
         7,
         8
       ],
-      "desc": "해변에 있는 야자수 줄기에서 발견됩니다."
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/a/a0/Cyclommatus_Stag_NH_Icon.png",
+      "number": 59
     },
     {
       "id": "b24",
-      "name": "황금사슴벌레",
+      "englishName": "golden stag",
       "price": 12000,
       "time": "17:00 - 08:00",
-      "location": "야자수 나무",
-      "rainOnly": false,
-      "condition": "palmTree",
       "months": [
         7,
         8
       ],
-      "desc": "초희귀 곤충으로, 살금살금 아주 느리게 다가가야 잡힙니다."
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/b/ba/Golden_Stag_NH_Icon.png",
+      "number": 60
     },
     {
       "id": "b25",
-      "name": "개미",
+      "englishName": "ant",
       "price": 80,
       "time": "24시간",
-      "location": "썩은 무 주변",
-      "rainOnly": false,
-      "condition": "rottenTurnip",
       "months": [
         1,
         2,
@@ -452,16 +428,15 @@
         11,
         12
       ],
-      "desc": "바닥에 썩은 무를 두면 개미 떼가 줄지어 나타납니다."
+      "location": "On/near spoiled turnips/candy/lollipops",
+      "image": "https://dodo.ac/np/images/5/5d/Ant_NH_Icon.png",
+      "number": 69
     },
     {
       "id": "b26",
-      "name": "초파리",
+      "englishName": "fly",
       "price": 60,
       "time": "24시간",
-      "location": "쓰레기 주변",
-      "rainOnly": false,
-      "condition": "trash",
       "months": [
         1,
         2,
@@ -476,16 +451,15 @@
         11,
         12
       ],
-      "desc": "낚시로 잡은 빈 캔, 장화 등을 방치하면 발생합니다."
+      "location": "Flying near trash or rotten turnips",
+      "image": "https://dodo.ac/np/images/1/15/Fly_NH_Icon.png",
+      "number": 72
     },
     {
       "id": "b27",
-      "name": "전갈",
+      "englishName": "scorpion",
       "price": 8000,
       "time": "19:00 - 04:00",
-      "location": "땅 위",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -493,51 +467,51 @@
         8,
         9,
         10
-      ]
+      ],
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/9/95/Scorpion_NH_Icon.png",
+      "number": 80
     },
     {
       "id": "b28",
-      "name": "타란툴라",
+      "englishName": "tarantula",
       "price": 8000,
       "time": "19:00 - 04:00",
-      "location": "땅 위",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
-        11,
-        12,
         1,
         2,
         3,
-        4
-      ]
+        4,
+        11,
+        12
+      ],
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/b/b5/Tarantula_NH_Icon.png",
+      "number": 79
     },
     {
       "id": "b29",
-      "name": "땅강아지",
+      "englishName": "mole cricket",
       "price": 500,
       "time": "24시간",
-      "location": "땅속 (삽질)",
-      "rainOnly": false,
-      "condition": "digGround",
       "months": [
-        11,
-        12,
         1,
         2,
         3,
         4,
-        5
+        5,
+        11,
+        12
       ],
-      "desc": "소리가 나는 위치 근처를 삽으로 파내면 출현합니다."
+      "location": "Underground",
+      "image": "https://dodo.ac/np/images/4/4f/Mole_Cricket_NH_Icon.png",
+      "number": 37
     },
     {
       "id": "b30",
-      "name": "도롱이벌레",
+      "englishName": "bagworm",
       "price": 600,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -552,16 +526,15 @@
         11,
         12
       ],
-      "location": "나무 흔들기",
-      "englishName": "bagworm"
+      "location": "Shaking trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/1/17/Bagworm_NH_Icon.png",
+      "number": 68
     },
     {
       "id": "b31",
-      "name": "장수잠자리",
+      "englishName": "banded dragonfly",
       "price": 4500,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -570,89 +543,83 @@
         9,
         10
       ],
-      "location": "공중 (물가 근처)",
-      "englishName": "banded dragonfly"
+      "location": "Flying near water",
+      "image": "https://dodo.ac/np/images/3/35/Banded_Dragonfly_NH_Icon.png",
+      "number": 34
     },
     {
       "id": "b32",
-      "name": "방울벌레",
+      "englishName": "bell cricket",
       "price": 430,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         9,
         10
       ],
-      "location": "땅 위",
-      "englishName": "bell cricket"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/4/4a/Bell_Cricket_NH_Icon.png",
+      "number": 21
     },
     {
       "id": "b33",
-      "name": "유지매미",
+      "englishName": "brown cicada",
       "price": 250,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "brown cicada"
+      "location": "On trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/4/44/Brown_Cicada_NH_Icon.png",
+      "number": 26
     },
     {
       "id": "b34",
-      "name": "매미 허물",
+      "englishName": "cicada shell",
       "price": 10,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "cicada shell"
+      "location": "On trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/d/d1/Cicada_Shell_NH_Icon.png",
+      "number": 31
     },
     {
       "id": "b35",
-      "name": "귀뚜라미",
+      "englishName": "cricket",
       "price": 130,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         9,
         10,
         11
       ],
-      "location": "땅 위",
-      "englishName": "cricket"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/8/8f/Cricket_NH_Icon.png",
+      "number": 20
     },
     {
       "id": "b36",
-      "name": "실잠자리",
+      "englishName": "damselfly",
       "price": 500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
         11,
         12
       ],
-      "location": "공중 (물가 근처)",
-      "englishName": "damselfly"
+      "location": "Flying near water",
+      "image": "https://dodo.ac/np/images/c/c8/Damselfly_NH_Icon.png",
+      "number": 35
     },
     {
       "id": "b37",
-      "name": "왕잠자리",
+      "englishName": "darner dragonfly",
       "price": 230,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -662,16 +629,15 @@
         9,
         10
       ],
-      "location": "공중 (물가 근처)",
-      "englishName": "darner dragonfly"
+      "location": "Flying near water",
+      "image": "https://dodo.ac/np/images/5/5c/Darner_Dragonfly_NH_Icon.png",
+      "number": 33
     },
     {
       "id": "b38",
-      "name": "물방개",
+      "englishName": "diving beetle",
       "price": 800,
       "time": "08:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -679,88 +645,82 @@
         8,
         9
       ],
-      "location": "강과 연못 위",
-      "englishName": "diving beetle"
+      "location": "On rivers and ponds",
+      "image": "https://dodo.ac/np/images/7/78/Diving_Beetle_NH_Icon.png",
+      "number": 39
     },
     {
       "id": "b39",
-      "name": "풍이",
+      "englishName": "drone beetle",
       "price": 200,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "drone beetle"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/4/48/Drone_Beetle_NH_Icon.png",
+      "number": 53
     },
     {
       "id": "b40",
-      "name": "쇠똥구리",
+      "englishName": "dung beetle",
       "price": 3000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
         12
       ],
-      "location": "눈덩이 굴리는 곳",
-      "englishName": "dung beetle"
+      "location": "Pushing snowballs",
+      "image": "https://dodo.ac/np/images/c/c4/Dung_Beetle_NH_Icon.png",
+      "number": 50
     },
     {
       "id": "b41",
-      "name": "보라금풍뎅이",
+      "englishName": "earth-boring dung beetle",
       "price": 300,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
-      "location": "땅 위",
-      "englishName": "earth-boring dung beetle"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/5/53/Earth-Boring_Dung_Beetle_NH_Icon.png",
+      "number": 51
     },
     {
       "id": "b42",
-      "name": "쓰르라미",
+      "englishName": "evening cicada",
       "price": 550,
       "time": "04:00 - 08:00, 16:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "evening cicada"
+      "location": "On trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/b/ba/Evening_Cicada_NH_Icon.png",
+      "number": 30
     },
     {
       "id": "b43",
-      "name": "반디",
+      "englishName": "firefly",
       "price": 300,
       "time": "19:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6
       ],
-      "location": "공중 (물가 근처)",
-      "englishName": "firefly"
+      "location": "Flying near water",
+      "image": "https://dodo.ac/np/images/d/d6/Firefly_NH_Icon.png",
+      "number": 36
     },
     {
       "id": "b44",
-      "name": "벼룩",
+      "englishName": "flea",
       "price": 70,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -771,44 +731,42 @@
         10,
         11
       ],
-      "location": "주민 주변",
-      "englishName": "flea"
+      "location": "On villagers",
+      "image": "https://dodo.ac/np/images/8/89/Flea_NH_Icon.png",
+      "number": 74
     },
     {
       "id": "b45",
-      "name": "곰매미",
+      "englishName": "giant cicada",
       "price": 500,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "giant cicada"
+      "location": "On trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/e/e3/Giant_Cicada_NH_Icon.png",
+      "number": 28,
+      "rarity": "Common"
     },
     {
       "id": "b46",
-      "name": "왕사슴벌레",
+      "englishName": "giant stag",
       "price": 10000,
       "time": "23:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "giant stag"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/0/08/Giant_Stag_NH_Icon.png",
+      "number": 57
     },
     {
       "id": "b47",
-      "name": "물장군",
+      "englishName": "giant water bug",
       "price": 2000,
       "time": "19:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -817,61 +775,57 @@
         8,
         9
       ],
-      "location": "강과 연못 위",
-      "englishName": "giant water bug"
+      "location": "On rivers and ponds",
+      "image": "https://dodo.ac/np/images/8/86/Giant_Water_Bug_NH_Icon.png",
+      "number": 40
     },
     {
       "id": "b48",
-      "name": "기라파톱사슴벌레",
+      "englishName": "giraffe stag",
       "price": 12000,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "야자수 나무",
-      "englishName": "giraffe stag"
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/c/c7/Giraffe_Stag_NH_Icon.png",
+      "number": 61
     },
     {
       "id": "b49",
-      "name": "골리앗왕꽃무지",
+      "englishName": "goliath beetle",
       "price": 8000,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "야자수 나무",
-      "englishName": "goliath beetle"
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/3/3e/Goliath_Beetle_NH_Icon.png",
+      "number": 54
     },
     {
       "id": "b50",
-      "name": "여치",
+      "englishName": "grasshopper",
       "price": 160,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
-      "location": "땅 위",
-      "englishName": "grasshopper"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/3/37/Grasshopper_NH_Icon.png",
+      "number": 19
     },
     {
       "id": "b51",
-      "name": "소라게",
+      "englishName": "hermit crab",
       "price": 1000,
       "time": "19:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -886,16 +840,15 @@
         11,
         12
       ],
-      "location": "해안가 위장",
-      "englishName": "hermit crab"
+      "location": "Disguised on shoreline",
+      "image": "https://dodo.ac/np/images/6/6b/Hermit_Crab_NH_Icon.png",
+      "number": 70
     },
     {
       "id": "b52",
-      "name": "꿀벌",
+      "englishName": "honeybee",
       "price": 200,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -903,72 +856,68 @@
         6,
         7
       ],
-      "location": "공중 (꽃 주변)",
-      "englishName": "honeybee"
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/5/51/Honeybee_NH_Icon.png",
+      "number": 24
     },
     {
       "id": "b53",
-      "name": "코카서스장수풍뎅이",
+      "englishName": "horned atlas",
       "price": 8000,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "야자수 나무",
-      "englishName": "horned atlas"
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/2/2a/Horned_Atlas_NH_Icon.png",
+      "number": 63
     },
     {
       "id": "b54",
-      "name": "장수풍뎅이",
+      "englishName": "horned dynastid",
       "price": 1350,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "horned dynastid"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/1/10/Horned_Dynastid_NH_Icon.png",
+      "number": 62
     },
     {
       "id": "b55",
-      "name": "코끼리장수풍뎅이",
+      "englishName": "horned elephant",
       "price": 8000,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "야자수 나무",
-      "englishName": "horned elephant"
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/e/ea/Horned_Elephant_NH_Icon.png",
+      "number": 64,
+      "rarity": "Very rare"
     },
     {
       "id": "b56",
-      "name": "헤라클레스장수풍뎅이",
+      "englishName": "horned hercules",
       "price": 12000,
       "time": "17:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "야자수 나무",
-      "englishName": "horned hercules"
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/2/21/Horned_Hercules_NH_Icon.png",
+      "number": 65
     },
     {
       "id": "b57",
-      "name": "무당벌레",
+      "englishName": "ladybug",
       "price": 200,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -976,16 +925,15 @@
         6,
         10
       ],
-      "location": "꽃 위",
-      "englishName": "ladybug"
+      "location": "On flowers",
+      "image": "https://dodo.ac/np/images/0/08/Ladybug_NH_Icon.png",
+      "number": 43
     },
     {
       "id": "b58",
-      "name": "방아깨비",
+      "englishName": "long locust",
       "price": 200,
       "time": "08:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -996,16 +944,15 @@
         10,
         11
       ],
-      "location": "땅 위",
-      "englishName": "long locust"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/9/9d/Long_Locust_NH_Icon.png",
+      "number": 16
     },
     {
       "id": "b59",
-      "name": "인면노린재",
+      "englishName": "man-faced stink bug",
       "price": 1000,
       "time": "19:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -1016,16 +963,15 @@
         9,
         10
       ],
-      "location": "꽃 위",
-      "englishName": "man-faced stink bug"
+      "location": "On flowers",
+      "image": "https://dodo.ac/np/images/a/ac/Man-Faced_Stink_Bug_NH_Icon.png",
+      "number": 42
     },
     {
       "id": "b60",
-      "name": "사마귀",
+      "englishName": "mantis",
       "price": 430,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -1037,62 +983,58 @@
         10,
         11
       ],
-      "location": "꽃 위",
-      "englishName": "mantis"
+      "location": "On flowers",
+      "image": "https://dodo.ac/np/images/4/4e/Mantis_NH_Icon.png",
+      "number": 22
     },
     {
       "id": "b61",
-      "name": "섬풀무치",
+      "englishName": "migratory locust",
       "price": 600,
       "time": "08:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9,
         10,
         11
       ],
-      "location": "땅 위",
-      "englishName": "migratory locust"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/d/d0/Migratory_Locust_NH_Icon.png",
+      "number": 17
     },
     {
       "id": "b62",
-      "name": "사슴벌레",
+      "englishName": "miyama stag",
       "price": 1000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "miyama stag"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/0/0a/Miyama_Stag_NH_Icon.png",
+      "number": 56
     },
     {
       "id": "b63",
-      "name": "모기",
+      "englishName": "mosquito",
       "price": 130,
       "time": "17:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "공중",
-      "englishName": "mosquito"
+      "location": "Flying",
+      "image": "https://dodo.ac/np/images/8/84/Mosquito_NH_Icon.png",
+      "number": 73
     },
     {
       "id": "b64",
-      "name": "연꽃사마귀",
+      "englishName": "orchid mantis",
       "price": 2400,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -1104,16 +1046,15 @@
         10,
         11
       ],
-      "location": "흰 꽃 위",
-      "englishName": "orchid mantis"
+      "location": "On white flowers",
+      "image": "https://dodo.ac/np/images/a/a7/Orchid_Mantis_NH_Icon.png",
+      "number": 23
     },
     {
       "id": "b65",
-      "name": "소금쟁이",
+      "englishName": "pondskater",
       "price": 130,
       "time": "08:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -1121,104 +1062,98 @@
         8,
         9
       ],
-      "location": "강과 연못 위",
-      "englishName": "pondskater"
+      "location": "On rivers and ponds",
+      "image": "https://dodo.ac/np/images/1/1f/Pondskater_NH_Icon.png",
+      "number": 38
     },
     {
       "id": "b66",
-      "name": "뮤엘러리사슴벌레",
+      "englishName": "rainbow stag",
       "price": 6000,
       "time": "19:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "나무 기둥",
-      "englishName": "rainbow stag"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/f/f7/Rainbow_Stag_NH_Icon.png",
+      "number": 58
     },
     {
       "id": "b67",
-      "name": "고추잠자리",
+      "englishName": "red dragonfly",
       "price": 180,
       "time": "08:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         9,
         10
       ],
-      "location": "공중 (물가 근처)",
-      "englishName": "red dragonfly"
+      "location": "Flying near water",
+      "image": "https://dodo.ac/np/images/0/09/Red_Dragonfly_NH_Icon.png",
+      "number": 32
     },
     {
       "id": "b68",
-      "name": "메뚜기",
+      "englishName": "rice grasshopper",
       "price": 400,
       "time": "08:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9,
         10,
         11
       ],
-      "location": "땅 위",
-      "englishName": "rice grasshopper"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/7/78/Rice_Grasshopper_NH_Icon.png",
+      "number": 18
     },
     {
       "id": "b69",
-      "name": "참매미",
+      "englishName": "robust cicada",
       "price": 300,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "robust cicada"
+      "location": "On trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/a/a2/Robust_Cicada_NH_Icon.png",
+      "number": 27,
+      "rarity": "Very common"
     },
     {
       "id": "b70",
-      "name": "톱사슴벌레",
+      "englishName": "saw stag",
       "price": 2000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "saw stag"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/0/03/Saw_Stag_NH_Icon.png",
+      "number": 55
     },
     {
       "id": "b71",
-      "name": "보석풍뎅이",
+      "englishName": "scarab beetle",
       "price": 10000,
       "time": "23:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "나무 기둥",
-      "englishName": "scarab beetle"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/e/ee/Scarab_Beetle_NH_Icon.png",
+      "number": 52
     },
     {
       "id": "b72",
-      "name": "거미",
+      "englishName": "spider",
       "price": 600,
       "time": "19:00 - 08:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -1233,16 +1168,15 @@
         11,
         12
       ],
-      "location": "나무 흔들기",
-      "englishName": "spider"
+      "location": "Shaking trees",
+      "image": "https://dodo.ac/np/images/e/e0/Spider_NH_Icon.png",
+      "number": 78
     },
     {
       "id": "b73",
-      "name": "노린재",
+      "englishName": "stinkbug",
       "price": 120,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -1253,16 +1187,15 @@
         9,
         10
       ],
-      "location": "꽃 위",
-      "englishName": "stinkbug"
+      "location": "On flowers",
+      "image": "https://dodo.ac/np/images/4/42/Stinkbug_NH_Icon.png",
+      "number": 41
     },
     {
       "id": "b74",
-      "name": "길앞잡이",
+      "englishName": "tiger beetle",
       "price": 1500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         2,
         3,
@@ -1274,45 +1207,43 @@
         9,
         10
       ],
-      "location": "땅 위",
-      "englishName": "tiger beetle"
+      "location": "On the ground",
+      "image": "https://dodo.ac/np/images/5/58/Tiger_Beetle_NH_Icon.png",
+      "number": 44
     },
     {
       "id": "b75",
-      "name": "애매미",
+      "englishName": "walker cicada",
       "price": 400,
       "time": "08:00 - 17:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9
       ],
-      "location": "나무 기둥",
-      "englishName": "walker cicada"
+      "location": "On trees (hardwood and cedar)",
+      "image": "https://dodo.ac/np/images/f/f8/Walker_Cicada_NH_Icon.png",
+      "number": 29,
+      "rarity": "Very common"
     },
     {
       "id": "b76",
-      "name": "잎사귀벌레",
+      "englishName": "walking leaf",
       "price": 600,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
-      "location": "나무 아래 위장",
-      "englishName": "walking leaf"
+      "location": "Disguised under trees",
+      "image": "https://dodo.ac/np/images/b/b9/Walking_Leaf_NH_Icon.png",
+      "number": 67
     },
     {
       "id": "b77",
-      "name": "긴수염대벌레",
+      "englishName": "walking stick",
       "price": 600,
       "time": "04:00 - 08:00, 17:00 - 19:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
@@ -1320,16 +1251,15 @@
         10,
         11
       ],
-      "location": "나무 기둥",
-      "englishName": "walking stick"
+      "location": "On trees (any kind)",
+      "image": "https://dodo.ac/np/images/5/58/Walking_Stick_NH_Icon.png",
+      "number": 66
     },
     {
       "id": "b78",
-      "name": "벌",
+      "englishName": "wasp",
       "price": 2500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -1344,16 +1274,15 @@
         11,
         12
       ],
-      "location": "나무 흔들기",
-      "englishName": "wasp"
+      "location": "Shaking non-fruit hardwood trees or cedar trees",
+      "image": "https://dodo.ac/np/images/a/a5/Wasp_NH_Icon.png",
+      "number": 25
     },
     {
       "id": "b79",
-      "name": "갯강구",
+      "englishName": "wharf roach",
       "price": 200,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -1368,39 +1297,72 @@
         11,
         12
       ],
-      "location": "해안 바위 위",
-      "englishName": "wharf roach"
+      "location": "On beach rocks",
+      "image": "https://dodo.ac/np/images/1/1f/Wharf_Roach_NH_Icon.png",
+      "number": 71
+    },
+    {
+      "id": "b80",
+      "englishName": "blue weevil beetle",
+      "price": 800,
+      "time": "24시간",
+      "months": [
+        7,
+        8
+      ],
+      "location": "On palm trees",
+      "image": "https://dodo.ac/np/images/2/20/Blue_Weevil_Beetle_NH_Icon.png",
+      "number": 49
+    },
+    {
+      "id": "b81",
+      "englishName": "paper kite butterfly",
+      "price": 1000,
+      "time": "08:00 - 19:00",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "location": "Flying near flowers",
+      "image": "https://dodo.ac/np/images/9/9e/Paper_Kite_Butterfly_NH_Icon.png",
+      "number": 6,
+      "rarity": "Uncommon"
     }
   ],
   "fish": [
     {
       "id": "f1",
-      "name": "납줄개",
+      "englishName": "Bitterling",
       "price": 900,
       "time": "24시간",
-      "location": "강",
-      "size": "1단계",
-      "rainOnly": false,
-      "condition": "river",
       "months": [
-        11,
-        12,
         1,
         2,
         3,
-        4,
-        5
-      ]
+        11,
+        12
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "image": "https://dodo.ac/np/images/4/4d/Bitterling_NH_Icon.png",
+      "number": 1,
+      "rarity": "Common"
     },
     {
       "id": "f2",
-      "name": "피라미",
+      "englishName": "Pale chub",
       "price": 200,
       "time": "09:00 - 16:00",
-      "location": "강",
-      "size": "1단계",
-      "rainOnly": false,
-      "condition": "river",
       "months": [
         1,
         2,
@@ -1414,17 +1376,18 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "River",
+      "size": "Tiny",
+      "image": "https://dodo.ac/np/images/e/e2/Pale_Chub_NH_Icon.png",
+      "number": 2,
+      "rarity": "Uncommon"
     },
     {
       "id": "f3",
-      "name": "붕어",
+      "englishName": "Crucian carp",
       "price": 160,
       "time": "24시간",
-      "location": "강",
-      "size": "2단계",
-      "rainOnly": false,
-      "condition": "river",
       "months": [
         1,
         2,
@@ -1438,17 +1401,18 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "River",
+      "size": "Small",
+      "image": "https://dodo.ac/np/images/f/f2/Crucian_Carp_NH_Icon.png",
+      "number": 3,
+      "rarity": "Common"
     },
     {
       "id": "f4",
-      "name": "황어",
+      "englishName": "Dace",
       "price": 240,
       "time": "16:00 - 09:00",
-      "location": "강",
-      "size": "3단계",
-      "rainOnly": false,
-      "condition": "river",
       "months": [
         1,
         2,
@@ -1462,17 +1426,18 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "River",
+      "size": "Medium",
+      "image": "https://dodo.ac/np/images/d/db/Dace_NH_Icon.png",
+      "number": 4,
+      "rarity": "Common"
     },
     {
       "id": "f5",
-      "name": "잉어",
+      "englishName": "Carp",
       "price": 300,
       "time": "24시간",
-      "location": "연못",
-      "size": "4단계",
-      "rainOnly": false,
-      "condition": "pond",
       "months": [
         1,
         2,
@@ -1486,17 +1451,18 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "Pond",
+      "size": "Large",
+      "image": "https://dodo.ac/np/images/5/5d/Carp_NH_Icon.png",
+      "number": 5,
+      "rarity": "Common"
     },
     {
       "id": "f6",
-      "name": "비단잉어",
+      "englishName": "Koi",
       "price": 4000,
       "time": "16:00 - 09:00",
-      "location": "연못",
-      "size": "4단계",
-      "rainOnly": false,
-      "condition": "pond",
       "months": [
         1,
         2,
@@ -1510,49 +1476,51 @@
         10,
         11,
         12
-      ]
+      ],
+      "location": "Pond",
+      "size": "Large",
+      "image": "https://dodo.ac/np/images/2/2d/Koi_NH_Icon.png",
+      "number": 6,
+      "rarity": "Uncommon"
     },
     {
       "id": "f7",
-      "name": "개구리",
+      "englishName": "Frog",
       "price": 120,
       "time": "24시간",
-      "location": "연못",
-      "size": "2단계",
-      "rainOnly": false,
-      "condition": "pond",
       "months": [
         5,
         6,
         7,
-        8,
-        9
-      ]
+        8
+      ],
+      "location": "Pond",
+      "size": "Small",
+      "image": "https://dodo.ac/np/images/2/2f/Frog_NH_Icon.png",
+      "number": 15,
+      "rarity": "Common"
     },
     {
       "id": "f8",
-      "name": "미꾸라지",
+      "englishName": "Loach",
       "price": 400,
       "time": "24시간",
-      "location": "강",
-      "size": "2단계",
-      "rainOnly": false,
-      "condition": "river",
       "months": [
         3,
         4,
         5
-      ]
+      ],
+      "location": "River",
+      "size": "Small",
+      "image": "https://dodo.ac/np/images/a/a5/Loach_NH_Icon.png",
+      "number": 17,
+      "rarity": "Common"
     },
     {
       "id": "f9",
-      "name": "메기",
+      "englishName": "Catfish",
       "price": 800,
       "time": "16:00 - 09:00",
-      "location": "연못",
-      "size": "4단계",
-      "rainOnly": false,
-      "condition": "pond",
       "months": [
         5,
         6,
@@ -1560,17 +1528,18 @@
         8,
         9,
         10
-      ]
+      ],
+      "location": "Pond",
+      "size": "Large",
+      "image": "https://dodo.ac/np/images/0/0d/Catfish_NH_Icon.png",
+      "number": 18,
+      "rarity": "Common"
     },
     {
       "id": "f10",
-      "name": "산천어",
+      "englishName": "Cherry salmon",
       "price": 1000,
       "time": "16:00 - 09:00",
-      "location": "강 (절벽 위)",
-      "size": "3단계",
-      "rainOnly": false,
-      "condition": "waterfall",
       "months": [
         3,
         4,
@@ -1580,17 +1549,17 @@
         10,
         11
       ],
-      "desc": "폭포 위쪽 고지대 하천에서만 잡힙니다."
+      "location": "River (clifftop)",
+      "size": "Medium",
+      "image": "https://dodo.ac/np/images/d/db/Cherry_Salmon_NH_Icon.png",
+      "number": 27,
+      "rarity": "Uncommon"
     },
     {
       "id": "f11",
-      "name": "열목어",
+      "englishName": "Char",
       "price": 3800,
       "time": "16:00 - 09:00",
-      "location": "강 (절벽 위)",
-      "size": "3단계",
-      "rainOnly": false,
-      "condition": "waterfall",
       "months": [
         3,
         4,
@@ -1599,17 +1568,18 @@
         9,
         10,
         11
-      ]
+      ],
+      "location": "River (clifftop)",
+      "size": "Medium",
+      "image": "https://dodo.ac/np/images/8/80/Char_NH_Icon.png",
+      "number": 28,
+      "rarity": "Rare"
     },
     {
       "id": "f12",
-      "name": "금송어",
+      "englishName": "Golden trout",
       "price": 15000,
       "time": "16:00 - 09:00",
-      "location": "강 (절벽 위)",
-      "size": "3단계",
-      "rainOnly": false,
-      "condition": "waterfall",
       "months": [
         3,
         4,
@@ -1618,66 +1588,67 @@
         10,
         11
       ],
-      "desc": "절벽 폭포 위 수역의 최고가 타깃입니다."
+      "location": "River (clifftop)",
+      "size": "Medium",
+      "image": "https://dodo.ac/np/images/f/fc/Golden_Trout_NH_Icon.png",
+      "number": 29,
+      "rarity": "Rare"
     },
     {
       "id": "f13",
-      "name": "연어",
+      "englishName": "Salmon",
       "price": 700,
       "time": "24시간",
-      "location": "강 하구",
-      "size": "4단계",
-      "rainOnly": false,
-      "condition": "riverMouth",
       "months": [
         9
       ],
-      "desc": "오직 9월, 바다와 강이 교차하는 지점에서만 잡힙니다."
+      "location": "River (mouth)",
+      "size": "Large",
+      "image": "https://dodo.ac/np/images/c/ca/Salmon_NH_Icon.png",
+      "number": 31,
+      "rarity": "Common"
     },
     {
       "id": "f14",
-      "name": "왕연어",
+      "englishName": "King salmon",
       "price": 1800,
       "time": "24시간",
-      "location": "강 하구",
-      "size": "5단계",
-      "rainOnly": false,
-      "condition": "riverMouth",
       "months": [
         9
-      ]
+      ],
+      "location": "River (mouth)",
+      "size": "Very large",
+      "image": "https://dodo.ac/np/images/e/e1/King_Salmon_NH_Icon.png",
+      "number": 32,
+      "rarity": "Uncommon"
     },
     {
       "id": "f15",
-      "name": "청새치",
+      "englishName": "Blue marlin",
       "price": 10000,
       "time": "24시간",
-      "location": "부두 (데크)",
-      "size": "6단계",
-      "rainOnly": false,
-      "condition": "pier",
       "months": [
-        11,
-        12,
         1,
         2,
         3,
         4,
         7,
         8,
-        9
+        9,
+        11,
+        12
       ],
-      "desc": "해안가의 목재 부시 데크 근처 바다에 등장합니다."
+      "location": "Pier",
+      "size": "Huge",
+      "image": "https://dodo.ac/np/images/2/2a/Blue_Marlin_NH_Icon.png",
+      "number": 67,
+      "rarity": "Rare"
     },
     {
       "id": "f16",
-      "name": "만새기",
+      "englishName": "Mahi-mahi",
       "price": 6000,
       "time": "24시간",
-      "location": "부두 (데크)",
-      "size": "5단계",
-      "rainOnly": false,
-      "condition": "pier",
       "months": [
         5,
         6,
@@ -1685,17 +1656,18 @@
         8,
         9,
         10
-      ]
+      ],
+      "location": "Pier",
+      "size": "Very large",
+      "image": "https://dodo.ac/np/images/d/d6/Mahi-Mahi_NH_Icon.png",
+      "number": 69,
+      "rarity": "Rare"
     },
     {
       "id": "f17",
-      "name": "무명갈전갱이",
+      "englishName": "Giant trevally",
       "price": 4500,
       "time": "24시간",
-      "location": "부두 (데크)",
-      "size": "5단계",
-      "rainOnly": false,
-      "condition": "pier",
       "months": [
         5,
         6,
@@ -1703,38 +1675,37 @@
         8,
         9,
         10
-      ]
+      ],
+      "location": "Pier",
+      "size": "Very large",
+      "image": "https://dodo.ac/np/images/1/17/Giant_Trevally_NH_Icon.png",
+      "number": 68,
+      "rarity": "Rare"
     },
     {
       "id": "f18",
-      "name": "블루탱",
+      "englishName": "Surgeonfish",
       "price": 1000,
       "time": "24시간",
-      "location": "바다",
-      "size": "2단계",
-      "rainOnly": false,
-      "condition": "sea",
       "months": [
         4,
         5,
         6,
         7,
         8,
-        9,
-        10,
-        11
+        9
       ],
-      "desc": "아름다운 푸른 빛을 내는 대표적인 산호초 열대어입니다."
+      "location": "Sea",
+      "size": "Small",
+      "image": "https://dodo.ac/np/images/c/cb/Surgeonfish_NH_Icon.png",
+      "number": 50,
+      "rarity": "Uncommon"
     },
     {
       "id": "f19",
-      "name": "흰동가리",
+      "englishName": "Clown fish",
       "price": 650,
       "time": "24시간",
-      "location": "바다",
-      "size": "1단계",
-      "rainOnly": false,
-      "condition": "sea",
       "months": [
         4,
         5,
@@ -1742,37 +1713,37 @@
         7,
         8,
         9
-      ]
+      ],
+      "location": "Sea",
+      "size": "Tiny",
+      "image": "https://dodo.ac/np/images/4/4f/Clown_Fish_NH_Icon.png",
+      "number": 49,
+      "rarity": "Common"
     },
     {
       "id": "f20",
-      "name": "나비고기",
+      "englishName": "Butterfly fish",
       "price": 1000,
       "time": "24시간",
-      "location": "바다",
-      "size": "2단계",
-      "rainOnly": false,
-      "condition": "sea",
       "months": [
         4,
         5,
         6,
         7,
         8,
-        9,
-        10,
-        11
-      ]
+        9
+      ],
+      "location": "Sea",
+      "size": "Small",
+      "image": "https://dodo.ac/np/images/4/47/Butterfly_Fish_NH_Icon.png",
+      "number": 51,
+      "rarity": "Uncommon"
     },
     {
       "id": "f21",
-      "name": "쏠배감펭",
+      "englishName": "Zebra turkeyfish",
       "price": 500,
       "time": "24시간",
-      "location": "바다",
-      "size": "3단계",
-      "rainOnly": false,
-      "condition": "sea",
       "months": [
         4,
         5,
@@ -1782,92 +1753,71 @@
         9,
         10,
         11
-      ]
+      ],
+      "location": "Sea",
+      "size": "Medium",
+      "image": "https://dodo.ac/np/images/8/85/Zebra_Turkeyfish_NH_Icon.png",
+      "number": 53,
+      "rarity": "Common"
     },
     {
       "id": "f22",
-      "name": "상어",
+      "englishName": "Great white shark",
       "price": 15000,
       "time": "16:00 - 09:00",
-      "location": "바다 (등지느러미)",
-      "size": "6단계(등지느러미)",
-      "rainOnly": false,
-      "condition": "fin",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "desc": "수면에 등지느러미가 삐죽 솟아있는 특수 그림자 어종입니다."
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "image": "https://dodo.ac/np/images/2/20/Great_White_Shark_NH_Icon.png",
+      "number": 74,
+      "rarity": "Rare"
     },
     {
       "id": "f23",
-      "name": "고래상어",
+      "englishName": "Whale shark",
       "price": 13000,
       "time": "24시간",
-      "location": "바다 (등지느러미)",
-      "size": "6단계(등지느러미)",
-      "rainOnly": false,
-      "condition": "fin",
       "months": [
         6,
         7,
         8,
         9
-      ]
+      ],
+      "location": "Sea",
+      "size": "Very large (finned)",
+      "image": "https://dodo.ac/np/images/4/4f/Whale_Shark_NH_Icon.png",
+      "number": 75,
+      "rarity": "Rare"
     },
     {
       "id": "f24",
-      "name": "산갈치",
+      "englishName": "Oarfish",
       "price": 9000,
       "time": "24시간",
-      "location": "바다",
-      "size": "6단계",
-      "rainOnly": false,
-      "condition": "sea",
-      "months": [
-        12,
-        1,
-        2,
-        3,
-        4,
-        5
-      ]
-    },
-    {
-      "id": "f25",
-      "name": "데메니기",
-      "price": 15000,
-      "time": "21:00 - 04:00",
-      "location": "바다",
-      "size": "1단계",
-      "rainOnly": false,
-      "condition": "sea",
       "months": [
         1,
         2,
         3,
         4,
         5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11,
         12
-      ]
+      ],
+      "location": "Sea",
+      "size": "Huge",
+      "image": "https://dodo.ac/np/images/5/50/Oarfish_NH_Icon.png",
+      "number": 78,
+      "rarity": "Rare"
     },
     {
       "id": "f26",
-      "name": "실라캔스",
+      "englishName": "Coelacanth",
       "price": 15000,
       "time": "24시간",
-      "location": "바다 (비 올 때)",
-      "size": "6단계",
-      "rainOnly": true,
-      "condition": "rain",
       "months": [
         1,
         2,
@@ -1882,15 +1832,17 @@
         11,
         12
       ],
-      "desc": "비나 눈이 내리는 날에만 등장하는 전설의 심해어입니다."
+      "location": "Sea (raining)",
+      "size": "Huge",
+      "image": "https://dodo.ac/np/images/4/45/Coelacanth_NH_Icon.png",
+      "number": 80,
+      "rarity": "Rare"
     },
     {
       "id": "f27",
-      "name": "멸치",
+      "englishName": "Anchovy",
       "price": 200,
       "time": "04:00 - 21:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -1905,17 +1857,17 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Small",
-      "englishName": "Anchovy"
+      "image": "https://dodo.ac/np/images/7/7f/Anchovy_(Fish)_NH_Icon.png",
+      "number": 56,
+      "rarity": "Uncommon"
     },
     {
       "id": "f28",
-      "name": "천사어",
+      "englishName": "Angelfish",
       "price": 3000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -1924,51 +1876,51 @@
         9,
         10
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Angelfish"
+      "image": "https://dodo.ac/np/images/c/cd/Angelfish_NH_Icon.png",
+      "number": 36,
+      "rarity": "Uncommon"
     },
     {
       "id": "f29",
-      "name": "피라루쿠",
+      "englishName": "Arapaima",
       "price": 10000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Huge",
-      "englishName": "Arapaima"
+      "image": "https://dodo.ac/np/images/b/b1/Arapaima_NH_Icon.png",
+      "number": 44,
+      "rarity": "Rare"
     },
     {
       "id": "f30",
-      "name": "아로와나",
+      "englishName": "Arowana",
       "price": 10000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Large",
-      "englishName": "Arowana"
+      "image": "https://dodo.ac/np/images/6/67/Arowana_NH_Icon.png",
+      "number": 41,
+      "rarity": "Uncommon"
     },
     {
       "id": "f31",
-      "name": "돌돔",
+      "englishName": "Barred knifejaw",
       "price": 5000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -1980,17 +1932,17 @@
         10,
         11
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Medium",
-      "englishName": "Barred knifejaw"
+      "image": "https://dodo.ac/np/images/d/d5/Barred_Knifejaw_NH_Icon.png",
+      "number": 58,
+      "rarity": "Uncommon"
     },
     {
       "id": "f32",
-      "name": "데메니기스",
+      "englishName": "Barreleye",
       "price": 15000,
       "time": "21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2005,17 +1957,17 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Small",
-      "englishName": "Barreleye"
+      "image": "https://dodo.ac/np/images/e/e0/Barreleye_NH_Icon.png",
+      "number": 79,
+      "rarity": "Rare"
     },
     {
       "id": "f33",
-      "name": "베타",
+      "englishName": "Betta",
       "price": 2500,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -2024,17 +1976,17 @@
         9,
         10
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Betta"
+      "image": "https://dodo.ac/np/images/0/0b/Betta_NH_Icon.png",
+      "number": 37,
+      "rarity": "Uncommon"
     },
     {
       "id": "f34",
-      "name": "큰입배스",
+      "englishName": "Black bass",
       "price": 400,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2049,34 +2001,34 @@
         11,
         12
       ],
-      "location": "강",
+      "location": "River",
       "size": "Large",
-      "englishName": "Black bass"
+      "image": "https://dodo.ac/np/images/0/00/Black_Bass_NH_Icon.png",
+      "number": 22,
+      "rarity": "Common"
     },
     {
       "id": "f35",
-      "name": "복어",
+      "englishName": "Blowfish",
       "price": 5000,
       "time": "21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Medium",
-      "englishName": "Blowfish"
+      "image": "https://dodo.ac/np/images/9/95/Blowfish_NH_Icon.png",
+      "number": 54,
+      "rarity": "Uncommon"
     },
     {
       "id": "f36",
-      "name": "블루길",
+      "englishName": "Bluegill",
       "price": 180,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2091,17 +2043,17 @@
         11,
         12
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Bluegill"
+      "image": "https://dodo.ac/np/images/0/0c/Bluegill_NH_Icon.png",
+      "number": 20,
+      "rarity": "Common"
     },
     {
       "id": "f37",
-      "name": "가재",
+      "englishName": "Crawfish",
       "price": 200,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -2110,17 +2062,17 @@
         8,
         9
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Small",
-      "englishName": "Crawfish"
+      "image": "https://dodo.ac/np/images/9/96/Crawfish_NH_Icon.png",
+      "number": 11,
+      "rarity": "Common"
     },
     {
       "id": "f38",
-      "name": "가자미",
+      "englishName": "Dab",
       "price": 300,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2130,34 +2082,34 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Medium",
-      "englishName": "Dab"
+      "image": "https://dodo.ac/np/images/1/1f/Dab_NH_Icon.png",
+      "number": 61,
+      "rarity": "Common"
     },
     {
       "id": "f39",
-      "name": "황금연어",
+      "englishName": "Dorado",
       "price": 15000,
       "time": "04:00 - 21:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Very large",
-      "englishName": "Dorado"
+      "image": "https://dodo.ac/np/images/f/fe/Dorado_NH_Icon.png",
+      "number": 42,
+      "rarity": "Rare"
     },
     {
       "id": "f40",
-      "name": "동사리",
+      "englishName": "Freshwater goby",
       "price": 400,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2172,50 +2124,50 @@
         11,
         12
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Freshwater goby"
+      "image": "https://dodo.ac/np/images/e/ec/Freshwater_Goby_NH_Icon.png",
+      "number": 16,
+      "rarity": "Uncommon"
     },
     {
       "id": "f41",
-      "name": "가아",
+      "englishName": "Gar",
       "price": 6000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Very large",
-      "englishName": "Gar"
+      "image": "https://dodo.ac/np/images/a/a2/Gar_NH_Icon.png",
+      "number": 43,
+      "rarity": "Uncommon"
     },
     {
       "id": "f42",
-      "name": "가물치",
+      "englishName": "Giant snakehead",
       "price": 5500,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Large",
-      "englishName": "Giant snakehead"
+      "image": "https://dodo.ac/np/images/5/50/Giant_Snakehead_NH_Icon.png",
+      "number": 19,
+      "rarity": "Rare"
     },
     {
       "id": "f43",
-      "name": "금붕어",
+      "englishName": "Goldfish",
       "price": 1300,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2230,17 +2182,17 @@
         11,
         12
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Tiny",
-      "englishName": "Goldfish"
+      "image": "https://dodo.ac/np/images/7/71/Goldfish_NH_Icon.png",
+      "number": 7,
+      "rarity": "Common"
     },
     {
       "id": "f44",
-      "name": "구피",
+      "englishName": "Guppy",
       "price": 1300,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -2251,34 +2203,34 @@
         10,
         11
       ],
-      "location": "강",
+      "location": "River",
       "size": "Tiny",
-      "englishName": "Guppy"
+      "image": "https://dodo.ac/np/images/3/38/Guppy_NH_Icon.png",
+      "number": 34,
+      "rarity": "Rare"
     },
     {
       "id": "f45",
-      "name": "귀상어",
+      "englishName": "Hammerhead shark",
       "price": 8000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large (finned)",
-      "englishName": "Hammerhead shark"
+      "image": "https://dodo.ac/np/images/e/ec/Hammerhead_Shark_NH_Icon.png",
+      "number": 73,
+      "rarity": "Rare"
     },
     {
       "id": "f46",
-      "name": "전갱이",
+      "englishName": "Horse mackerel",
       "price": 150,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2293,17 +2245,17 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Small",
-      "englishName": "Horse mackerel"
+      "image": "https://dodo.ac/np/images/a/a3/Horse_Mackerel_NH_Icon.png",
+      "number": 57,
+      "rarity": "Common"
     },
     {
       "id": "f47",
-      "name": "송사리",
+      "englishName": "Killifish",
       "price": 300,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -2311,64 +2263,64 @@
         7,
         8
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Tiny",
-      "englishName": "Killifish"
+      "image": "https://dodo.ac/np/images/e/ea/Killifish_NH_Icon.png",
+      "number": 10,
+      "rarity": "Uncommon"
     },
     {
       "id": "f48",
-      "name": "참게",
+      "englishName": "Mitten crab",
       "price": 2000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         9,
         10,
         11
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Mitten crab"
+      "image": "https://dodo.ac/np/images/9/9d/Mitten_Crab_NH_Icon.png",
+      "number": 33,
+      "rarity": "Rare"
     },
     {
       "id": "f49",
-      "name": "곰치",
+      "englishName": "Moray eel",
       "price": 2000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9,
         10
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Long",
-      "englishName": "Moray eel"
+      "image": "https://dodo.ac/np/images/3/3e/Moray_Eel_NH_Icon.png",
+      "number": 64,
+      "rarity": "Uncommon"
     },
     {
       "id": "f50",
-      "name": "나폴레옹피시",
+      "englishName": "Napoleonfish",
       "price": 10000,
       "time": "04:00 - 21:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Huge",
-      "englishName": "Napoleonfish"
+      "image": "https://dodo.ac/np/images/3/30/Napoleonfish_NH_Icon.png",
+      "number": 52,
+      "rarity": "Rare"
     },
     {
       "id": "f51",
-      "name": "네온테트라",
+      "englishName": "Neon tetra",
       "price": 500,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -2379,17 +2331,17 @@
         10,
         11
       ],
-      "location": "강",
+      "location": "River",
       "size": "Tiny",
-      "englishName": "Neon tetra"
+      "image": "https://dodo.ac/np/images/4/42/Neon_Tetra_NH_Icon.png",
+      "number": 38,
+      "rarity": "Uncommon"
     },
     {
       "id": "f52",
-      "name": "닥터피시",
+      "englishName": "Nibble fish",
       "price": 1500,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -2397,33 +2349,33 @@
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Tiny",
-      "englishName": "Nibble fish"
+      "image": "https://dodo.ac/np/images/0/0b/Nibble_Fish_NH_Icon.png",
+      "number": 35,
+      "rarity": "Rare"
     },
     {
       "id": "f53",
-      "name": "개복치",
+      "englishName": "Ocean sunfish",
       "price": 4000,
       "time": "04:00 - 21:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large (finned)",
-      "englishName": "Ocean sunfish"
+      "image": "https://dodo.ac/np/images/e/eb/Ocean_Sunfish_NH_Icon.png",
+      "number": 70,
+      "rarity": "Rare"
     },
     {
       "id": "f54",
-      "name": "넙치",
+      "englishName": "Olive flounder",
       "price": 800,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2438,67 +2390,67 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large",
-      "englishName": "Olive flounder"
+      "image": "https://dodo.ac/np/images/b/b3/Olive_Flounder_NH_Icon.png",
+      "number": 62,
+      "rarity": "Common"
     },
     {
       "id": "f55",
-      "name": "강꼬치고기",
+      "englishName": "Pike",
       "price": 1800,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         9,
         10,
         11,
         12
       ],
-      "location": "강",
+      "location": "River",
       "size": "Very large",
-      "englishName": "Pike"
+      "image": "https://dodo.ac/np/images/9/9f/Pike_NH_Icon.png",
+      "number": 24,
+      "rarity": "Uncommon"
     },
     {
       "id": "f56",
-      "name": "피라니아",
+      "englishName": "Piranha",
       "price": 2500,
       "time": "09:00 - 16:00, 21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Piranha"
+      "image": "https://dodo.ac/np/images/c/c6/Piranha_NH_Icon.png",
+      "number": 40,
+      "rarity": "Rare"
     },
     {
       "id": "f57",
-      "name": "빙어",
+      "englishName": "Pond smelt",
       "price": 400,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
         12
       ],
-      "location": "강",
+      "location": "River",
       "size": "Small",
-      "englishName": "Pond smelt"
+      "image": "https://dodo.ac/np/images/0/0f/Pond_Smelt_NH_Icon.png",
+      "number": 25,
+      "rarity": "Common"
     },
     {
       "id": "f58",
-      "name": "툭눈금붕어",
+      "englishName": "Pop-eyed goldfish",
       "price": 1300,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2513,33 +2465,33 @@
         11,
         12
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Tiny",
-      "englishName": "Pop-eyed goldfish"
+      "image": "https://dodo.ac/np/images/0/0d/Pop-Eyed_Goldfish_NH_Icon.png",
+      "number": 8,
+      "rarity": "Uncommon"
     },
     {
       "id": "f59",
-      "name": "가시복",
+      "englishName": "Puffer fish",
       "price": 250,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Medium",
-      "englishName": "Puffer fish"
+      "image": "https://dodo.ac/np/images/e/ee/Puffer_Fish_NH_Icon.png",
+      "number": 55,
+      "rarity": "Uncommon"
     },
     {
       "id": "f60",
-      "name": "레인보우피시",
+      "englishName": "Rainbowfish",
       "price": 800,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -2548,17 +2500,17 @@
         9,
         10
       ],
-      "location": "강",
+      "location": "River",
       "size": "Tiny",
-      "englishName": "Rainbowfish"
+      "image": "https://dodo.ac/np/images/e/e7/Rainbowfish_NH_Icon.png",
+      "number": 39,
+      "rarity": "Uncommon"
     },
     {
       "id": "f61",
-      "name": "난주",
+      "englishName": "Ranchu goldfish",
       "price": 4500,
       "time": "09:00 - 16:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2573,34 +2525,34 @@
         11,
         12
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Small",
-      "englishName": "Ranchu goldfish"
+      "image": "https://dodo.ac/np/images/3/35/Ranchu_Goldfish_NH_Icon.png",
+      "number": 9,
+      "rarity": "Uncommon"
     },
     {
       "id": "f62",
-      "name": "가오리",
+      "englishName": "Ray",
       "price": 3000,
       "time": "04:00 - 21:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9,
         10,
         11
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large",
-      "englishName": "Ray"
+      "image": "https://dodo.ac/np/images/9/9b/Ray_NH_Icon.png",
+      "number": 71,
+      "rarity": "Uncommon"
     },
     {
       "id": "f63",
-      "name": "도미",
+      "englishName": "Red snapper",
       "price": 3000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2615,17 +2567,17 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Large",
-      "englishName": "Red snapper"
+      "image": "https://dodo.ac/np/images/c/c1/Red_Snapper_NH_Icon.png",
+      "number": 60,
+      "rarity": "Uncommon"
     },
     {
       "id": "f64",
-      "name": "리본장어",
+      "englishName": "Ribbon eel",
       "price": 600,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
@@ -2633,51 +2585,51 @@
         9,
         10
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Long",
-      "englishName": "Ribbon eel"
+      "image": "https://dodo.ac/np/images/2/26/Ribbon_Eel_NH_Icon.png",
+      "number": 65,
+      "rarity": "Uncommon"
     },
     {
       "id": "f65",
-      "name": "엔드리케리",
+      "englishName": "Saddled bichir",
       "price": 4000,
       "time": "21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Large",
-      "englishName": "Saddled bichir"
+      "image": "https://dodo.ac/np/images/4/46/Saddled_Bichir_NH_Icon.png",
+      "number": 45,
+      "rarity": "Uncommon"
     },
     {
       "id": "f66",
-      "name": "톱상어",
+      "englishName": "Saw shark",
       "price": 12000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large (finned)",
-      "englishName": "Saw shark"
+      "image": "https://dodo.ac/np/images/4/45/Saw_Shark_NH_Icon.png",
+      "number": 72,
+      "rarity": "Rare"
     },
     {
       "id": "f67",
-      "name": "농어",
+      "englishName": "Sea bass",
       "price": 400,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2692,34 +2644,34 @@
         11,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large",
-      "englishName": "Sea bass"
+      "image": "https://dodo.ac/np/images/7/7f/Sea_Bass_NH_Icon.png",
+      "number": 59,
+      "rarity": "Common"
     },
     {
       "id": "f68",
-      "name": "클리오네",
+      "englishName": "Sea butterfly",
       "price": 1000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
         3,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Tiny",
-      "englishName": "Sea butterfly"
+      "image": "https://dodo.ac/np/images/f/f7/Sea_Butterfly_NH_Icon.png",
+      "number": 47,
+      "rarity": "Common"
     },
     {
       "id": "f69",
-      "name": "해마",
+      "englishName": "Sea horse",
       "price": 1100,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -2730,17 +2682,17 @@
         10,
         11
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Tiny",
-      "englishName": "Sea horse"
+      "image": "https://dodo.ac/np/images/d/dc/Sea_Horse_NH_Icon.png",
+      "number": 48,
+      "rarity": "Common"
     },
     {
       "id": "f70",
-      "name": "늑대거북",
+      "englishName": "Snapping turtle",
       "price": 5000,
       "time": "21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         4,
         5,
@@ -2750,32 +2702,32 @@
         9,
         10
       ],
-      "location": "강",
+      "location": "River",
       "size": "Large",
-      "englishName": "Snapping turtle"
+      "image": "https://dodo.ac/np/images/b/b1/Snapping_Turtle_NH_Icon.png",
+      "number": 13,
+      "rarity": "Common"
     },
     {
       "id": "f71",
-      "name": "자라",
+      "englishName": "Soft-shelled turtle",
       "price": 3750,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Large",
-      "englishName": "Soft-shelled turtle"
+      "image": "https://dodo.ac/np/images/e/eb/Soft-Shelled_Turtle_NH_Icon.png",
+      "number": 12,
+      "rarity": "Common"
     },
     {
       "id": "f72",
-      "name": "오징어",
+      "englishName": "Squid",
       "price": 500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2787,34 +2739,34 @@
         8,
         12
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Medium",
-      "englishName": "Squid"
+      "image": "https://dodo.ac/np/images/b/bf/Squid_NH_Icon.png",
+      "number": 63,
+      "rarity": "Common"
     },
     {
       "id": "f73",
-      "name": "일본연어",
+      "englishName": "Stringfish",
       "price": 15000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
         3,
         12
       ],
-      "location": "강 (절벽 위)",
+      "location": "River (clifftop)",
       "size": "Very large",
-      "englishName": "Stringfish"
+      "image": "https://dodo.ac/np/images/e/eb/Stringfish_NH_Icon.png",
+      "number": 30,
+      "rarity": "Rare"
     },
     {
       "id": "f74",
-      "name": "철갑상어",
+      "englishName": "Sturgeon",
       "price": 10000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2824,50 +2776,50 @@
         11,
         12
       ],
-      "location": "강 하구",
+      "location": "River (mouth)",
       "size": "Huge",
-      "englishName": "Sturgeon"
+      "image": "https://dodo.ac/np/images/9/91/Sturgeon_NH_Icon.png",
+      "number": 46,
+      "rarity": "Rare"
     },
     {
       "id": "f75",
-      "name": "빨판상어",
+      "englishName": "Suckerfish",
       "price": 1500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
         8,
         9
       ],
-      "location": "바다",
+      "location": "Sea",
       "size": "Very large (finned)",
-      "englishName": "Suckerfish"
+      "image": "https://dodo.ac/np/images/d/de/Suckerfish_NH_Icon.png",
+      "number": 76,
+      "rarity": "Rare"
     },
     {
       "id": "f76",
-      "name": "은어",
+      "englishName": "Sweetfish",
       "price": 900,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
-      "location": "강",
+      "location": "River",
       "size": "Medium",
-      "englishName": "Sweetfish"
+      "image": "https://dodo.ac/np/images/6/6a/Sweetfish_NH_Icon.png",
+      "number": 26,
+      "rarity": "Common"
     },
     {
       "id": "f77",
-      "name": "올챙이",
+      "englishName": "Tadpole",
       "price": 100,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -2875,17 +2827,17 @@
         6,
         7
       ],
-      "location": "연못",
+      "location": "Pond",
       "size": "Tiny",
-      "englishName": "Tadpole"
+      "image": "https://dodo.ac/np/images/b/bb/Tadpole_NH_Icon.png",
+      "number": 14,
+      "rarity": "Common"
     },
     {
       "id": "f78",
-      "name": "틸라피아",
+      "englishName": "Tilapia",
       "price": 800,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
@@ -2893,17 +2845,17 @@
         9,
         10
       ],
-      "location": "강",
+      "location": "River",
       "size": "Medium",
-      "englishName": "Tilapia"
+      "image": "https://dodo.ac/np/images/e/ef/Tilapia_NH_Icon.png",
+      "number": 23,
+      "rarity": "Common"
     },
     {
       "id": "f79",
-      "name": "다랑어",
+      "englishName": "Tuna",
       "price": 7000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2912,17 +2864,17 @@
         11,
         12
       ],
-      "location": "부두 (데크)",
+      "location": "Pier",
       "size": "Huge",
-      "englishName": "Tuna"
+      "image": "https://dodo.ac/np/images/4/4b/Tuna_NH_Icon.png",
+      "number": 66,
+      "rarity": "Rare"
     },
     {
       "id": "f80",
-      "name": "옐로우퍼치",
+      "englishName": "Yellow perch",
       "price": 300,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -2931,49 +2883,73 @@
         11,
         12
       ],
-      "location": "강",
+      "location": "River",
       "size": "Medium",
-      "englishName": "Yellow perch"
+      "image": "https://dodo.ac/np/images/6/67/Yellow_Perch_NH_Icon.png",
+      "number": 21,
+      "rarity": "Common"
+    },
+    {
+      "id": "f81",
+      "englishName": "Football fish",
+      "price": 2500,
+      "time": "16:00 - 09:00",
+      "months": [
+        1,
+        2,
+        3,
+        11,
+        12
+      ],
+      "location": "Sea",
+      "size": "Large",
+      "image": "https://dodo.ac/np/images/3/34/Football_Fish_NH_Icon.png",
+      "number": 77,
+      "rarity": "Uncommon"
     }
   ],
   "seafood": [
     {
       "id": "s1",
-      "name": "미역",
+      "englishName": "seaweed",
       "price": 600,
       "time": "24시간",
-      "speed": "대 / 고정형",
       "months": [
-        11,
-        12,
         1,
         2,
         3,
         4,
         5,
         6,
-        7
-      ]
+        7,
+        10,
+        11,
+        12
+      ],
+      "speed": "Stationary",
+      "image": "https://dodo.ac/np/images/8/8c/Seaweed_NH_Icon.png",
+      "number": 1
     },
     {
       "id": "s2",
-      "name": "바다포도",
-      "price": 600,
+      "englishName": "sea grapes",
+      "price": 900,
       "time": "24시간",
-      "speed": "소 / 고정형",
       "months": [
         6,
         7,
         8,
         9
-      ]
+      ],
+      "speed": "Stationary",
+      "image": "https://dodo.ac/np/images/e/e7/Sea_Grapes_NH_Icon.png",
+      "number": 2
     },
     {
       "id": "s3",
-      "name": "진주조개",
+      "englishName": "pearl oyster",
       "price": 2800,
       "time": "24시간",
-      "speed": "소 / 보통",
       "months": [
         1,
         2,
@@ -2987,14 +2963,16 @@
         10,
         11,
         12
-      ]
+      ],
+      "speed": "Medium",
+      "image": "https://dodo.ac/np/images/0/0a/Pearl_Oyster_NH_Icon.png",
+      "number": 11
     },
     {
       "id": "s4",
-      "name": "가리비",
-      "price": 1250,
+      "englishName": "scallop",
+      "price": 1200,
       "time": "24시간",
-      "speed": "중 / 보통",
       "months": [
         1,
         2,
@@ -3009,14 +2987,15 @@
         11,
         12
       ],
-      "desc": "캘 때 옹기종기 귀여운 해탈한이 나타나 레시피와 교환해 줍니다."
+      "speed": "Slow",
+      "image": "https://dodo.ac/np/images/5/55/Scallop_NH_Icon.png",
+      "number": 14
     },
     {
       "id": "s5",
-      "name": "멍게",
+      "englishName": "sea pineapple",
       "price": 1500,
       "time": "24시간",
-      "speed": "중 / 보통",
       "months": [
         4,
         5,
@@ -3024,147 +3003,106 @@
         7,
         8
       ],
-      "desc": "한국 식용으로 흔히 접하는 붉은색 멍게(Sea Squirt)입니다."
-    },
-    {
-      "id": "s6",
-      "name": "바다의 파인애플",
-      "price": 1500,
-      "time": "24시간",
-      "speed": "중 / 보통",
-      "months": [
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "desc": "모동숲 내에서 멍게와는 완전히 다른 독립 조우 기증품입니다."
-    },
-    {
-      "id": "s7",
-      "name": "대왕오징어",
-      "price": 10000,
-      "time": "16:00 - 09:00",
-      "speed": "대 / 매우 빠름",
-      "months": [
-        5,
-        6,
-        7,
-        8
-      ]
+      "speed": "Slow",
+      "image": "https://dodo.ac/np/images/6/61/Sea_Pineapple_NH_Icon.png",
+      "number": 37
     },
     {
       "id": "s8",
-      "name": "가시파브르게",
-      "price": 12000,
+      "englishName": "spiny lobster",
+      "price": 5000,
       "time": "21:00 - 04:00",
-      "speed": "대 / 매우 빠름",
       "months": [
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
         10,
-        11
-      ]
+        11,
+        12
+      ],
+      "speed": "Fast",
+      "image": "https://dodo.ac/np/images/8/8c/Spiny_Lobster_NH_Icon.png",
+      "number": 33
     },
     {
       "id": "s9",
-      "name": "키다리게",
+      "englishName": "spider crab",
       "price": 12000,
       "time": "24시간",
-      "speed": "대 / 매우 빠름",
       "months": [
         3,
-        4,
-        5,
-        9,
-        10,
-        11
-      ]
+        4
+      ],
+      "speed": "Very fast",
+      "image": "https://dodo.ac/np/images/f/f3/Spider_Crab_NH_Icon.png",
+      "number": 29
     },
     {
       "id": "s10",
-      "name": "성게",
+      "englishName": "sea urchin",
       "price": 1700,
       "time": "24시간",
-      "speed": "소 / 느림",
       "months": [
         5,
         6,
         7,
         8,
         9
-      ]
+      ],
+      "speed": "Slow",
+      "image": "https://dodo.ac/np/images/9/9c/Sea_Urchin_NH_Icon.png",
+      "number": 6
     },
     {
       "id": "s11",
-      "name": "연필성게",
+      "englishName": "slate pencil urchin",
       "price": 2000,
       "time": "16:00 - 09:00",
-      "speed": "중 / 보통",
       "months": [
         5,
         6,
         7,
         8,
         9
-      ]
+      ],
+      "speed": "Medium",
+      "image": "https://dodo.ac/np/images/0/05/Slate_Pencil_Urchin_NH_Icon.png",
+      "number": 7
     },
     {
       "id": "s12",
-      "name": "자이언트 이소포드",
+      "englishName": "giant isopod",
       "price": 12000,
       "time": "09:00 - 16:00, 21:00 - 04:00",
-      "speed": "대 / 매우 빠름",
       "months": [
         7,
         8,
         9,
         10
-      ]
+      ],
+      "speed": "Very fast",
+      "image": "https://dodo.ac/np/images/0/00/Giant_Isopod_NH_Icon.png",
+      "number": 35
     },
     {
       "id": "s13",
-      "name": "해삼",
+      "englishName": "sea cucumber",
       "price": 500,
       "time": "24시간",
-      "speed": "대 / 느림",
       "months": [
-        11,
-        12,
         1,
         2,
         3,
         4,
-        5
-      ]
-    },
-    {
-      "id": "s14",
-      "name": "바다반딧불이",
-      "price": 600,
-      "time": "19:00 - 04:00",
-      "speed": "소 / 매우 느림",
-      "months": [
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
+        11,
+        12
+      ],
+      "speed": "Very slow",
+      "image": "https://dodo.ac/np/images/9/9b/Sea_Cucumber_NH_Icon.png",
+      "number": 3
     },
     {
       "id": "s15",
-      "name": "대왕거거",
+      "englishName": "gigas giant clam",
       "price": 15000,
       "time": "24시간",
-      "speed": "대 / 초고속 빠름",
       "months": [
         5,
         6,
@@ -3172,15 +3110,15 @@
         8,
         9
       ],
-      "desc": "매우 잽싸게 질주하므로 기포를 막아서 퇴로를 차단해야 잡기 편합니다."
+      "speed": "Very fast",
+      "image": "https://dodo.ac/np/images/c/ca/Gigas_Giant_Clam_NH_Icon.png",
+      "number": 18
     },
     {
       "id": "s16",
-      "name": "전복",
+      "englishName": "abalone",
       "price": 2000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         6,
@@ -3192,15 +3130,14 @@
         12
       ],
       "speed": "Medium",
-      "englishName": "abalone"
+      "image": "https://dodo.ac/np/images/0/04/Abalone_NH_Icon.png",
+      "number": 17
     },
     {
       "id": "s17",
-      "name": "따개비",
+      "englishName": "acorn barnacle",
       "price": 600,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3216,15 +3153,14 @@
         12
       ],
       "speed": "Stationary",
-      "englishName": "acorn barnacle"
+      "image": "https://dodo.ac/np/images/a/a4/Acorn_Barnacle_NH_Icon.png",
+      "number": 28
     },
     {
       "id": "s18",
-      "name": "앵무조개",
+      "englishName": "chambered nautilus",
       "price": 1800,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -3235,15 +3171,14 @@
         11
       ],
       "speed": "Medium",
-      "englishName": "chambered nautilus"
+      "image": "https://dodo.ac/np/images/9/98/Chambered_Nautilus_NH_Icon.png",
+      "number": 19
     },
     {
       "id": "s19",
-      "name": "던지니스크랩",
+      "englishName": "Dungeness crab",
       "price": 1900,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3254,15 +3189,14 @@
         12
       ],
       "speed": "Medium",
-      "englishName": "Dungeness crab"
+      "image": "https://dodo.ac/np/images/6/65/Dungeness_Crab_NH_Icon.png",
+      "number": 25
     },
     {
       "id": "s20",
-      "name": "반딧불오징어",
+      "englishName": "firefly squid",
       "price": 1400,
       "time": "21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -3270,29 +3204,27 @@
         6
       ],
       "speed": "Slow",
-      "englishName": "firefly squid"
+      "image": "https://dodo.ac/np/images/d/d0/Firefly_Squid_NH_Icon.png",
+      "number": 23
     },
     {
       "id": "s21",
-      "name": "납작벌레",
+      "englishName": "flatworm",
       "price": 700,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         8,
         9
       ],
       "speed": "Very slow",
-      "englishName": "flatworm"
+      "image": "https://dodo.ac/np/images/0/07/Flatworm_NH_Icon.png",
+      "number": 39
     },
     {
       "id": "s22",
-      "name": "꽃게",
+      "englishName": "gazami crab",
       "price": 2200,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
@@ -3302,30 +3234,28 @@
         11
       ],
       "speed": "Medium",
-      "englishName": "gazami crab"
+      "image": "https://dodo.ac/np/images/6/60/Gazami_Crab_NH_Icon.png",
+      "number": 24
     },
     {
       "id": "s23",
-      "name": "투구게",
+      "englishName": "horseshoe crab",
       "price": 2500,
       "time": "21:00 - 04:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
       "speed": "Medium",
-      "englishName": "horseshoe crab"
+      "image": "https://dodo.ac/np/images/5/5b/Horseshoe_Crab_NH_Icon.png",
+      "number": 36
     },
     {
       "id": "s24",
-      "name": "바닷가재",
+      "englishName": "lobster",
       "price": 4500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         4,
@@ -3334,15 +3264,14 @@
         12
       ],
       "speed": "Fast",
-      "englishName": "lobster"
+      "image": "https://dodo.ac/np/images/a/a9/Lobster_NH_Icon.png",
+      "number": 34
     },
     {
       "id": "s25",
-      "name": "갯가재",
+      "englishName": "mantis shrimp",
       "price": 2500,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3358,30 +3287,28 @@
         12
       ],
       "speed": "Medium",
-      "englishName": "mantis shrimp"
+      "image": "https://dodo.ac/np/images/7/7d/Mantis_Shrimp_NH_Icon.png",
+      "number": 32
     },
     {
       "id": "s26",
-      "name": "보름달물해파리",
+      "englishName": "moon jellyfish",
       "price": 600,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         7,
         8,
         9
       ],
       "speed": "Very slow",
-      "englishName": "moon jellyfish"
+      "image": "https://dodo.ac/np/images/f/f9/Moon_Jellyfish_NH_Icon.png",
+      "number": 9
     },
     {
       "id": "s27",
-      "name": "지중해담치",
+      "englishName": "mussel",
       "price": 1500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
@@ -3392,15 +3319,14 @@
         12
       ],
       "speed": "Slow",
-      "englishName": "mussel"
+      "image": "https://dodo.ac/np/images/6/6c/Mussel_NH_Icon.png",
+      "number": 12
     },
     {
       "id": "s28",
-      "name": "문어",
+      "englishName": "octopus",
       "price": 1200,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3416,15 +3342,14 @@
         12
       ],
       "speed": "Slow",
-      "englishName": "octopus"
+      "image": "https://dodo.ac/np/images/5/58/Octopus_NH_Icon.png",
+      "number": 20
     },
     {
       "id": "s29",
-      "name": "굴",
+      "englishName": "oyster",
       "price": 1100,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3434,15 +3359,14 @@
         12
       ],
       "speed": "Slow",
-      "englishName": "oyster"
+      "image": "https://dodo.ac/np/images/4/4d/Oyster_NH_Icon.png",
+      "number": 13
     },
     {
       "id": "s30",
-      "name": "왕게",
+      "englishName": "red king crab",
       "price": 8000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3451,15 +3375,14 @@
         12
       ],
       "speed": "Very fast",
-      "englishName": "red king crab"
+      "image": "https://dodo.ac/np/images/9/9d/Red_King_Crab_NH_Icon.png",
+      "number": 27
     },
     {
       "id": "s31",
-      "name": "말미잘",
+      "englishName": "sea anemone",
       "price": 500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3475,15 +3398,14 @@
         12
       ],
       "speed": "Stationary",
-      "englishName": "sea anemone"
+      "image": "https://dodo.ac/np/images/e/e9/Sea_Anemone_NH_Icon.png",
+      "number": 8
     },
     {
       "id": "s32",
-      "name": "바다돼지",
+      "englishName": "sea pig",
       "price": 10000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3491,15 +3413,14 @@
         12
       ],
       "speed": "Very fast",
-      "englishName": "sea pig"
+      "image": "https://dodo.ac/np/images/a/a9/Sea_Pig_NH_Icon.png",
+      "number": 4
     },
     {
       "id": "s33",
-      "name": "갯민숭달팽이",
+      "englishName": "sea slug",
       "price": 600,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3515,15 +3436,14 @@
         12
       ],
       "speed": "Very slow",
-      "englishName": "sea slug"
+      "image": "https://dodo.ac/np/images/5/54/Sea_Slug_NH_Icon.png",
+      "number": 10
     },
     {
       "id": "s34",
-      "name": "불가사리",
+      "englishName": "sea star",
       "price": 500,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3539,15 +3459,14 @@
         12
       ],
       "speed": "Very slow",
-      "englishName": "sea star"
+      "image": "https://dodo.ac/np/images/6/6c/Sea_Star_NH_Icon.png",
+      "number": 5
     },
     {
       "id": "s35",
-      "name": "가든일",
+      "englishName": "spotted garden eel",
       "price": 1100,
       "time": "04:00 - 21:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -3557,15 +3476,14 @@
         10
       ],
       "speed": "Slow",
-      "englishName": "spotted garden eel"
+      "image": "https://dodo.ac/np/images/a/aa/Spotted_Garden_Eel_NH_Icon.png",
+      "number": 38
     },
     {
       "id": "s36",
-      "name": "북쪽분홍새우",
+      "englishName": "sweet shrimp",
       "price": 1400,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3575,15 +3493,14 @@
         12
       ],
       "speed": "Slow",
-      "englishName": "sweet shrimp"
+      "image": "https://dodo.ac/np/images/d/d3/Sweet_Shrimp_NH_Icon.png",
+      "number": 31
     },
     {
       "id": "s37",
-      "name": "보리새우",
+      "englishName": "tiger prawn",
       "price": 3000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         6,
         7,
@@ -3591,15 +3508,14 @@
         9
       ],
       "speed": "Medium",
-      "englishName": "tiger prawn"
+      "image": "https://dodo.ac/np/images/6/65/Tiger_Prawn_NH_Icon.png",
+      "number": 30
     },
     {
       "id": "s38",
-      "name": "소라",
+      "englishName": "turban shell",
       "price": 1000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -3610,15 +3526,14 @@
         12
       ],
       "speed": "Slow",
-      "englishName": "turban shell"
+      "image": "https://dodo.ac/np/images/9/93/Turban_Shell_NH_Icon.png",
+      "number": 16
     },
     {
       "id": "s39",
-      "name": "우무문어",
+      "englishName": "umbrella octopus",
       "price": 6000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         3,
         4,
@@ -3628,15 +3543,14 @@
         11
       ],
       "speed": "Fast",
-      "englishName": "umbrella octopus"
+      "image": "https://dodo.ac/np/images/a/ac/Umbrella_Octopus_NH_Icon.png",
+      "number": 21
     },
     {
       "id": "s40",
-      "name": "흡혈오징어",
+      "englishName": "vampire squid",
       "price": 10000,
       "time": "16:00 - 09:00",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         5,
         6,
@@ -3644,15 +3558,14 @@
         8
       ],
       "speed": "Very fast",
-      "englishName": "vampire squid"
+      "image": "https://dodo.ac/np/images/a/ac/Vampire_Squid_NH_Icon.png",
+      "number": 22
     },
     {
       "id": "s41",
-      "name": "해로동혈",
+      "englishName": "Venus' flower basket",
       "price": 5000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3661,15 +3574,14 @@
         12
       ],
       "speed": "Fast",
-      "englishName": "Venus' flower basket"
+      "image": "https://dodo.ac/np/images/6/6a/Venus'_Flower_Basket_NH_Icon.png",
+      "number": 40
     },
     {
       "id": "s42",
-      "name": "수랑",
+      "englishName": "whelk",
       "price": 1000,
       "time": "24시간",
-      "rainOnly": false,
-      "condition": "none",
       "months": [
         1,
         2,
@@ -3685,7 +3597,25 @@
         12
       ],
       "speed": "Slow",
-      "englishName": "whelk"
+      "image": "https://dodo.ac/np/images/5/5e/Whelk_NH_Icon.png",
+      "number": 15
+    },
+    {
+      "id": "s43",
+      "englishName": "snow crab",
+      "price": 6000,
+      "time": "24시간",
+      "months": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "speed": "Fast",
+      "image": "https://dodo.ac/np/images/7/78/Snow_Crab_NH_Icon.png",
+      "number": 26
     }
   ]
 }

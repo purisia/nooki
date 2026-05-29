@@ -1,44 +1,36 @@
-import {
-  Search,
-  Filter,
-  CloudRain,
-  Sparkles,
-  HelpCircle,
-  Flower2,
-  Sprout,
-  Trash2,
-  Anchor,
-  Circle,
-} from 'lucide-react';
+import { useState } from 'react';
+import { Search, Sparkles, HelpCircle, Circle, ChevronDown } from 'lucide-react';
 import type { CritterCategory } from '../lib/critterAvailability';
 import {
   getLocations,
   getFishSizes,
-  getRarities,
-  rarityMeta,
+  formatMinPrice,
+  PRICE_MAX,
+  PRICE_STEP,
 } from '../lib/critterAvailability';
+import { LocationSheet } from './LocationSheet';
 
 interface FilterPanelProps {
   activeTab: CritterCategory;
   selectedMonth: number | null;
   searchQuery: string;
   onSearchChange: (q: string) => void;
-  showRainOnly: boolean;
-  onRainToggle: () => void;
   showNewOnly: boolean;
   onNewToggle: () => void;
   showLeavingOnly: boolean;
   onLeavingToggle: () => void;
   showUndonatedOnly: boolean;
   onUndonatedToggle: () => void;
-  selectedEnvironment: string;
-  onEnvironmentChange: (e: string) => void;
   selectedLocation: string;
   onLocationChange: (l: string) => void;
   selectedSize: string;
   onSizeChange: (s: string) => void;
-  selectedRarity: string;
-  onRarityChange: (r: string) => void;
+  minPrice: number;
+  onMinPriceChange: (p: number) => void;
+  sortBy: 'number-asc' | 'number-desc' | 'price-desc' | 'price-asc';
+  onSortByChange: (
+    s: 'number-asc' | 'number-desc' | 'price-desc' | 'price-asc'
+  ) => void;
 }
 
 export function FilterPanel(props: FilterPanelProps) {
@@ -47,142 +39,28 @@ export function FilterPanel(props: FilterPanelProps) {
     selectedMonth,
     searchQuery,
     onSearchChange,
-    showRainOnly,
-    onRainToggle,
     showNewOnly,
     onNewToggle,
     showLeavingOnly,
     onLeavingToggle,
     showUndonatedOnly,
     onUndonatedToggle,
-    selectedEnvironment,
-    onEnvironmentChange,
     selectedLocation,
     onLocationChange,
     selectedSize,
     onSizeChange,
-    selectedRarity,
-    onRarityChange,
+    minPrice,
+    onMinPriceChange,
+    sortBy,
+    onSortByChange,
   } = props;
 
-  const rarities = getRarities(activeTab);
+  const locations = activeTab !== 'seafood' ? getLocations(activeTab) : [];
+  const [locationSheetOpen, setLocationSheetOpen] = useState(false);
 
   return (
     <div className="bg-white rounded-2xl shadow-sm p-4 md:p-6 mb-6 border border-slate-200 space-y-4">
-      <div>
-        <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
-          <Filter size={14} />
-          <span>수렵 환경 및 특수 아이템 기믹 필터링</span>
-        </h3>
-
-        <div className="flex flex-wrap gap-1.5">
-          <EnvBtn
-            active={selectedEnvironment === 'all'}
-            onClick={() => onEnvironmentChange('all')}
-            activeClass="bg-slate-800 text-white"
-            idleClass="bg-slate-100 text-slate-600 hover:bg-slate-200"
-            label="전체 수렵조건"
-          />
-
-          {activeTab === 'bugs' && (
-            <>
-              <EnvBtn
-                active={selectedEnvironment === 'hybridFlower'}
-                onClick={() => onEnvironmentChange('hybridFlower')}
-                activeClass="bg-purple-600 text-white shadow-sm"
-                idleClass="bg-purple-50 text-purple-700 hover:bg-purple-100"
-                label={
-                  <>
-                    <Flower2 size={12} /> 🌺 교배꽃 근처
-                  </>
-                }
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'stump'}
-                onClick={() => onEnvironmentChange('stump')}
-                activeClass="bg-amber-700 text-white shadow-sm"
-                idleClass="bg-amber-50 text-amber-800 hover:bg-amber-100"
-                label={
-                  <>
-                    <Sprout size={12} /> 🪵 그루터기 한정
-                  </>
-                }
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'palmTree'}
-                onClick={() => onEnvironmentChange('palmTree')}
-                activeClass="bg-orange-600 text-white shadow-sm"
-                idleClass="bg-orange-50 text-orange-700 hover:bg-orange-100"
-                label="🌴 야자수 나무"
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'hitRock'}
-                onClick={() => onEnvironmentChange('hitRock')}
-                activeClass="bg-slate-600 text-white shadow-sm"
-                idleClass="bg-slate-50 text-slate-700 hover:bg-slate-100"
-                label="🪨 바위치기"
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'rottenTurnip'}
-                onClick={() => onEnvironmentChange('rottenTurnip')}
-                activeClass="bg-rose-600 text-white shadow-sm"
-                idleClass="bg-rose-50 text-rose-700 hover:bg-rose-100"
-                label="🥕 썩은 무"
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'trash'}
-                onClick={() => onEnvironmentChange('trash')}
-                activeClass="bg-slate-700 text-white shadow-sm"
-                idleClass="bg-slate-50 text-slate-700 hover:bg-slate-100"
-                label={
-                  <>
-                    <Trash2 size={12} /> 🗑️ 쓰레기
-                  </>
-                }
-              />
-            </>
-          )}
-
-          {activeTab === 'fish' && (
-            <>
-              <EnvBtn
-                active={selectedEnvironment === 'pier'}
-                onClick={() => onEnvironmentChange('pier')}
-                activeClass="bg-sky-700 text-white shadow-sm"
-                idleClass="bg-sky-50 text-sky-800 hover:bg-sky-100"
-                label={
-                  <>
-                    <Anchor size={12} /> ⚓ 부두(데크)
-                  </>
-                }
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'waterfall'}
-                onClick={() => onEnvironmentChange('waterfall')}
-                activeClass="bg-blue-600 text-white shadow-sm"
-                idleClass="bg-blue-50 text-blue-700 hover:bg-blue-100"
-                label="💧 절벽 위 폭포"
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'riverMouth'}
-                onClick={() => onEnvironmentChange('riverMouth')}
-                activeClass="bg-cyan-600 text-white shadow-sm"
-                idleClass="bg-cyan-50 text-cyan-700 hover:bg-cyan-100"
-                label="🌊 강 하구"
-              />
-              <EnvBtn
-                active={selectedEnvironment === 'fin'}
-                onClick={() => onEnvironmentChange('fin')}
-                activeClass="bg-indigo-600 text-white shadow-sm"
-                idleClass="bg-indigo-50 text-indigo-700 hover:bg-indigo-100"
-                label="🦈 등지느러미"
-              />
-            </>
-          )}
-        </div>
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-3 pt-3 border-t border-slate-100">
+      <div className="flex flex-col md:flex-row gap-3">
         <div className="relative flex-1">
           <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
             <Search size={18} />
@@ -195,25 +73,6 @@ export function FilterPanel(props: FilterPanelProps) {
             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
           />
         </div>
-
-        {activeTab !== 'seafood' && (
-          <div className="flex items-center space-x-2">
-            <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">
-              원래 장소:
-            </span>
-            <select
-              value={selectedLocation}
-              onChange={(e) => onLocationChange(e.target.value)}
-              className="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-            >
-              {getLocations(activeTab).map((loc) => (
-                <option key={loc} value={loc}>
-                  {loc}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
 
         {activeTab === 'fish' && (
           <div className="flex items-center space-x-2">
@@ -234,41 +93,87 @@ export function FilterPanel(props: FilterPanelProps) {
             </select>
           </div>
         )}
+      </div>
 
-        {rarities.length > 0 && (
-          <div className="flex items-center space-x-2">
-            <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">
-              ✨ 희귀도:
+      {locations.length > 1 && (
+        <div className="pt-3 border-t border-slate-100">
+          <button
+            onClick={() => setLocationSheetOpen(true)}
+            className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-all text-sm"
+          >
+            <span className="flex items-center gap-1.5 font-semibold text-slate-500 text-xs uppercase tracking-wider">
+              📍 출현 장소
             </span>
+            <span className="flex items-center gap-1.5">
+              <span
+                className={`font-bold ${
+                  selectedLocation === '전체' ? 'text-slate-500' : 'text-emerald-700'
+                }`}
+              >
+                {selectedLocation}
+              </span>
+              <ChevronDown size={16} className="text-slate-400" />
+            </span>
+          </button>
+
+          <LocationSheet
+            open={locationSheetOpen}
+            onClose={() => setLocationSheetOpen(false)}
+            category={activeTab}
+            locations={locations}
+            selected={selectedLocation}
+            onSelect={onLocationChange}
+          />
+        </div>
+      )}
+
+      <div className="pt-3 border-t border-slate-100">
+        <div className="flex justify-between items-center mb-2 gap-3">
+          <label className="text-xs font-semibold text-slate-500 flex items-center gap-1.5">
+            💰 <span>최소 판매가</span>
+          </label>
+          <div className="flex items-center gap-2">
             <select
-              value={selectedRarity}
-              onChange={(e) => onRarityChange(e.target.value)}
-              className="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              value={sortBy}
+              onChange={(e) =>
+                onSortByChange(
+                  e.target.value as
+                    | 'number-asc'
+                    | 'number-desc'
+                    | 'price-desc'
+                    | 'price-asc'
+                )
+              }
+              className="bg-slate-50 border border-slate-200 text-slate-700 text-[11px] font-semibold rounded-lg py-1 px-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
-              <option value="all">전체 희귀도</option>
-              {rarities.map((r) => (
-                <option key={r} value={r}>
-                  {rarityMeta(r)?.label ?? r}
-                </option>
-              ))}
+              <option value="number-asc">정렬: 도감 # ↑</option>
+              <option value="number-desc">정렬: 도감 # ↓</option>
+              <option value="price-desc">정렬: 가격 ↓</option>
+              <option value="price-asc">정렬: 가격 ↑</option>
             </select>
+            <span className="text-xs bg-slate-50 text-slate-700 font-bold px-2.5 py-1 rounded-full border border-slate-200">
+              {formatMinPrice(minPrice)}
+            </span>
           </div>
-        )}
+        </div>
+        <input
+          type="range"
+          min={0}
+          max={PRICE_MAX}
+          step={PRICE_STEP}
+          value={minPrice}
+          onChange={(e) => onMinPriceChange(parseInt(e.target.value))}
+          className="w-full accent-emerald-600 cursor-pointer"
+        />
+        <div className="flex justify-between text-[10px] text-slate-400 px-1 mt-0.5">
+          <span>전체</span>
+          <span>5,000</span>
+          <span>10,000</span>
+          <span>15,000벨+</span>
+        </div>
       </div>
 
       <div className="flex flex-wrap gap-2 pt-1 border-t border-slate-100">
-        <button
-          onClick={onRainToggle}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
-            showRainOnly
-              ? 'bg-blue-100 text-blue-800 border-2 border-blue-400'
-              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-          }`}
-        >
-          <CloudRain size={14} />
-          🌧️ 날씨(비/눈) 기후 한정
-        </button>
-
         <button
           onClick={onUndonatedToggle}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
@@ -310,30 +215,5 @@ export function FilterPanel(props: FilterPanelProps) {
         )}
       </div>
     </div>
-  );
-}
-
-function EnvBtn({
-  active,
-  onClick,
-  activeClass,
-  idleClass,
-  label,
-}: {
-  active: boolean;
-  onClick: () => void;
-  activeClass: string;
-  idleClass: string;
-  label: React.ReactNode;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className={`px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 transition-all ${
-        active ? activeClass : idleClass
-      }`}
-    >
-      {label}
-    </button>
   );
 }

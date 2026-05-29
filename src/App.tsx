@@ -13,6 +13,7 @@ import {
   checkIfNew,
   checkIfLeaving,
   getProgress,
+  matchesMinPrice,
   normalizeFishSize,
   type Critter,
   type CritterCategory,
@@ -29,14 +30,15 @@ function App() {
   const [view, setView] = useState<'catalog' | 'links'>('catalog');
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [showRainOnly, setShowRainOnly] = useState(false);
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [showLeavingOnly, setShowLeavingOnly] = useState(false);
   const [showUndonatedOnly, setShowUndonatedOnly] = useState(false);
-  const [selectedEnvironment, setSelectedEnvironment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('전체');
   const [selectedSize, setSelectedSize] = useState('all');
-  const [selectedRarity, setSelectedRarity] = useState('all');
+  const [minPrice, setMinPrice] = useState(0);
+  const [sortBy, setSortBy] = useState<
+    'number-asc' | 'number-desc' | 'price-desc' | 'price-asc'
+  >('number-asc');
 
   const { donated, toggle, user, authReady } = useDonations();
 
@@ -52,16 +54,11 @@ function App() {
       list = list.filter((item) => item.name.toLowerCase().includes(q));
     }
 
-    if (showRainOnly) list = list.filter((item) => item.rainOnly);
     if (showNewOnly && selectedMonth)
       list = list.filter((item) => checkIfNew(item, selectedMonth));
     if (showLeavingOnly && selectedMonth)
       list = list.filter((item) => checkIfLeaving(item, selectedMonth));
     if (showUndonatedOnly) list = list.filter((item) => !donated[item.id]);
-
-    if (selectedEnvironment !== 'all') {
-      list = list.filter((item) => item.condition === selectedEnvironment);
-    }
 
     if (activeTab !== 'seafood' && selectedLocation !== '전체') {
       list = list.filter((item) => item.location === selectedLocation);
@@ -73,23 +70,37 @@ function App() {
       );
     }
 
-    if (selectedRarity !== 'all') {
-      list = list.filter((item) => item.rarity === selectedRarity);
+    if (minPrice > 0) {
+      list = list.filter((item) => matchesMinPrice(item.price, minPrice));
     }
+
+    list = [...list].sort((a, b) => {
+      switch (sortBy) {
+        case 'price-desc':
+          return b.price - a.price;
+        case 'price-asc':
+          return a.price - b.price;
+        case 'number-desc':
+          return (b.number ?? -1) - (a.number ?? -1);
+        case 'number-asc':
+        default:
+          // number 없는 entry(보존된 비-Cargo 종)는 맨 뒤로.
+          return (a.number ?? Infinity) - (b.number ?? Infinity);
+      }
+    });
 
     return list;
   }, [
     activeTab,
     selectedMonth,
     searchQuery,
-    showRainOnly,
     showNewOnly,
     showLeavingOnly,
     showUndonatedOnly,
-    selectedEnvironment,
     selectedLocation,
     selectedSize,
-    selectedRarity,
+    minPrice,
+    sortBy,
     donated,
   ]);
 
@@ -99,34 +110,29 @@ function App() {
   );
 
   const filtersActive =
-    showRainOnly ||
     showNewOnly ||
     showLeavingOnly ||
     showUndonatedOnly ||
     searchQuery !== '' ||
     selectedLocation !== '전체' ||
-    selectedEnvironment !== 'all' ||
     selectedSize !== 'all' ||
-    selectedRarity !== 'all';
+    minPrice > 0;
 
   const resetFilters = () => {
     setSearchQuery('');
-    setShowRainOnly(false);
     setShowNewOnly(false);
     setShowLeavingOnly(false);
     setShowUndonatedOnly(false);
     setSelectedLocation('전체');
-    setSelectedEnvironment('all');
     setSelectedSize('all');
-    setSelectedRarity('all');
+    setMinPrice(0);
   };
 
   const switchTab = (tab: CritterCategory) => {
     setActiveTab(tab);
     setSelectedLocation('전체');
-    setSelectedEnvironment('all');
     setSelectedSize('all');
-    setSelectedRarity('all');
+    setMinPrice(0);
   };
 
   return (
@@ -185,22 +191,20 @@ function App() {
           selectedMonth={selectedMonth}
           searchQuery={searchQuery}
           onSearchChange={setSearchQuery}
-          showRainOnly={showRainOnly}
-          onRainToggle={() => setShowRainOnly((v) => !v)}
           showNewOnly={showNewOnly}
           onNewToggle={() => setShowNewOnly((v) => !v)}
           showLeavingOnly={showLeavingOnly}
           onLeavingToggle={() => setShowLeavingOnly((v) => !v)}
           showUndonatedOnly={showUndonatedOnly}
           onUndonatedToggle={() => setShowUndonatedOnly((v) => !v)}
-          selectedEnvironment={selectedEnvironment}
-          onEnvironmentChange={setSelectedEnvironment}
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
           selectedSize={selectedSize}
           onSizeChange={setSelectedSize}
-          selectedRarity={selectedRarity}
-          onRarityChange={setSelectedRarity}
+          minPrice={minPrice}
+          onMinPriceChange={setMinPrice}
+          sortBy={sortBy}
+          onSortByChange={setSortBy}
         />
 
         <div className="mb-4 flex justify-between items-center px-1">

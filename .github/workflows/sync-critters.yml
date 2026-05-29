@@ -42,9 +42,9 @@ jobs:
             Nookipedia Cargo extension에서 신규 종 자동 감지.
 
             **검수 포인트:**
-            - `needsKoreanName: true` 항목은 영문명이 그대로 들어가 있음 — `scripts/name-map.json`에 매핑 추가 후 한국어 이름으로 교체.
-            - `condition` 필드는 'none' 기본값으로 들어감 — 특수 출현 조건(교배꽃 / 바위치기 등)이 있으면 수동 설정.
-            - `desc` 필드는 비어 있음 — 한국어 가이드 코멘트 추가 가능.
+            - `src/data/critters.json`은 영문 canonical(자동 덮어쓰기). 수동 편집 X.
+            - 추가된 종의 영문명을 `src/data/overlay.json`에 한국어 이름과 함께 매핑 추가 — 안 하면 UI에 "⚠️ 영문명" 뱃지로 표시됨.
+            - 특수 출현 조건(교배꽃/바위치기 등)·날씨(비/눈)·설명은 overlay 의 `condition`/`rainOnly`/`desc` 로 등록.
 
             <details>
             <summary>스크립트 로그</summary>

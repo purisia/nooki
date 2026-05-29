@@ -13,7 +13,6 @@ import {
   checkIfNew,
   checkIfLeaving,
   normalizeFishSize,
-  rarityMeta,
 } from '../lib/critterAvailability';
 
 interface CritterCardProps {
@@ -39,7 +38,6 @@ export function CritterCard({
     fishSize && fishSize.key !== 'unknown'
       ? `${fishSize.label}${fishSize.hasFin ? ' · 등지느러미' : ''}`
       : critter.size;
-  const rarity = rarityMeta(critter.rarity);
 
   return (
     <div
@@ -67,13 +65,6 @@ export function CritterCard({
             {typeof critter.number === 'number' && (
               <span className="text-[10px] font-semibold text-slate-400">
                 #{critter.number}
-              </span>
-            )}
-            {rarity && (
-              <span
-                className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md ${rarity.badgeClass}`}
-              >
-                ✨ {rarity.label}
               </span>
             )}
             {critter.needsKoreanName && (

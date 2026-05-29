@@ -1,0 +1,837 @@
+{
+  "bugs": {
+    "Common butterfly": {
+      "name": "배추흰나비",
+      "location": "공중 (꽃 주변)",
+      "condition": "flower"
+    },
+    "Yellow butterfly": {
+      "name": "노랑나비",
+      "location": "공중"
+    },
+    "Tiger butterfly": {
+      "name": "호랑나비",
+      "location": "공중 (꽃 주변)",
+      "condition": "flower"
+    },
+    "Peacock butterfly": {
+      "name": "제비나비",
+      "location": "공중 (교배꽃 주변)",
+      "condition": "hybridFlower",
+      "desc": "검정, 파랑, 보라색 등 교배꽃 주변에 나타납니다."
+    },
+    "Common bluebottle": {
+      "name": "청띠제비나비",
+      "location": "공중 (꽃 주변)",
+      "condition": "flower"
+    },
+    "Great purple emperor": {
+      "name": "왕오색나비",
+      "location": "공중"
+    },
+    "Emperor butterfly": {
+      "name": "몰포나비",
+      "location": "공중 (교배꽃 주변)",
+      "condition": "hybridFlower",
+      "desc": "푸른빛의 아름다운 나비로 교배꽃 주변에서 발견됩니다."
+    },
+    "Monarch butterfly": {
+      "name": "왕나비",
+      "location": "공중"
+    },
+    "Agrias butterfly": {
+      "name": "아그리아스나비",
+      "location": "공중"
+    },
+    "Rajah Brooke's birdwing": {
+      "name": "붉은목도리비단나비",
+      "location": "공중 (꽃 주변)",
+      "condition": "flower"
+    },
+    "Madagascan sunset moth": {
+      "name": "마다가스카르비단나비",
+      "location": "공중 (꽃 주변)",
+      "condition": "flower"
+    },
+    "Queen Alexandra's birdwing": {
+      "name": "알렉산드라제비나비",
+      "location": "공중 (꽃 주변)",
+      "condition": "flower"
+    },
+    "Moth": {
+      "name": "나방",
+      "location": "전등이나 야간 불빛 주변 공중",
+      "condition": "light"
+    },
+    "Atlas moth": {
+      "name": "아틀라스나방",
+      "location": "나무 기둥",
+      "condition": "tree"
+    },
+    "Snail": {
+      "name": "달팽이",
+      "location": "바위, 저목(부시) 위",
+      "condition": "rain",
+      "rainOnly": true,
+      "desc": "비가 올 때 나무 수풀이나 바위 위에 출현합니다."
+    },
+    "Pill bug": {
+      "name": "공벌레",
+      "location": "바위 치기",
+      "condition": "hitRock",
+      "desc": "삽으로 섬의 바위를 치면 튀어나옵니다."
+    },
+    "Centipede": {
+      "name": "지네",
+      "location": "바위 치기",
+      "condition": "hitRock"
+    },
+    "Jewel beetle": {
+      "name": "비단벌레",
+      "location": "나무 그루터기",
+      "condition": "stump",
+      "desc": "도끼로 벤 그루터기 위에서만 발견됩니다."
+    },
+    "Violin beetle": {
+      "name": "바이올린벌레",
+      "location": "나무 그루터기",
+      "condition": "stump"
+    },
+    "Citrus long-horned beetle": {
+      "name": "알락하늘소",
+      "location": "나무 그루터기",
+      "condition": "stump"
+    },
+    "rosalia batesi beetle": {
+      "name": "루리하늘소",
+      "location": "나무 그루터기",
+      "condition": "stump"
+    },
+    "Cyclommatus stag": {
+      "name": "엘라푸스가위사슴벌레",
+      "location": "야자수 나무",
+      "condition": "palmTree",
+      "desc": "해변에 있는 야자수 줄기에서 발견됩니다."
+    },
+    "Golden stag": {
+      "name": "황금사슴벌레",
+      "location": "야자수 나무",
+      "condition": "palmTree",
+      "desc": "초희귀 곤충으로, 살금살금 아주 느리게 다가가야 잡힙니다."
+    },
+    "Ant": {
+      "name": "개미",
+      "location": "썩은 무 주변",
+      "condition": "rottenTurnip",
+      "desc": "바닥에 썩은 무를 두면 개미 떼가 줄지어 나타납니다."
+    },
+    "Fly": {
+      "name": "파리",
+      "location": "쓰레기 주변",
+      "condition": "trash",
+      "desc": "낚시로 잡은 빈 캔, 장화 등을 방치하면 발생합니다."
+    },
+    "Scorpion": {
+      "name": "전갈",
+      "location": "땅 위"
+    },
+    "Tarantula": {
+      "name": "타란툴라",
+      "location": "땅 위"
+    },
+    "Mole cricket": {
+      "name": "땅강아지",
+      "location": "땅속 (삽질)",
+      "condition": "digGround",
+      "desc": "소리가 나는 위치 근처를 삽으로 파내면 출현합니다."
+    },
+    "bagworm": {
+      "name": "도롱이벌레",
+      "location": "나무 흔들기"
+    },
+    "banded dragonfly": {
+      "name": "장수잠자리",
+      "location": "공중 (물가 근처)"
+    },
+    "bell cricket": {
+      "name": "방울벌레",
+      "location": "땅 위"
+    },
+    "brown cicada": {
+      "name": "유지매미",
+      "location": "나무 기둥"
+    },
+    "cicada shell": {
+      "name": "매미 허물",
+      "location": "나무 기둥"
+    },
+    "cricket": {
+      "name": "귀뚜라미",
+      "location": "땅 위"
+    },
+    "damselfly": {
+      "name": "실잠자리",
+      "location": "공중 (물가 근처)"
+    },
+    "darner dragonfly": {
+      "name": "왕잠자리",
+      "location": "공중 (물가 근처)"
+    },
+    "diving beetle": {
+      "name": "물방개",
+      "location": "강과 연못 위"
+    },
+    "drone beetle": {
+      "name": "풍이",
+      "location": "나무 기둥"
+    },
+    "dung beetle": {
+      "name": "쇠똥구리",
+      "location": "눈덩이 굴리는 곳"
+    },
+    "earth-boring dung beetle": {
+      "name": "보라금풍뎅이",
+      "location": "땅 위"
+    },
+    "evening cicada": {
+      "name": "쓰르라미",
+      "location": "나무 기둥"
+    },
+    "firefly": {
+      "name": "반디",
+      "location": "공중 (물가 근처)"
+    },
+    "flea": {
+      "name": "벼룩",
+      "location": "주민 주변"
+    },
+    "giant cicada": {
+      "name": "곰매미",
+      "location": "나무 기둥"
+    },
+    "giant stag": {
+      "name": "왕사슴벌레",
+      "location": "나무 기둥"
+    },
+    "giant water bug": {
+      "name": "물장군",
+      "location": "강과 연못 위"
+    },
+    "giraffe stag": {
+      "name": "기라파톱사슴벌레",
+      "location": "야자수 나무"
+    },
+    "goliath beetle": {
+      "name": "골리앗왕꽃무지",
+      "location": "야자수 나무"
+    },
+    "grasshopper": {
+      "name": "여치",
+      "location": "땅 위"
+    },
+    "hermit crab": {
+      "name": "소라게",
+      "location": "해안가 위장"
+    },
+    "honeybee": {
+      "name": "꿀벌",
+      "location": "공중 (꽃 주변)"
+    },
+    "horned atlas": {
+      "name": "코카서스장수풍뎅이",
+      "location": "야자수 나무"
+    },
+    "horned dynastid": {
+      "name": "장수풍뎅이",
+      "location": "나무 기둥"
+    },
+    "horned elephant": {
+      "name": "코끼리장수풍뎅이",
+      "location": "야자수 나무"
+    },
+    "horned hercules": {
+      "name": "헤라클레스장수풍뎅이",
+      "location": "야자수 나무"
+    },
+    "ladybug": {
+      "name": "무당벌레",
+      "location": "꽃 위"
+    },
+    "long locust": {
+      "name": "방아깨비",
+      "location": "땅 위"
+    },
+    "man-faced stink bug": {
+      "name": "인면노린재",
+      "location": "꽃 위"
+    },
+    "mantis": {
+      "name": "사마귀",
+      "location": "꽃 위"
+    },
+    "migratory locust": {
+      "name": "섬풀무치",
+      "location": "땅 위"
+    },
+    "miyama stag": {
+      "name": "사슴벌레",
+      "location": "나무 기둥"
+    },
+    "mosquito": {
+      "name": "모기",
+      "location": "공중"
+    },
+    "orchid mantis": {
+      "name": "연꽃사마귀",
+      "location": "흰 꽃 위"
+    },
+    "pondskater": {
+      "name": "소금쟁이",
+      "location": "강과 연못 위"
+    },
+    "rainbow stag": {
+      "name": "뮤엘러리사슴벌레",
+      "location": "나무 기둥"
+    },
+    "red dragonfly": {
+      "name": "고추잠자리",
+      "location": "공중 (물가 근처)"
+    },
+    "rice grasshopper": {
+      "name": "메뚜기",
+      "location": "땅 위"
+    },
+    "robust cicada": {
+      "name": "참매미",
+      "location": "나무 기둥"
+    },
+    "saw stag": {
+      "name": "톱사슴벌레",
+      "location": "나무 기둥"
+    },
+    "scarab beetle": {
+      "name": "보석풍뎅이",
+      "location": "나무 기둥"
+    },
+    "spider": {
+      "name": "거미",
+      "location": "나무 흔들기"
+    },
+    "stinkbug": {
+      "name": "노린재",
+      "location": "꽃 위"
+    },
+    "tiger beetle": {
+      "name": "길앞잡이",
+      "location": "땅 위"
+    },
+    "walker cicada": {
+      "name": "애매미",
+      "location": "나무 기둥"
+    },
+    "walking leaf": {
+      "name": "잎사귀벌레",
+      "location": "나무 아래 위장"
+    },
+    "walking stick": {
+      "name": "긴수염대벌레",
+      "location": "나무 기둥"
+    },
+    "wasp": {
+      "name": "벌",
+      "location": "나무 흔들기"
+    },
+    "wharf roach": {
+      "name": "갯강구",
+      "location": "해안 바위 위"
+    },
+    "Paper kite butterfly": {
+      "name": "왕얼룩나비",
+      "location": "공중"
+    },
+    "Blue weevil beetle": {
+      "name": "유포루스바구미",
+      "location": "나무 기둥"
+    }
+  },
+  "fish": {
+    "Bitterling": {
+      "name": "납줄개",
+      "location": "강",
+      "condition": "river"
+    },
+    "Pale chub": {
+      "name": "피라미",
+      "location": "강",
+      "condition": "river"
+    },
+    "Crucian carp": {
+      "name": "붕어",
+      "location": "강",
+      "condition": "river"
+    },
+    "Dace": {
+      "name": "황어",
+      "location": "강",
+      "condition": "river"
+    },
+    "Carp": {
+      "name": "잉어",
+      "location": "연못",
+      "condition": "pond"
+    },
+    "Koi": {
+      "name": "비단잉어",
+      "location": "연못",
+      "condition": "pond"
+    },
+    "Frog": {
+      "name": "개구리",
+      "location": "연못",
+      "condition": "pond"
+    },
+    "Loach": {
+      "name": "미꾸라지",
+      "location": "강",
+      "condition": "river"
+    },
+    "Catfish": {
+      "name": "메기",
+      "location": "연못",
+      "condition": "pond"
+    },
+    "Cherry salmon": {
+      "name": "산천어",
+      "location": "강 (절벽 위)",
+      "condition": "waterfall",
+      "desc": "폭포 위쪽 고지대 하천에서만 잡힙니다."
+    },
+    "Char": {
+      "name": "열목어",
+      "location": "강 (절벽 위)",
+      "condition": "waterfall"
+    },
+    "Golden trout": {
+      "name": "금송어",
+      "location": "강 (절벽 위)",
+      "condition": "waterfall",
+      "desc": "절벽 폭포 위 수역의 최고가 타깃입니다."
+    },
+    "Salmon": {
+      "name": "연어",
+      "location": "강 하구",
+      "condition": "riverMouth",
+      "desc": "오직 9월, 바다와 강이 교차하는 지점에서만 잡힙니다."
+    },
+    "King salmon": {
+      "name": "왕연어",
+      "location": "강 하구",
+      "condition": "riverMouth"
+    },
+    "Blue marlin": {
+      "name": "청새치",
+      "location": "부두 (데크)",
+      "condition": "pier",
+      "desc": "해안가의 목재 부시 데크 근처 바다에 등장합니다."
+    },
+    "Mahi-mahi": {
+      "name": "만새기",
+      "location": "부두 (데크)",
+      "condition": "pier"
+    },
+    "Giant trevally": {
+      "name": "무명갈전갱이",
+      "location": "부두 (데크)",
+      "condition": "pier"
+    },
+    "Surgeonfish": {
+      "name": "블루탱",
+      "location": "바다",
+      "condition": "sea",
+      "desc": "아름다운 푸른 빛을 내는 대표적인 산호초 열대어입니다."
+    },
+    "Clown fish": {
+      "name": "흰동가리",
+      "location": "바다",
+      "condition": "sea"
+    },
+    "Butterfly fish": {
+      "name": "나비고기",
+      "location": "바다",
+      "condition": "sea"
+    },
+    "Zebra turkeyfish": {
+      "name": "쏠배감펭",
+      "location": "바다",
+      "condition": "sea"
+    },
+    "great white shark": {
+      "name": "상어",
+      "location": "바다 (등지느러미)",
+      "condition": "fin",
+      "desc": "수면에 등지느러미가 삐죽 솟아있는 특수 그림자 어종입니다."
+    },
+    "Whale shark": {
+      "name": "고래상어",
+      "location": "바다 (등지느러미)",
+      "condition": "fin"
+    },
+    "Oarfish": {
+      "name": "산갈치",
+      "location": "바다",
+      "condition": "sea"
+    },
+    "Coelacanth": {
+      "name": "실러캔스",
+      "location": "바다 (비 올 때)",
+      "condition": "rain",
+      "rainOnly": true,
+      "desc": "비나 눈이 내리는 날에만 등장하는 전설의 심해어입니다."
+    },
+    "Anchovy": {
+      "name": "멸치",
+      "location": "바다"
+    },
+    "Angelfish": {
+      "name": "천사어",
+      "location": "강"
+    },
+    "Arapaima": {
+      "name": "피라루쿠",
+      "location": "강"
+    },
+    "Arowana": {
+      "name": "아로와나",
+      "location": "강"
+    },
+    "Barred knifejaw": {
+      "name": "돌돔",
+      "location": "바다"
+    },
+    "Barreleye": {
+      "name": "데메니기스",
+      "location": "바다"
+    },
+    "Betta": {
+      "name": "베타",
+      "location": "강"
+    },
+    "Black bass": {
+      "name": "큰입배스",
+      "location": "강"
+    },
+    "Blowfish": {
+      "name": "복어",
+      "location": "바다"
+    },
+    "Bluegill": {
+      "name": "블루길",
+      "location": "강"
+    },
+    "Crawfish": {
+      "name": "가재",
+      "location": "연못"
+    },
+    "Dab": {
+      "name": "가자미",
+      "location": "바다"
+    },
+    "Dorado": {
+      "name": "황금연어",
+      "location": "강"
+    },
+    "Freshwater goby": {
+      "name": "동사리",
+      "location": "강"
+    },
+    "Gar": {
+      "name": "가아",
+      "location": "연못"
+    },
+    "Giant snakehead": {
+      "name": "가물치",
+      "location": "연못"
+    },
+    "Goldfish": {
+      "name": "금붕어",
+      "location": "연못"
+    },
+    "Guppy": {
+      "name": "구피",
+      "location": "강"
+    },
+    "Hammerhead shark": {
+      "name": "귀상어",
+      "location": "바다"
+    },
+    "Horse mackerel": {
+      "name": "전갱이",
+      "location": "바다"
+    },
+    "Killifish": {
+      "name": "송사리",
+      "location": "연못"
+    },
+    "Mitten crab": {
+      "name": "참게",
+      "location": "강"
+    },
+    "Moray eel": {
+      "name": "곰치",
+      "location": "바다"
+    },
+    "Napoleonfish": {
+      "name": "나폴레옹피시",
+      "location": "바다"
+    },
+    "Neon tetra": {
+      "name": "네온테트라",
+      "location": "강"
+    },
+    "Nibble fish": {
+      "name": "닥터피시",
+      "location": "강"
+    },
+    "Ocean sunfish": {
+      "name": "개복치",
+      "location": "바다"
+    },
+    "Olive flounder": {
+      "name": "넙치",
+      "location": "바다"
+    },
+    "Pike": {
+      "name": "강꼬치고기",
+      "location": "강"
+    },
+    "Piranha": {
+      "name": "피라니아",
+      "location": "강"
+    },
+    "Pond smelt": {
+      "name": "빙어",
+      "location": "강"
+    },
+    "Pop-eyed goldfish": {
+      "name": "툭눈금붕어",
+      "location": "연못"
+    },
+    "Puffer fish": {
+      "name": "가시복",
+      "location": "바다"
+    },
+    "Rainbowfish": {
+      "name": "레인보우피시",
+      "location": "강"
+    },
+    "Ranchu goldfish": {
+      "name": "난주",
+      "location": "연못"
+    },
+    "Ray": {
+      "name": "가오리",
+      "location": "바다"
+    },
+    "Red snapper": {
+      "name": "도미",
+      "location": "바다"
+    },
+    "Ribbon eel": {
+      "name": "리본장어",
+      "location": "바다"
+    },
+    "Saddled bichir": {
+      "name": "엔드리케리",
+      "location": "강"
+    },
+    "Saw shark": {
+      "name": "톱상어",
+      "location": "바다"
+    },
+    "Sea bass": {
+      "name": "농어",
+      "location": "바다"
+    },
+    "Sea butterfly": {
+      "name": "클리오네",
+      "location": "바다"
+    },
+    "Sea horse": {
+      "name": "해마",
+      "location": "바다"
+    },
+    "Snapping turtle": {
+      "name": "늑대거북",
+      "location": "강"
+    },
+    "Soft-shelled turtle": {
+      "name": "자라",
+      "location": "강"
+    },
+    "Squid": {
+      "name": "오징어",
+      "location": "바다"
+    },
+    "Stringfish": {
+      "name": "일본연어",
+      "location": "강 (절벽 위)"
+    },
+    "Sturgeon": {
+      "name": "철갑상어",
+      "location": "강 하구"
+    },
+    "Suckerfish": {
+      "name": "빨판상어",
+      "location": "바다"
+    },
+    "Sweetfish": {
+      "name": "은어",
+      "location": "강"
+    },
+    "Tadpole": {
+      "name": "올챙이",
+      "location": "연못"
+    },
+    "Tilapia": {
+      "name": "틸라피아",
+      "location": "강"
+    },
+    "Tuna": {
+      "name": "다랑어",
+      "location": "부두 (데크)"
+    },
+    "Yellow perch": {
+      "name": "옐로우퍼치",
+      "location": "강"
+    },
+    "Football fish": {
+      "name": "초롱아귀",
+      "location": "바다"
+    }
+  },
+  "seafood": {
+    "Seaweed": {
+      "name": "미역"
+    },
+    "Sea grapes": {
+      "name": "바다포도"
+    },
+    "Pearl oyster": {
+      "name": "진주조개"
+    },
+    "Scallop": {
+      "name": "가리비",
+      "desc": "캘 때 옹기종기 귀여운 해탈한이 나타나 레시피와 교환해 줍니다."
+    },
+    "Spiny lobster": {
+      "name": "닭새우"
+    },
+    "Snow crab": {
+      "name": "대게"
+    },
+    "Sea urchin": {
+      "name": "성게"
+    },
+    "Slate pencil urchin": {
+      "name": "연필성게"
+    },
+    "Giant isopod": {
+      "name": "자이언트 이소포드"
+    },
+    "Sea cucumber": {
+      "name": "해삼"
+    },
+    "Gigas giant clam": {
+      "name": "대왕거거",
+      "desc": "매우 잽싸게 질주하므로 기포를 막아서 퇴로를 차단해야 잡기 편합니다."
+    },
+    "abalone": {
+      "name": "전복"
+    },
+    "acorn barnacle": {
+      "name": "따개비"
+    },
+    "chambered nautilus": {
+      "name": "앵무조개"
+    },
+    "Dungeness crab": {
+      "name": "던지니스크랩"
+    },
+    "firefly squid": {
+      "name": "반딧불오징어"
+    },
+    "flatworm": {
+      "name": "납작벌레"
+    },
+    "gazami crab": {
+      "name": "꽃게"
+    },
+    "horseshoe crab": {
+      "name": "투구게"
+    },
+    "lobster": {
+      "name": "바닷가재"
+    },
+    "mantis shrimp": {
+      "name": "갯가재"
+    },
+    "moon jellyfish": {
+      "name": "보름달물해파리"
+    },
+    "mussel": {
+      "name": "지중해담치"
+    },
+    "octopus": {
+      "name": "문어"
+    },
+    "oyster": {
+      "name": "굴"
+    },
+    "red king crab": {
+      "name": "왕게"
+    },
+    "sea anemone": {
+      "name": "말미잘"
+    },
+    "sea pig": {
+      "name": "바다돼지"
+    },
+    "sea slug": {
+      "name": "갯민숭달팽이"
+    },
+    "sea star": {
+      "name": "불가사리"
+    },
+    "spotted garden eel": {
+      "name": "가든일"
+    },
+    "sweet shrimp": {
+      "name": "북쪽분홍새우"
+    },
+    "tiger prawn": {
+      "name": "보리새우"
+    },
+    "turban shell": {
+      "name": "소라"
+    },
+    "umbrella octopus": {
+      "name": "우무문어"
+    },
+    "vampire squid": {
+      "name": "흡혈오징어"
+    },
+    "Venus' flower basket": {
+      "name": "해로동혈"
+    },
+    "whelk": {
+      "name": "수랑"
+    },
+    "Sea pineapple": {
+      "name": "멍게",
+      "desc": "한국 식용으로 흔히 접하는 붉은색 멍게(Sea Pineapple)입니다."
+    },
+    "Spider crab": {
+      "name": "키다리게"
+    }
+  }
+}

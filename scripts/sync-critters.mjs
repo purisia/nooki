@@ -1,31 +1,34 @@
 #!/usr/bin/env node
 /**
- * Nookipedia MediaWiki Cargo extension에서 NH 곤충/물고기/해산물 데이터를
- * 받아와 src/data/critters.json 의 누락된 종을 보강한다.
+ * Nookipedia MediaWiki Cargo extension 에서 NH 곤충/물고기/해산물 데이터를 받아와
+ * src/data/critters.json (canonical) 을 업데이트한다.
  *
- * - 한국어 시드(현재 critters.json)는 절대 덮어쓰지 않는다.
- * - 누락된 종만 추가하고, name-map.json 매핑이 없으면 needsKoreanName 플래그를 단다.
- * - 변경이 있으면 critters.json을 다시 쓴다. (GitHub Actions가 PR 생성)
- * - 네트워크 실패는 조용히 skip (exit 0) — sync 실패가 사이트를 깨면 안 된다.
+ * 새 구조:
+ *  - src/data/critters.json — 위키에서 받은 영문 데이터(canonical, 매 sync마다 덮어씀)
+ *  - src/data/overlay.json — 손으로 관리하는 한국어 이름/메타(sync 가 절대 안 건드림)
+ *
+ * 동작 규칙:
+ *  - 영문 이름(englishName) 이 1차 키.
+ *  - 기존 entry 의 id 는 영문 이름 매칭으로 보존(기증 기록 안 깨짐).
+ *  - 위키에 새로 생긴 종은 다음 id 를 할당해 추가.
+ *  - 위키에서 사라진 종은 보존(데이터 일시 누락 대비) — 다음 PR 리뷰에서 결정.
+ *  - 네트워크 실패는 조용히 skip(exit 0) — sync 실패가 사이트를 깨면 안 된다.
  */
 
 import { readFile, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
+import { createHash } from 'node:crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const CRITTERS_PATH = resolve(ROOT, 'src/data/critters.json');
-const NAME_MAP_PATH = resolve(__dirname, 'name-map.json');
-const LOCATION_MAP_PATH = resolve(__dirname, 'location-map.json');
 
 const USER_AGENT =
   'nooki-sync/1.0 (https://github.com/purisia/nooki; +https://purisia.github.io/nooki/)';
 const API = 'https://nookipedia.com/w/api.php';
 const TIMEOUT_MS = 15_000;
 
-// image=이미지 URL, number=도감 번호, rarity=희귀도 — 세 컬럼은 모든 NH critter
-// Cargo 테이블에 공통 존재(Nookipedia 공식 API가 동일 필드명으로 질의).
 const COMMON_EXTRA = ['image=image', 'number=number', 'rarity=rarity'];
 
 const TABLES = {
@@ -67,6 +70,8 @@ const TABLES = {
     ],
   },
 };
+
+const ID_PREFIX = { bugs: 'b', fish: 'f', seafood: 's' };
 
 async function fetchWithTimeout(url, opts = {}) {
   const ctrl = new AbortController();
@@ -141,7 +146,6 @@ function normalizeTime(timeRaw) {
   const t = String(timeRaw).trim();
   if (!t || t.toLowerCase().includes('all day')) return '24시간';
 
-  // "4 AM – 9 PM" 또는 "4 AM - 9 PM" 같은 패턴
   const ampmToHour = (token) => {
     const m = token.match(/(\d+)\s*(AM|PM|am|pm)/);
     if (!m) return null;
@@ -165,12 +169,50 @@ function normalizeTime(timeRaw) {
   return parts.length > 0 ? parts.join(', ') : '24시간';
 }
 
-// 위키 row에서 이미지/도감번호/희귀도만 정규화해 추출.
-function extractEnrich(row) {
-  const out = {};
+// Cargo 의 image 컬럼은 파일명(예: "Common Butterfly NH Icon.png")만 반환한다.
+// Nookipedia 의 MediaWiki 파일 호스팅 규약(파일명 MD5 → 첫 1글자/2글자 디렉터리)으로
+// CDN URL 을 합성한다. imageinfo API 응답과 일치 확인됨.
+function wikiImageUrl(filename) {
+  const norm = filename.replace(/ /g, '_');
+  const h = createHash('md5').update(norm).digest('hex');
+  return `https://dodo.ac/np/images/${h[0]}/${h.slice(0, 2)}/${norm}`;
+}
+
+function nextIdAllocator(existing, category) {
+  const prefix = ID_PREFIX[category];
+  let max = existing.reduce((acc, item) => {
+    const m = item.id?.match(new RegExp(`^${prefix}(\\d+)$`));
+    return m ? Math.max(acc, parseInt(m[1])) : acc;
+  }, 0);
+  return () => `${prefix}${++max}`;
+}
+
+// 위키 row → canonical entry. id 는 호출 측에서 보존/할당.
+function rowToCanonical(row, id) {
+  const englishName = String(row.name ?? '').trim();
+  const months = rowToMonths(row);
+  const out = {
+    id,
+    englishName,
+    price: parseInt(row.price) || 0,
+    time: normalizeTime(row.time),
+    months,
+  };
+  if (row.location) {
+    const loc = String(row.location).trim();
+    if (loc) out.location = loc;
+  }
+  if (row.shadow) {
+    const s = String(row.shadow).trim();
+    if (s) out.size = s;
+  }
+  if (row.speed) {
+    const s = String(row.speed).trim();
+    if (s) out.speed = s;
+  }
   if (row.image) {
     const img = String(row.image).trim();
-    if (img) out.image = img;
+    if (img) out.image = wikiImageUrl(img);
   }
   if (row.number != null && String(row.number).trim() !== '') {
     const n = parseInt(row.number);
@@ -183,152 +225,80 @@ function extractEnrich(row) {
   return out;
 }
 
-// 기존 항목에 빠진 enrich 필드만 채운다(시드 한국어/가격 등은 절대 안 건드림).
-function applyEnrich(entry, enrich) {
-  let changed = false;
-  for (const key of ['image', 'number', 'rarity']) {
-    if (enrich[key] != null && entry[key] == null) {
-      entry[key] = enrich[key];
-      changed = true;
-    }
-  }
-  return changed;
-}
-
-function buildIdFromExisting(seed, category) {
-  const prefix = category === 'bugs' ? 'b' : category === 'fish' ? 'f' : 's';
-  const max = seed.reduce((acc, item) => {
-    const m = item.id?.match(new RegExp(`^${prefix}(\\d+)$`));
-    return m ? Math.max(acc, parseInt(m[1])) : acc;
-  }, 0);
-  let counter = max;
-  return () => `${prefix}${++counter}`;
-}
-
 async function main() {
-  const [crittersRaw, nameMapRaw, locMapRaw] = await Promise.all([
-    readFile(CRITTERS_PATH, 'utf-8'),
-    readFile(NAME_MAP_PATH, 'utf-8'),
-    readFile(LOCATION_MAP_PATH, 'utf-8'),
-  ]);
+  const crittersRaw = await readFile(CRITTERS_PATH, 'utf-8');
   const critters = JSON.parse(crittersRaw);
-  const nameMap = JSON.parse(nameMapRaw);
-  const locMap = JSON.parse(locMapRaw);
 
-  const changes = { bugs: [], fish: [], seafood: [] };
-  const backfilled = { bugs: 0, fish: 0, seafood: 0 };
-
+  const summary = { updated: 0, added: 0, untouched: 0, missing: [] };
   const categories = /** @type {const} */ (['bugs', 'fish', 'seafood']);
+
   for (let i = 0; i < categories.length; i++) {
     const category = categories[i];
     if (i > 0) await new Promise((r) => setTimeout(r, 3000));
     const rows = await cargoQuery(category);
     if (rows === null) {
-      console.error(`[${category}] skip — using existing data`);
+      console.error(`[${category}] skip — keeping existing canonical`);
       continue;
     }
 
-    // 기존 항목 색인: 한국어 이름 / 영문 이름(소문자)으로 빠르게 조회해 백필.
-    const byName = new Map();
+    const existing = critters[category] ?? [];
+    // 영문 이름(소문자) → 기존 entry. id 보존용.
     const byEnglish = new Map();
-    for (const c of critters[category] ?? []) {
-      byName.set(c.name, c);
-      if (c.englishName) byEnglish.set(String(c.englishName).toLowerCase(), c);
+    for (const c of existing) {
+      if (c.englishName) byEnglish.set(c.englishName.toLowerCase(), c);
     }
-    // Build case-insensitive map: lowercase English → Korean
-    const mapForCategory = Object.fromEntries(
-      Object.entries(nameMap[category] ?? {}).map(([k, v]) => [k.toLowerCase(), v])
-    );
-
-    const nextId = buildIdFromExisting(critters[category] ?? [], category);
+    const nextId = nextIdAllocator(existing, category);
+    const seenEnglish = new Set();
+    const next = [];
 
     for (const row of rows) {
       const englishName = String(row.name ?? '').trim();
       if (!englishName) continue;
-      const englishLower = englishName.toLowerCase();
-
-      const koreanName = mapForCategory[englishLower];
-      const finalName = koreanName ?? englishName;
-      const enrich = extractEnrich(row);
-
-      // 이미 있는 종이면 새로 추가하지 않고, 빠진 이미지/번호/희귀도만 보강.
-      const existing =
-        byEnglish.get(englishLower) ??
-        byName.get(finalName) ??
-        (koreanName ? byName.get(koreanName) : undefined);
-      if (existing) {
-        let changed = applyEnrich(existing, enrich);
-        if (!existing.englishName) {
-          existing.englishName = englishName;
-          changed = true;
-        }
-        if (changed) backfilled[category]++;
-        continue;
-      }
+      const key = englishName.toLowerCase();
+      if (seenEnglish.has(key)) continue; // 위키 응답 자체에 중복 있을 경우 가드
+      seenEnglish.add(key);
 
       const months = rowToMonths(row);
       if (months.length === 0) continue;
 
-      const price = parseInt(row.price) || 0;
-      const time = normalizeTime(row.time);
+      const existingEntry = byEnglish.get(key);
+      const id = existingEntry?.id ?? nextId();
+      const canonical = rowToCanonical(row, id);
+      next.push(canonical);
 
-      const item = {
-        id: nextId(),
-        name: finalName,
-        price,
-        time,
-        rainOnly: false,
-        condition: 'none',
-        months,
-      };
-
-      if (row.location) {
-        const locRaw = String(row.location).trim();
-        const locKo = (locMap[category] ?? {})[locRaw];
-        item.location = locKo ?? locRaw;
-      }
-      if (row.shadow) item.size = String(row.shadow).trim();
-      if (row.speed) item.speed = String(row.speed).trim();
-      if (enrich.image) item.image = enrich.image;
-      if (enrich.number != null) item.number = enrich.number;
-      if (enrich.rarity) item.rarity = enrich.rarity;
-      if (!koreanName) item.needsKoreanName = true;
-      // Always record English name for future re-matching even if Korean exists
-      item.englishName = englishName;
-
-      critters[category].push(item);
-      changes[category].push({ english: englishName, addedAs: finalName, needsKoreanName: !koreanName });
+      if (existingEntry) summary.updated++;
+      else summary.added++;
     }
-  }
 
-  const addedCount = changes.bugs.length + changes.fish.length + changes.seafood.length;
-  const backfillCount = backfilled.bugs + backfilled.fish + backfilled.seafood;
-  if (addedCount === 0 && backfillCount === 0) {
-    console.log('No changes — critters.json is up to date.');
-    return;
+    // 위키에서 사라진 종은 보존(데이터 일시 누락 / 잠시 다른 표기 대비).
+    for (const c of existing) {
+      const key = (c.englishName ?? '').toLowerCase();
+      if (key && !seenEnglish.has(key)) {
+        next.push(c);
+        summary.untouched++;
+        summary.missing.push(`${category}/${c.englishName} (${c.id})`);
+      }
+    }
+
+    // 안정적인 id 순으로 정렬해서 diff 가 작게 유지되도록.
+    const prefix = ID_PREFIX[category];
+    next.sort((a, b) => {
+      const na = parseInt(String(a.id).slice(prefix.length)) || 0;
+      const nb = parseInt(String(b.id).slice(prefix.length)) || 0;
+      return na - nb;
+    });
+    critters[category] = next;
   }
 
   await writeFile(CRITTERS_PATH, JSON.stringify(critters, null, 2) + '\n');
 
-  if (backfillCount > 0) {
-    console.log(
-      `Backfilled image/number/rarity on ${backfillCount} existing species ` +
-        `(bugs ${backfilled.bugs}, fish ${backfilled.fish}, seafood ${backfilled.seafood}).`
-    );
-  }
-  if (addedCount === 0) {
-    console.log('No new species — only enrichment backfill applied.');
-    return;
-  }
-
-  console.log(`Added ${addedCount} new species:`);
-  for (const cat of ['bugs', 'fish', 'seafood']) {
-    if (changes[cat].length === 0) continue;
-    console.log(`  ${cat}:`);
-    for (const c of changes[cat]) {
-      const mark = c.needsKoreanName ? '⚠️  needs Korean name' : '✅';
-      console.log(`    ${mark}  ${c.english} → ${c.addedAs}`);
-    }
+  console.log(`Sync complete:`);
+  console.log(`  updated  : ${summary.updated}`);
+  console.log(`  added    : ${summary.added}`);
+  console.log(`  preserved: ${summary.untouched} (not in current Cargo response)`);
+  if (summary.missing.length > 0) {
+    console.log(`  preserved list:`);
+    for (const m of summary.missing) console.log(`    - ${m}`);
   }
 }
 
