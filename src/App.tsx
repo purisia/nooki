@@ -34,6 +34,7 @@ function App() {
   const [selectedEnvironment, setSelectedEnvironment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('전체');
   const [selectedSize, setSelectedSize] = useState('all');
+  const [selectedRarity, setSelectedRarity] = useState('all');
 
   const { donated, toggle, user, authReady } = useDonations();
 
@@ -70,6 +71,10 @@ function App() {
       );
     }
 
+    if (selectedRarity !== 'all') {
+      list = list.filter((item) => item.rarity === selectedRarity);
+    }
+
     return list;
   }, [
     activeTab,
@@ -82,6 +87,7 @@ function App() {
     selectedEnvironment,
     selectedLocation,
     selectedSize,
+    selectedRarity,
     donated,
   ]);
 
@@ -98,7 +104,8 @@ function App() {
     searchQuery !== '' ||
     selectedLocation !== '전체' ||
     selectedEnvironment !== 'all' ||
-    selectedSize !== 'all';
+    selectedSize !== 'all' ||
+    selectedRarity !== 'all';
 
   const resetFilters = () => {
     setSearchQuery('');
@@ -109,6 +116,7 @@ function App() {
     setSelectedLocation('전체');
     setSelectedEnvironment('all');
     setSelectedSize('all');
+    setSelectedRarity('all');
   };
 
   const switchTab = (tab: CritterCategory) => {
@@ -116,6 +124,7 @@ function App() {
     setSelectedLocation('전체');
     setSelectedEnvironment('all');
     setSelectedSize('all');
+    setSelectedRarity('all');
   };
 
   return (
@@ -161,6 +170,8 @@ function App() {
           onLocationChange={setSelectedLocation}
           selectedSize={selectedSize}
           onSizeChange={setSelectedSize}
+          selectedRarity={selectedRarity}
+          onRarityChange={setSelectedRarity}
         />
 
         <div className="mb-4 flex justify-between items-center px-1">

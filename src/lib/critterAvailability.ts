@@ -14,6 +14,9 @@ export interface Critter {
   desc?: string;
   needsKoreanName?: boolean;
   englishName?: string;
+  image?: string;
+  number?: number;
+  rarity?: string;
 }
 
 export type CritterCategory = 'bugs' | 'fish' | 'seafood';
@@ -152,4 +155,46 @@ export function getFishSizes(): { key: string; label: string }[] {
     key,
     label: FISH_SIZE_LABELS[key],
   }));
+}
+
+/**
+ * 희귀도 정규화. Nookipedia 영문 rarity 값을 한국어 라벨 + 뱃지 색으로 매핑.
+ * (데이터는 sync 후 채워지므로, 매핑에 없으면 원문을 그대로 노출한다.)
+ */
+const RARITY_META: Record<
+  string,
+  { order: number; label: string; badgeClass: string }
+> = {
+  common: { order: 1, label: '흔함', badgeClass: 'bg-slate-100 text-slate-600' },
+  uncommon: {
+    order: 2,
+    label: '약간 드묾',
+    badgeClass: 'bg-emerald-100 text-emerald-700',
+  },
+  rare: { order: 3, label: '희귀', badgeClass: 'bg-sky-100 text-sky-700' },
+  'ultra-rare': {
+    order: 4,
+    label: '매우 희귀',
+    badgeClass: 'bg-purple-100 text-purple-700',
+  },
+};
+
+export function rarityMeta(raw?: string): {
+  label: string;
+  badgeClass: string;
+} | null {
+  if (!raw) return null;
+  const meta = RARITY_META[raw.trim().toLowerCase()];
+  if (meta) return { label: meta.label, badgeClass: meta.badgeClass };
+  return { label: raw.trim(), badgeClass: 'bg-amber-100 text-amber-700' };
+}
+
+/** 해당 탭에 실제로 존재하는 희귀도 값만 (흔함→매우 희귀 순) 반환. */
+export function getRarities(category: CritterCategory): string[] {
+  const present = new Set<string>();
+  for (const item of ALL_CRITTERS[category] ?? []) {
+    if (item.rarity && item.rarity.trim()) present.add(item.rarity.trim());
+  }
+  const order = (r: string) => RARITY_META[r.toLowerCase()]?.order ?? 99;
+  return [...present].sort((a, b) => order(a) - order(b) || a.localeCompare(b));
 }
