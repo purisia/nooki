@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Sparkles, HelpCircle, Circle, ChevronDown } from 'lucide-react';
+import { Search, Sparkles, HelpCircle, Circle, ChevronDown, Clock } from 'lucide-react';
 import type { CritterCategory } from '../lib/critterAvailability';
 import {
   getLocations,
@@ -21,6 +21,8 @@ interface FilterPanelProps {
   onLeavingToggle: () => void;
   showUndonatedOnly: boolean;
   onUndonatedToggle: () => void;
+  showAvailableNow: boolean;
+  onAvailableNowToggle: () => void;
   selectedLocation: string;
   onLocationChange: (l: string) => void;
   selectedSize: string;
@@ -45,6 +47,8 @@ export function FilterPanel(props: FilterPanelProps) {
     onLeavingToggle,
     showUndonatedOnly,
     onUndonatedToggle,
+    showAvailableNow,
+    onAvailableNowToggle,
     selectedLocation,
     onLocationChange,
     selectedSize,
@@ -174,6 +178,18 @@ export function FilterPanel(props: FilterPanelProps) {
       </div>
 
       <div className="flex flex-wrap gap-2 pt-1 border-t border-slate-100">
+        <button
+          onClick={onAvailableNowToggle}
+          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+            showAvailableNow
+              ? 'bg-sky-100 text-sky-800 border-2 border-sky-400'
+              : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+          }`}
+        >
+          <Clock size={14} />
+          ⏰ 지금 출현만 보기
+        </button>
+
         <button
           onClick={onUndonatedToggle}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
