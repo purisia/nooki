@@ -11,7 +11,12 @@ import {
   Circle,
 } from 'lucide-react';
 import type { CritterCategory } from '../lib/critterAvailability';
-import { getLocations, getFishSizes } from '../lib/critterAvailability';
+import {
+  getLocations,
+  getFishSizes,
+  getRarities,
+  rarityMeta,
+} from '../lib/critterAvailability';
 
 interface FilterPanelProps {
   activeTab: CritterCategory;
@@ -32,6 +37,8 @@ interface FilterPanelProps {
   onLocationChange: (l: string) => void;
   selectedSize: string;
   onSizeChange: (s: string) => void;
+  selectedRarity: string;
+  onRarityChange: (r: string) => void;
 }
 
 export function FilterPanel(props: FilterPanelProps) {
@@ -54,7 +61,11 @@ export function FilterPanel(props: FilterPanelProps) {
     onLocationChange,
     selectedSize,
     onSizeChange,
+    selectedRarity,
+    onRarityChange,
   } = props;
+
+  const rarities = getRarities(activeTab);
 
   return (
     <div className="bg-white rounded-2xl shadow-sm p-4 md:p-6 mb-6 border border-slate-200 space-y-4">
@@ -218,6 +229,26 @@ export function FilterPanel(props: FilterPanelProps) {
               {getFishSizes().map((size) => (
                 <option key={size.key} value={size.key}>
                   {size.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
+        {rarities.length > 0 && (
+          <div className="flex items-center space-x-2">
+            <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">
+              ✨ 희귀도:
+            </span>
+            <select
+              value={selectedRarity}
+              onChange={(e) => onRarityChange(e.target.value)}
+              className="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="all">전체 희귀도</option>
+              {rarities.map((r) => (
+                <option key={r} value={r}>
+                  {rarityMeta(r)?.label ?? r}
                 </option>
               ))}
             </select>

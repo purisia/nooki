@@ -13,6 +13,7 @@ import {
   checkIfNew,
   checkIfLeaving,
   normalizeFishSize,
+  rarityMeta,
 } from '../lib/critterAvailability';
 
 interface CritterCardProps {
@@ -38,6 +39,7 @@ export function CritterCard({
     fishSize && fishSize.key !== 'unknown'
       ? `${fishSize.label}${fishSize.hasFin ? ' · 등지느러미' : ''}`
       : critter.size;
+  const rarity = rarityMeta(critter.rarity);
 
   return (
     <div
@@ -50,7 +52,30 @@ export function CritterCard({
       <div className="p-4 flex-1">
         <div className="flex justify-between items-start mb-2">
           <div className="flex flex-wrap items-center gap-1.5">
+            {critter.image && (
+              <img
+                src={critter.image}
+                alt={critter.name}
+                loading="lazy"
+                className="w-11 h-11 object-contain rounded-lg bg-slate-50 border border-slate-100 flex-shrink-0"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+            )}
             <h3 className="text-base font-bold text-slate-800">{critter.name}</h3>
+            {typeof critter.number === 'number' && (
+              <span className="text-[10px] font-semibold text-slate-400">
+                #{critter.number}
+              </span>
+            )}
+            {rarity && (
+              <span
+                className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md ${rarity.badgeClass}`}
+              >
+                ✨ {rarity.label}
+              </span>
+            )}
             {critter.needsKoreanName && (
               <span className="bg-amber-100 text-amber-800 text-[9px] font-bold px-1.5 py-0.5 rounded-md">
                 ⚠️ 영문명
