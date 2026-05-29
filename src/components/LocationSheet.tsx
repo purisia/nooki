@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Search, X, Check } from 'lucide-react';
+import { useEffect, useMemo } from 'react';
+import { X, Check } from 'lucide-react';
 import type { CritterCategory } from '../lib/critterAvailability';
 
 interface LocationSheetProps {
@@ -57,12 +57,6 @@ export function LocationSheet({
   selected,
   onSelect,
 }: LocationSheetProps) {
-  const [query, setQuery] = useState('');
-
-  useEffect(() => {
-    if (open) setQuery('');
-  }, [open]);
-
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
@@ -72,12 +66,10 @@ export function LocationSheet({
     return () => document.removeEventListener('keydown', onKey);
   }, [open, onClose]);
 
-  const groups = useMemo(() => {
-    const filtered = query.trim()
-      ? locations.filter((l) => l.toLowerCase().includes(query.trim().toLowerCase()))
-      : locations;
-    return groupLocations(filtered, category);
-  }, [locations, category, query]);
+  const groups = useMemo(
+    () => groupLocations(locations, category),
+    [locations, category]
+  );
 
   if (!open) return null;
 
@@ -109,23 +101,7 @@ export function LocationSheet({
           </div>
         </div>
 
-        <div className="px-5 pb-3 flex-shrink-0">
-          <div className="relative">
-            <span className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
-              <Search size={16} />
-            </span>
-            <input
-              type="text"
-              autoFocus
-              placeholder="장소 검색..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
-            />
-          </div>
-        </div>
-
-        <div className="px-5 pb-5 overflow-y-auto flex-1 space-y-4">
+        <div className="px-5 pb-5 pt-2 overflow-y-auto flex-1 space-y-4">
           <button
             onClick={() => pickAndClose('전체')}
             className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${
@@ -137,12 +113,6 @@ export function LocationSheet({
             <span>전체 장소</span>
             {selected === '전체' && <Check size={16} />}
           </button>
-
-          {groups.length === 0 && query.trim() && (
-            <p className="text-xs text-slate-400 text-center py-8">
-              "{query}" 와 일치하는 장소가 없습니다.
-            </p>
-          )}
 
           {groups.map((g) => (
             <div key={g.title}>

@@ -250,44 +250,6 @@ export function getFishSizes(): { key: string; label: string }[] {
   }));
 }
 
-const RARITY_META: Record<
-  string,
-  { order: number; label: string; badgeClass: string }
-> = {
-  'very common': {
-    order: 1,
-    label: '매우 흔함',
-    badgeClass: 'bg-slate-100 text-slate-500',
-  },
-  common: { order: 2, label: '흔함', badgeClass: 'bg-slate-100 text-slate-600' },
-  uncommon: {
-    order: 3,
-    label: '약간 드묾',
-    badgeClass: 'bg-emerald-100 text-emerald-700',
-  },
-  rare: { order: 4, label: '희귀', badgeClass: 'bg-sky-100 text-sky-700' },
-  'very rare': {
-    order: 5,
-    label: '매우 희귀',
-    badgeClass: 'bg-purple-100 text-purple-700',
-  },
-  'ultra-rare': {
-    order: 6,
-    label: '초희귀',
-    badgeClass: 'bg-fuchsia-100 text-fuchsia-700',
-  },
-};
-
-export function rarityMeta(raw?: string): {
-  label: string;
-  badgeClass: string;
-} | null {
-  if (!raw) return null;
-  const meta = RARITY_META[raw.trim().toLowerCase()];
-  if (meta) return { label: meta.label, badgeClass: meta.badgeClass };
-  return { label: raw.trim(), badgeClass: 'bg-amber-100 text-amber-700' };
-}
-
 /** 가격 슬라이더 — "최소 N벨 이상" 임계값 필터. 1,000벨 단위. */
 export const PRICE_STEP = 1000;
 export const PRICE_MAX = 15000; // 데이터상 상한(금송어 15,000)
@@ -299,13 +261,4 @@ export function matchesMinPrice(price: number, minPrice: number): boolean {
 export function formatMinPrice(minPrice: number): string {
   if (minPrice <= 0) return '전체 가격';
   return `${minPrice.toLocaleString()}벨 이상`;
-}
-
-export function getRarities(category: CritterCategory): string[] {
-  const present = new Set<string>();
-  for (const item of ALL_CRITTERS[category] ?? []) {
-    if (item.rarity && item.rarity.trim()) present.add(item.rarity.trim());
-  }
-  const order = (r: string) => RARITY_META[r.toLowerCase()]?.order ?? 99;
-  return [...present].sort((a, b) => order(a) - order(b) || a.localeCompare(b));
 }
