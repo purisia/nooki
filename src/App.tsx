@@ -13,6 +13,7 @@ import {
   checkIfNew,
   checkIfLeaving,
   getProgress,
+  isAvailableNow,
   matchesMinPrice,
   normalizeFishSize,
   type Critter,
@@ -33,6 +34,7 @@ function App() {
   const [showNewOnly, setShowNewOnly] = useState(false);
   const [showLeavingOnly, setShowLeavingOnly] = useState(false);
   const [showUndonatedOnly, setShowUndonatedOnly] = useState(false);
+  const [showAvailableNow, setShowAvailableNow] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState('전체');
   const [selectedSize, setSelectedSize] = useState('all');
   const [minPrice, setMinPrice] = useState(0);
@@ -59,6 +61,8 @@ function App() {
     if (showLeavingOnly && selectedMonth)
       list = list.filter((item) => checkIfLeaving(item, selectedMonth));
     if (showUndonatedOnly) list = list.filter((item) => !donated[item.id]);
+    if (showAvailableNow)
+      list = list.filter((item) => isAvailableNow(item.time, currentHour));
 
     if (activeTab !== 'seafood' && selectedLocation !== '전체') {
       list = list.filter((item) => item.location === selectedLocation);
@@ -97,6 +101,8 @@ function App() {
     showNewOnly,
     showLeavingOnly,
     showUndonatedOnly,
+    showAvailableNow,
+    currentHour,
     selectedLocation,
     selectedSize,
     minPrice,
@@ -113,6 +119,7 @@ function App() {
     showNewOnly ||
     showLeavingOnly ||
     showUndonatedOnly ||
+    showAvailableNow ||
     searchQuery !== '' ||
     selectedLocation !== '전체' ||
     selectedSize !== 'all' ||
@@ -123,6 +130,7 @@ function App() {
     setShowNewOnly(false);
     setShowLeavingOnly(false);
     setShowUndonatedOnly(false);
+    setShowAvailableNow(false);
     setSelectedLocation('전체');
     setSelectedSize('all');
     setMinPrice(0);
@@ -197,6 +205,8 @@ function App() {
           onLeavingToggle={() => setShowLeavingOnly((v) => !v)}
           showUndonatedOnly={showUndonatedOnly}
           onUndonatedToggle={() => setShowUndonatedOnly((v) => !v)}
+          showAvailableNow={showAvailableNow}
+          onAvailableNowToggle={() => setShowAvailableNow((v) => !v)}
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
           selectedSize={selectedSize}
