@@ -8,7 +8,12 @@ import {
   Calendar,
 } from 'lucide-react';
 import type { Critter } from '../lib/critterAvailability';
-import { isAvailableNow, checkIfNew, checkIfLeaving } from '../lib/critterAvailability';
+import {
+  isAvailableNow,
+  checkIfNew,
+  checkIfLeaving,
+  normalizeFishSize,
+} from '../lib/critterAvailability';
 
 interface CritterCardProps {
   critter: Critter;
@@ -28,6 +33,11 @@ export function CritterCard({
   const activeNow = isAvailableNow(critter.time, currentHour);
   const isNew = checkIfNew(critter, selectedMonth);
   const isLeaving = checkIfLeaving(critter, selectedMonth);
+  const fishSize = normalizeFishSize(critter.size);
+  const sizeLabel =
+    fishSize && fishSize.key !== 'unknown'
+      ? `${fishSize.label}${fishSize.hasFin ? ' · 등지느러미' : ''}`
+      : critter.size;
 
   return (
     <div
@@ -112,7 +122,7 @@ export function CritterCard({
             <div className="flex items-center gap-1.5">
               <HelpCircle size={14} className="text-slate-400 flex-shrink-0" />
               <span>
-                그림자: <strong className="text-slate-700">{critter.size}</strong>
+                그림자: <strong className="text-slate-700">{sizeLabel}</strong>
               </span>
             </div>
           )}

@@ -12,6 +12,7 @@ import {
   checkIfNew,
   checkIfLeaving,
   getProgress,
+  normalizeFishSize,
   type Critter,
   type CritterCategory,
 } from './lib/critterAvailability';
@@ -32,6 +33,7 @@ function App() {
   const [showUndonatedOnly, setShowUndonatedOnly] = useState(false);
   const [selectedEnvironment, setSelectedEnvironment] = useState('all');
   const [selectedLocation, setSelectedLocation] = useState('전체');
+  const [selectedSize, setSelectedSize] = useState('all');
 
   const { donated, toggle, user, authReady } = useDonations();
 
@@ -62,6 +64,12 @@ function App() {
       list = list.filter((item) => item.location === selectedLocation);
     }
 
+    if (activeTab === 'fish' && selectedSize !== 'all') {
+      list = list.filter(
+        (item) => normalizeFishSize(item.size)?.key === selectedSize
+      );
+    }
+
     return list;
   }, [
     activeTab,
@@ -73,6 +81,7 @@ function App() {
     showUndonatedOnly,
     selectedEnvironment,
     selectedLocation,
+    selectedSize,
     donated,
   ]);
 
@@ -88,7 +97,8 @@ function App() {
     showUndonatedOnly ||
     searchQuery !== '' ||
     selectedLocation !== '전체' ||
-    selectedEnvironment !== 'all';
+    selectedEnvironment !== 'all' ||
+    selectedSize !== 'all';
 
   const resetFilters = () => {
     setSearchQuery('');
@@ -98,12 +108,14 @@ function App() {
     setShowUndonatedOnly(false);
     setSelectedLocation('전체');
     setSelectedEnvironment('all');
+    setSelectedSize('all');
   };
 
   const switchTab = (tab: CritterCategory) => {
     setActiveTab(tab);
     setSelectedLocation('전체');
     setSelectedEnvironment('all');
+    setSelectedSize('all');
   };
 
   return (
@@ -147,6 +159,8 @@ function App() {
           onEnvironmentChange={setSelectedEnvironment}
           selectedLocation={selectedLocation}
           onLocationChange={setSelectedLocation}
+          selectedSize={selectedSize}
+          onSizeChange={setSelectedSize}
         />
 
         <div className="mb-4 flex justify-between items-center px-1">

@@ -79,3 +79,77 @@ export function getLocations(category: CritterCategory): string[] {
   }
   return ['전체', ...locs];
 }
+
+/**
+ * 물고기 그림자 크기 정규화.
+ * 시드 데이터는 한국어 "N단계", Nookipedia 동기화분은 영문 라벨(Tiny~Huge, Long,
+ * "(finned)")을 쓰기 때문에 둘을 하나의 카테고리 키로 통일한다.
+ */
+export interface FishSize {
+  key: string; // 필터/그룹 키: '1'~'6' | 'long' | 'unknown'
+  label: string; // 표시용 한국어 라벨
+  hasFin: boolean; // 등지느러미 여부
+}
+
+const ENGLISH_SIZE_LEVEL: Record<string, string> = {
+  tiny: '1',
+  small: '2',
+  medium: '3',
+  large: '4',
+  'very large': '5',
+  huge: '6',
+};
+
+export const FISH_SIZE_LABELS: Record<string, string> = {
+  '1': '① 가장 작음',
+  '2': '② 작음',
+  '3': '③ 보통',
+  '4': '④ 큼',
+  '5': '⑤ 매우 큼',
+  '6': '⑥ 가장 큼',
+  long: '길쭉함 (장어류)',
+};
+
+const FISH_SIZE_ORDER = ['1', '2', '3', '4', '5', '6', 'long'];
+
+export function normalizeFishSize(raw?: string): FishSize | null {
+  if (!raw) return null;
+  const s = raw.trim();
+  if (!s) return null;
+  const lower = s.toLowerCase();
+  const hasFin = s.includes('등지느러미') || lower.includes('finned');
+
+  // 한국어 "N단계"
+  const stage = s.match(/([1-6])\s*단계/);
+  if (stage) {
+    const key = stage[1];
+    return { key, label: FISH_SIZE_LABELS[key], hasFin };
+  }
+
+  // 길쭉한 그림자 (장어류)
+  if (lower.includes('long')) {
+    return { key: 'long', label: FISH_SIZE_LABELS.long, hasFin };
+  }
+
+  // Nookipedia 영문 라벨 ("Very large (finned)" → "very large")
+  const base = lower.replace(/\s*\(finned\)\s*/, '').trim();
+  const key = ENGLISH_SIZE_LEVEL[base];
+  if (key) {
+    return { key, label: FISH_SIZE_LABELS[key], hasFin };
+  }
+
+  return { key: 'unknown', label: s, hasFin };
+}
+
+/** 물고기 데이터에 실제로 존재하는 크기 카테고리만 정렬해 반환. */
+export function getFishSizes(): { key: string; label: string }[] {
+  const present = new Set<string>();
+  for (const fish of ALL_CRITTERS.fish ?? []) {
+    const size = normalizeFishSize(fish.size);
+    if (size && size.key !== 'unknown') present.add(size.key);
+  }
+  return FISH_SIZE_ORDER.filter((k) => present.has(k)).map((key) => ({
+    key,
+    label: FISH_SIZE_LABELS[key],
+  }));
+}
