@@ -11,7 +11,7 @@ import {
   Circle,
 } from 'lucide-react';
 import type { CritterCategory } from '../lib/critterAvailability';
-import { getLocations } from '../lib/critterAvailability';
+import { getLocations, getFishSizes } from '../lib/critterAvailability';
 
 interface FilterPanelProps {
   activeTab: CritterCategory;
@@ -30,6 +30,8 @@ interface FilterPanelProps {
   onEnvironmentChange: (e: string) => void;
   selectedLocation: string;
   onLocationChange: (l: string) => void;
+  selectedSize: string;
+  onSizeChange: (s: string) => void;
 }
 
 export function FilterPanel(props: FilterPanelProps) {
@@ -50,6 +52,8 @@ export function FilterPanel(props: FilterPanelProps) {
     onEnvironmentChange,
     selectedLocation,
     onLocationChange,
+    selectedSize,
+    onSizeChange,
   } = props;
 
   return (
@@ -194,6 +198,26 @@ export function FilterPanel(props: FilterPanelProps) {
               {getLocations(activeTab).map((loc) => (
                 <option key={loc} value={loc}>
                   {loc}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
+        {activeTab === 'fish' && (
+          <div className="flex items-center space-x-2">
+            <span className="text-xs font-semibold text-slate-500 whitespace-nowrap">
+              🐟 그림자 크기:
+            </span>
+            <select
+              value={selectedSize}
+              onChange={(e) => onSizeChange(e.target.value)}
+              className="bg-slate-50 border border-slate-200 text-slate-700 text-sm rounded-xl py-2.5 px-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+            >
+              <option value="all">전체 크기</option>
+              {getFishSizes().map((size) => (
+                <option key={size.key} value={size.key}>
+                  {size.label}
                 </option>
               ))}
             </select>
