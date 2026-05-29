@@ -6,6 +6,7 @@ import { TabSwitcher } from './components/TabSwitcher';
 import { FilterPanel } from './components/FilterPanel';
 import { CritterCard } from './components/CritterCard';
 import { Footer } from './components/Footer';
+import { FlowerBreeder } from './components/FlowerBreeder';
 import { useDonations } from './lib/donations';
 import {
   ALL_CRITTERS,
@@ -25,6 +26,7 @@ function App() {
   );
   const [currentHour, setCurrentHour] = useState<number>(now.getHours());
   const [activeTab, setActiveTab] = useState<CritterCategory>('fish');
+  const [view, setView] = useState<'catalog' | 'flowers'>('catalog');
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showRainOnly, setShowRainOnly] = useState(false);
@@ -132,6 +134,33 @@ function App() {
       <Header user={user} authReady={authReady} />
 
       <main className="max-w-4xl mx-auto px-4 mt-6">
+        <div className="grid grid-cols-2 gap-2 mb-6">
+          <button
+            onClick={() => setView('catalog')}
+            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border ${
+              view === 'catalog'
+                ? 'bg-slate-800 text-white border-transparent shadow-sm'
+                : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
+            }`}
+          >
+            📖 수렵 도감
+          </button>
+          <button
+            onClick={() => setView('flowers')}
+            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border ${
+              view === 'flowers'
+                ? 'bg-pink-600 text-white border-transparent shadow-sm shadow-pink-200'
+                : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
+            }`}
+          >
+            🌸 꽃 교배 시뮬레이터
+          </button>
+        </div>
+
+        {view === 'flowers' ? (
+          <FlowerBreeder />
+        ) : (
+          <>
         <MonthPicker
           selectedMonth={selectedMonth}
           onChange={(m) => {
@@ -213,6 +242,8 @@ function App() {
               해당 조건에 부합하는 생물이 없습니다.
             </p>
           </div>
+        )}
+          </>
         )}
       </main>
 
