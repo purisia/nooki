@@ -6,7 +6,7 @@ import { TabSwitcher } from './components/TabSwitcher';
 import { FilterPanel } from './components/FilterPanel';
 import { CritterCard } from './components/CritterCard';
 import { Footer } from './components/Footer';
-import { FlowerBreeder } from './components/FlowerBreeder';
+import { LinksView } from './components/LinksView';
 import { useDonations } from './lib/donations';
 import {
   ALL_CRITTERS,
@@ -26,7 +26,7 @@ function App() {
   );
   const [currentHour, setCurrentHour] = useState<number>(now.getHours());
   const [activeTab, setActiveTab] = useState<CritterCategory>('fish');
-  const [view, setView] = useState<'catalog' | 'flowers'>('catalog');
+  const [view, setView] = useState<'catalog' | 'links'>('catalog');
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showRainOnly, setShowRainOnly] = useState(false);
@@ -146,19 +146,19 @@ function App() {
             📖 수렵 도감
           </button>
           <button
-            onClick={() => setView('flowers')}
+            onClick={() => setView('links')}
             className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border ${
-              view === 'flowers'
-                ? 'bg-pink-600 text-white border-transparent shadow-sm shadow-pink-200'
+              view === 'links'
+                ? 'bg-sky-600 text-white border-transparent shadow-sm shadow-sky-200'
                 : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
             }`}
           >
-            🌸 꽃 교배 시뮬레이터
+            🔗 관련 링크
           </button>
         </div>
 
-        {view === 'flowers' ? (
-          <FlowerBreeder />
+        {view === 'links' ? (
+          <LinksView />
         ) : (
           <>
         <MonthPicker
