@@ -33,6 +33,7 @@ function App() {
   const [currentHour, setCurrentHour] = useState<number>(now.getHours());
   const [activeTab, setActiveTab] = useState<CritterCategory>('fish');
   const [view, setView] = useState<'catalog' | 'islands' | 'links'>('catalog');
+  const [filterSheetOpen, setFilterSheetOpen] = useState(false);
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showNewOnly, setShowNewOnly] = useState(false);
@@ -145,6 +146,29 @@ function App() {
     setSelectedLocation('전체');
     setSelectedSize('all');
     setMinPrice(0);
+  };
+
+  const filterPanelProps = {
+    activeTab,
+    selectedMonth,
+    searchQuery,
+    onSearchChange: setSearchQuery,
+    showNewOnly,
+    onNewToggle: () => setShowNewOnly((v) => !v),
+    showLeavingOnly,
+    onLeavingToggle: () => setShowLeavingOnly((v) => !v),
+    showUndonatedOnly,
+    onUndonatedToggle: () => setShowUndonatedOnly((v) => !v),
+    showAvailableNow,
+    onAvailableNowToggle: () => setShowAvailableNow((v) => !v),
+    selectedLocation,
+    onLocationChange: setSelectedLocation,
+    selectedSize,
+    onSizeChange: setSelectedSize,
+    minPrice,
+    onMinPriceChange: setMinPrice,
+    sortBy,
+    onSortByChange: setSortBy,
   };
 
   const activeFilters: ActiveFilter[] = [];
@@ -260,28 +284,7 @@ function App() {
 
         <TabSwitcher activeTab={activeTab} onChange={switchTab} />
 
-        <FilterPanel
-          activeTab={activeTab}
-          selectedMonth={selectedMonth}
-          searchQuery={searchQuery}
-          onSearchChange={setSearchQuery}
-          showNewOnly={showNewOnly}
-          onNewToggle={() => setShowNewOnly((v) => !v)}
-          showLeavingOnly={showLeavingOnly}
-          onLeavingToggle={() => setShowLeavingOnly((v) => !v)}
-          showUndonatedOnly={showUndonatedOnly}
-          onUndonatedToggle={() => setShowUndonatedOnly((v) => !v)}
-          showAvailableNow={showAvailableNow}
-          onAvailableNowToggle={() => setShowAvailableNow((v) => !v)}
-          selectedLocation={selectedLocation}
-          onLocationChange={setSelectedLocation}
-          selectedSize={selectedSize}
-          onSizeChange={setSelectedSize}
-          minPrice={minPrice}
-          onMinPriceChange={setMinPrice}
-          sortBy={sortBy}
-          onSortByChange={setSortBy}
-        />
+        <FilterPanel {...filterPanelProps} />
 
         <div className="mb-4 flex justify-between items-center px-1">
           <p className="text-xs font-semibold text-slate-500">
@@ -330,7 +333,49 @@ function App() {
       <Footer />
 
       {view === 'catalog' && (
-        <ActiveFiltersBar filters={activeFilters} onClearAll={resetFilters} />
+        <ActiveFiltersBar
+          filters={activeFilters}
+          onClearAll={resetFilters}
+          onOpenFilters={() => setFilterSheetOpen(true)}
+        />
+      )}
+
+      {view === 'catalog' && filterSheetOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex items-end justify-center">
+          <div
+            className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm"
+            onClick={() => setFilterSheetOpen(false)}
+          />
+          <div className="relative w-full max-w-4xl bg-slate-50 rounded-t-3xl shadow-xl max-h-[85vh] flex flex-col">
+            <div className="px-5 pt-3 pb-2 flex-shrink-0 bg-white rounded-t-3xl border-b border-slate-100">
+              <div className="w-10 h-1 bg-slate-300 rounded-full mx-auto mb-3" />
+              <div className="flex justify-between items-center">
+                <h3 className="text-sm font-bold text-slate-700 flex items-center gap-1.5">
+                  🎚️ <span>필터 설정</span>
+                </h3>
+                <div className="flex items-center gap-3">
+                  {filtersActive && (
+                    <button
+                      onClick={resetFilters}
+                      className="text-xs text-rose-500 font-semibold"
+                    >
+                      초기화
+                    </button>
+                  )}
+                  <button
+                    onClick={() => setFilterSheetOpen(false)}
+                    className="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1.5 rounded-full"
+                  >
+                    완료
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="overflow-y-auto p-4">
+              <FilterPanel {...filterPanelProps} />
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
