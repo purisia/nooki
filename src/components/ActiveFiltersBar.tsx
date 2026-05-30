@@ -14,18 +14,23 @@ export interface ActiveFilter {
 export function ActiveFiltersBar({
   filters,
   onClearAll,
+  onOpenFilters,
 }: {
   filters: ActiveFilter[];
   onClearAll: () => void;
+  onOpenFilters: () => void;
 }) {
   const active = filters.length > 0;
   return (
     <div className="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur border-t border-slate-200 shadow-[0_-2px_12px_rgba(0,0,0,0.06)]">
       <div className="max-w-4xl mx-auto px-3 py-2 flex items-center gap-2">
-        <span className="shrink-0 flex items-center gap-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+        <button
+          onClick={onOpenFilters}
+          className="shrink-0 flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2.5 py-1.5 active:bg-emerald-100"
+        >
           <SlidersHorizontal size={13} />
           필터
-        </span>
+        </button>
 
         {active ? (
           <>
