@@ -7,11 +7,14 @@ import { FilterPanel } from './components/FilterPanel';
 import { CritterCard } from './components/CritterCard';
 import { Footer } from './components/Footer';
 import { LinksView } from './components/LinksView';
+import { ActiveFiltersBar, type ActiveFilter } from './components/ActiveFiltersBar';
 import { useDonations } from './lib/donations';
 import {
   ALL_CRITTERS,
   checkIfNew,
   checkIfLeaving,
+  FISH_SIZE_LABELS,
+  formatMinPrice,
   getProgress,
   isAvailableNow,
   matchesMinPrice,
@@ -143,6 +146,56 @@ function App() {
     setMinPrice(0);
   };
 
+  const activeFilters: ActiveFilter[] = [];
+  if (showAvailableNow)
+    activeFilters.push({
+      key: 'now',
+      label: '⏰ 지금 출현',
+      onClear: () => setShowAvailableNow(false),
+    });
+  if (showUndonatedOnly)
+    activeFilters.push({
+      key: 'undonated',
+      label: '🏛️ 미기증',
+      onClear: () => setShowUndonatedOnly(false),
+    });
+  if (showNewOnly && selectedMonth)
+    activeFilters.push({
+      key: 'new',
+      label: `🆕 ${selectedMonth}월 신규`,
+      onClear: () => setShowNewOnly(false),
+    });
+  if (showLeavingOnly && selectedMonth)
+    activeFilters.push({
+      key: 'leaving',
+      label: `⚠️ ${selectedMonth}월 퇴장`,
+      onClear: () => setShowLeavingOnly(false),
+    });
+  if (searchQuery.trim() !== '')
+    activeFilters.push({
+      key: 'search',
+      label: `🔍 ${searchQuery.trim()}`,
+      onClear: () => setSearchQuery(''),
+    });
+  if (activeTab !== 'seafood' && selectedLocation !== '전체')
+    activeFilters.push({
+      key: 'location',
+      label: `📍 ${selectedLocation}`,
+      onClear: () => setSelectedLocation('전체'),
+    });
+  if (activeTab === 'fish' && selectedSize !== 'all')
+    activeFilters.push({
+      key: 'size',
+      label: `🐟 ${FISH_SIZE_LABELS[selectedSize] ?? selectedSize}`,
+      onClear: () => setSelectedSize('all'),
+    });
+  if (minPrice > 0)
+    activeFilters.push({
+      key: 'price',
+      label: `💰 ${formatMinPrice(minPrice)}`,
+      onClear: () => setMinPrice(0),
+    });
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 font-sans pb-16">
       <Header user={user} authReady={authReady} />
@@ -262,6 +315,10 @@ function App() {
       </main>
 
       <Footer />
+
+      {view === 'catalog' && (
+        <ActiveFiltersBar filters={activeFilters} onClearAll={resetFilters} />
+      )}
     </div>
   );
 }
