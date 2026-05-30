@@ -7,6 +7,7 @@ import { FilterPanel } from './components/FilterPanel';
 import { CritterCard } from './components/CritterCard';
 import { Footer } from './components/Footer';
 import { LinksView } from './components/LinksView';
+import { IslandGuide } from './components/IslandGuide';
 import { ActiveFiltersBar, type ActiveFilter } from './components/ActiveFiltersBar';
 import { useDonations } from './lib/donations';
 import {
@@ -31,7 +32,7 @@ function App() {
   );
   const [currentHour, setCurrentHour] = useState<number>(now.getHours());
   const [activeTab, setActiveTab] = useState<CritterCategory>('fish');
-  const [view, setView] = useState<'catalog' | 'links'>('catalog');
+  const [view, setView] = useState<'catalog' | 'islands' | 'links'>('catalog');
 
   const [searchQuery, setSearchQuery] = useState('');
   const [showNewOnly, setShowNewOnly] = useState(false);
@@ -201,10 +202,10 @@ function App() {
       <Header user={user} authReady={authReady} />
 
       <main className="max-w-4xl mx-auto px-4 mt-6">
-        <div className="grid grid-cols-2 gap-2 mb-6">
+        <div className="grid grid-cols-3 gap-2 mb-6">
           <button
             onClick={() => setView('catalog')}
-            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border ${
+            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all border text-xs sm:text-sm ${
               view === 'catalog'
                 ? 'bg-slate-800 text-white border-transparent shadow-sm'
                 : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
@@ -213,8 +214,18 @@ function App() {
             📖 수렵 도감
           </button>
           <button
+            onClick={() => setView('islands')}
+            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all border text-xs sm:text-sm ${
+              view === 'islands'
+                ? 'bg-emerald-700 text-white border-transparent shadow-sm shadow-emerald-200'
+                : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
+            }`}
+          >
+            🏝️ 마일섬
+          </button>
+          <button
             onClick={() => setView('links')}
-            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-2 transition-all border ${
+            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all border text-xs sm:text-sm ${
               view === 'links'
                 ? 'bg-sky-600 text-white border-transparent shadow-sm shadow-sky-200'
                 : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
@@ -226,6 +237,8 @@ function App() {
 
         {view === 'links' ? (
           <LinksView />
+        ) : view === 'islands' ? (
+          <IslandGuide />
         ) : (
           <>
         <MonthPicker
