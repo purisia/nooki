@@ -74,6 +74,25 @@ export function FurnitureGuide() {
               </div>
             </div>
 
+            {g.cannot && (
+              <div className="rounded-lg border border-rose-100 bg-rose-50/60 p-2">
+                <p className="text-[10px] font-bold text-rose-500 uppercase tracking-wider mb-1">
+                  ✕ {g.cannot.label}
+                </p>
+                <div className="flex flex-wrap gap-x-2 gap-y-0.5">
+                  {g.cannot.items.map((ex) => (
+                    <span
+                      key={ex.en}
+                      className="text-[11px] text-rose-700/80"
+                      title={ex.en}
+                    >
+                      {ex.ko}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <a
               href={g.sourceUrl}
               target="_blank"
