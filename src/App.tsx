@@ -8,6 +8,7 @@ import { CritterCard } from './components/CritterCard';
 import { Footer } from './components/Footer';
 import { LinksView } from './components/LinksView';
 import { IslandGuide } from './components/IslandGuide';
+import { FurnitureGuide } from './components/FurnitureGuide';
 import { ActiveFiltersBar, type ActiveFilter } from './components/ActiveFiltersBar';
 import { useDonations } from './lib/donations';
 import {
@@ -32,7 +33,9 @@ function App() {
   );
   const [currentHour, setCurrentHour] = useState<number>(now.getHours());
   const [activeTab, setActiveTab] = useState<CritterCategory>('fish');
-  const [view, setView] = useState<'catalog' | 'islands' | 'links'>('catalog');
+  const [view, setView] = useState<
+    'catalog' | 'islands' | 'furniture' | 'links'
+  >('catalog');
   const [filterSheetOpen, setFilterSheetOpen] = useState(false);
 
   const [searchQuery, setSearchQuery] = useState('');
@@ -226,7 +229,7 @@ function App() {
       <Header user={user} authReady={authReady} />
 
       <main className="max-w-4xl mx-auto px-4 mt-6">
-        <div className="grid grid-cols-3 gap-2 mb-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
           <button
             onClick={() => setView('catalog')}
             className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all border text-xs sm:text-sm ${
@@ -248,6 +251,16 @@ function App() {
             🏝️ 마일섬
           </button>
           <button
+            onClick={() => setView('furniture')}
+            className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all border text-xs sm:text-sm ${
+              view === 'furniture'
+                ? 'bg-amber-600 text-white border-transparent shadow-sm shadow-amber-200'
+                : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
+            }`}
+          >
+            🪑 기능성 가구
+          </button>
+          <button
             onClick={() => setView('links')}
             className={`py-2.5 px-2 rounded-xl font-bold flex items-center justify-center gap-1.5 transition-all border text-xs sm:text-sm ${
               view === 'links'
@@ -263,6 +276,8 @@ function App() {
           <LinksView />
         ) : view === 'islands' ? (
           <IslandGuide />
+        ) : view === 'furniture' ? (
+          <FurnitureGuide />
         ) : (
           <>
         <MonthPicker
