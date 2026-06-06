@@ -27,6 +27,8 @@ export interface FunctionalGroup {
   what: string; // 이 기능으로 무엇을 할 수 있는지
   tips?: string[]; // 알아두면 좋은 점
   examples: FurnitureExample[];
+  /** "외형은 비슷한데 이 기능은 안 되는" 항목(예: 요리 안 되는 주방 가구). */
+  cannot?: { label: string; items: FurnitureExample[] };
   sourceUrl: string; // Nookipedia 관련 목록/문서
 }
 
@@ -49,11 +51,12 @@ export const FUNCTIONAL_GROUPS: FunctionalGroup[] = [
     ],
     examples: [
       { ko: '나무 옷장', en: 'Wooden wardrobe' },
-      { ko: '옷장', en: 'Wardrobe' },
       { ko: '옷 정리장', en: 'Clothes closet' },
-      { ko: '냉장고', en: 'Refrigerator', note: '외형은 주방, 기능은 옷장' },
-      { ko: '냉동고', en: 'Freezer', note: '외형은 주방, 기능은 옷장' },
+      { ko: '플라스틱 옷 정리함', en: 'Plastic clothing organizer' },
+      { ko: '냉장고', en: 'Refrigerator', note: '주방 외형 → 옷장' },
+      { ko: '냉동고', en: 'Freezer', note: '주방 외형 → 옷장' },
       { ko: '탈의실', en: 'Changing room' },
+      { ko: '로커(사물함)', en: 'Locker' },
     ],
     sourceUrl: 'https://nookipedia.com/wiki/Wardrobe',
   },
@@ -79,12 +82,17 @@ export const FUNCTIONAL_GROUPS: FunctionalGroup[] = [
     title: '쓰레기통 (버리기)',
     enTitle: 'Trash / Waste bin',
     what: 'A로 상호작용해 팔 수 없거나 가치 낮은 아이템(분실물, 쓰레기 등)을 버립니다.',
-    tips: ['낚시로 나온 빈 깡통·장화·타이어 같은 쓰레기 처리에 유용합니다.'],
+    tips: [
+      '낚시로 나온 빈 깡통·장화·타이어 같은 쓰레기 처리에 유용합니다.',
+      '실수로 버리면 되돌릴 수 없으니 주의하세요.',
+    ],
     examples: [
       { ko: '쓰레기통', en: 'Trash can' },
-      { ko: '페달 휴지통', en: 'Pedal-style trash can' },
-      { ko: '오피스 휴지통', en: 'Garbage can', note: '사무용 금속 휴지통' },
-      { ko: '쓰레기 봉투', en: 'Garbage bin' },
+      { ko: '뚜껑 쓰레기통', en: 'Garbage can', note: '뚜껑 달린 금속형' },
+      { ko: '페달 휴지통', en: 'Pedal bin / Garbage bin' },
+      { ko: '스틸 쓰레기통', en: 'Steel trash can' },
+      { ko: '드럼통', en: 'Oil drum', note: '드럼통도 버리기 가능' },
+      { ko: '나무 휴지통(DIY)', en: 'Wooden waste bin', note: 'DIY 제작' },
     ],
     sourceUrl: 'https://game8.co/games/Animal-Crossing-New-Horizons/archives/286717',
   },
@@ -93,18 +101,41 @@ export const FUNCTIONAL_GROUPS: FunctionalGroup[] = [
     emoji: '🍳',
     title: '주방 (요리)',
     enTitle: 'Kitchenware (Cooking)',
-    what: '2.0 업데이트 이후, 요리 레시피를 배우면 일부 주방 가구에서 음식을 만들 수 있습니다.',
+    what: '2.0 업데이트 이후, 요리 레시피를 배우면 "큰" 주방 가구에서 음식을 만들 수 있습니다.',
     tips: [
       '요리하려면 먼저 "요리 DIY 레시피+"를 해금하고 재료(채소·생선 등)가 필요합니다.',
-      '주방 외형이라도 요리가 되는 건 일부입니다(나머지는 옷장 기능인 경우 많음).',
+      '규칙: 평평하고 큰 조리대형이면 요리 OK. 불꽃·소형 가전(전자레인지 등)은 요리 불가.',
     ],
     examples: [
       { ko: '시스템 키친', en: 'System kitchen' },
-      { ko: '스톤 키친(돌 주방)', en: 'Stonework kitchen' },
+      { ko: '가스레인지', en: 'Gas range' },
+      { ko: '벽돌 오븐', en: 'Brick oven' },
+      { ko: '흙가마', en: 'Clay furnace' },
+      { ko: '컴팩트 키친', en: 'Compact kitchen' },
+      { ko: '아이언우드 키친', en: 'Ironwood kitchenette' },
+      { ko: '주방 조리대', en: 'Kitchen counter' },
+      { ko: '식기세척기', en: 'Kitchen dishwasher' },
       { ko: '키친 아일랜드', en: 'Kitchen island' },
-      { ko: '랜치 키친', en: 'Ranch kitchen' },
       { ko: '주방 가스레인지', en: 'Kitchen stove' },
+      { ko: '오픈 프레임 키친', en: 'Open-frame kitchen' },
+      { ko: '야외 주방', en: 'Outdoor kitchen' },
+      { ko: '랜치 키친', en: 'Ranch kitchen' },
+      { ko: '서빙 카트', en: 'Serving cart' },
+      { ko: '낡은 싱크대', en: 'Sloppy sink' },
+      { ko: '스톤 키친(돌 주방)', en: 'Stonework kitchen' },
     ],
+    cannot: {
+      label: '요리 안 됨 (주방처럼 보여도)',
+      items: [
+        { ko: '캠프파이어 조리도구', en: 'Campfire cookware' },
+        { ko: '화목 난로', en: 'Wood-burning stove' },
+        { ko: '벽난로', en: 'Hearth' },
+        { ko: '모닥불', en: 'Bonfire' },
+        { ko: '전자레인지', en: 'Microwave' },
+        { ko: '밥솥', en: 'Rice cooker' },
+        { ko: '토스터', en: 'Toaster' },
+      ],
+    },
     sourceUrl: 'https://nookipedia.com/wiki/Furniture/New_Horizons/Kitchen',
   },
   {
