@@ -212,7 +212,7 @@ export function FlowerGuide({
                   : 'bg-white text-slate-600 hover:bg-slate-50 border-slate-200'
               }`}
             >
-              <span className="text-lg leading-none">{s.emoji}</span>
+              <FlowerIcon species={s.id} color={s.repColor} size={28} />
               {s.label}
             </button>
           ))}
