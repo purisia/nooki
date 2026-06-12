@@ -7,6 +7,7 @@ import {
   fastestPaths,
   seedColors,
   islandGenotypes,
+  flowerImageUrl,
   type FlowerSpecies,
   type FlowerColor,
   type ColorPath,
@@ -15,18 +16,45 @@ import {
 import { useFlowerColors } from '../lib/flowerColors';
 import type { User } from '../lib/firebase';
 
-function Petal({ color, size = 20 }: { color: FlowerColor; size?: number }) {
+/**
+ * 꽃 아이콘 — 모동숲 실제 꽃 이미지 우선, 로드 실패 시 색 원으로 폴백.
+ * species 를 받아 해당 꽃·색의 인벤토리 아이콘 URL 을 합성한다.
+ */
+function FlowerIcon({
+  species,
+  color,
+  size = 20,
+}: {
+  species: FlowerSpecies;
+  color: FlowerColor;
+  size?: number;
+}) {
+  const [failed, setFailed] = useState(false);
   const meta = COLOR_META[color];
+  if (failed) {
+    return (
+      <span
+        className="inline-block rounded-full border shrink-0 align-middle"
+        style={{
+          width: size,
+          height: size,
+          backgroundColor: meta.hex,
+          borderColor: color === 'white' ? '#cbd5e1' : 'rgba(0,0,0,0.12)',
+        }}
+        aria-hidden
+      />
+    );
+  }
   return (
-    <span
-      className="inline-block rounded-full border shrink-0"
-      style={{
-        width: size,
-        height: size,
-        backgroundColor: meta.hex,
-        borderColor: color === 'white' ? '#cbd5e1' : 'rgba(0,0,0,0.12)',
-      }}
-      aria-hidden
+    <img
+      src={flowerImageUrl(species, color)}
+      alt={meta.label}
+      width={size}
+      height={size}
+      loading="lazy"
+      className="inline-block shrink-0 align-middle object-contain"
+      style={{ width: size, height: size }}
+      onError={() => setFailed(true)}
     />
   );
 }
@@ -53,15 +81,17 @@ function OriginTag({ origin }: { origin: string }) {
 }
 
 function Parent({
+  species,
   color,
   origin,
 }: {
+  species: FlowerSpecies;
   color: FlowerColor;
   origin: string;
 }) {
   return (
     <span className="inline-flex items-center gap-1">
-      <Petal color={color} size={14} />
+      <FlowerIcon species={species} color={color} size={18} />
       {COLOR_META[color].label}
       <OriginTag origin={origin} />
     </span>
@@ -69,10 +99,12 @@ function Parent({
 }
 
 function StepRow({
+  species,
   step,
   idx,
   originOf,
 }: {
+  species: FlowerSpecies;
   step: ColorPath['steps'][number];
   idx: number;
   originOf: (geno: string) => string;
@@ -82,12 +114,12 @@ function StepRow({
       <span className="shrink-0 w-5 h-5 rounded-full bg-pink-500 text-white text-[10px] font-bold flex items-center justify-center">
         {idx + 1}
       </span>
-      <Parent color={step.parentAColor} origin={originOf(step.parentA)} />
+      <Parent species={species} color={step.parentAColor} origin={originOf(step.parentA)} />
       <span className="text-slate-400">×</span>
-      <Parent color={step.parentBColor} origin={originOf(step.parentB)} />
+      <Parent species={species} color={step.parentBColor} origin={originOf(step.parentB)} />
       <ArrowRight size={12} className="text-slate-400" />
       <span className="inline-flex items-center gap-1 font-bold text-slate-800">
-        <Petal color={step.resultColor} size={14} />
+        <FlowerIcon species={species} color={step.resultColor} size={18} />
         {COLOR_META[step.resultColor].label}
         <span className="text-[9px] font-bold px-1 py-px rounded bg-pink-100 text-pink-700">
           {CIRCLED[idx] ?? `${idx + 1}`}
@@ -161,9 +193,11 @@ export function FlowerGuide({
         </div>
         {stock === 'island' && (
           <p className="text-[11px] text-emerald-700 bg-emerald-50 rounded-lg px-2.5 py-2 mb-3 leading-relaxed">
-            마일섬 하이브리드 꽃은 유전자형이 우월해서 어려운 색을 훨씬 빨리 만들 수
-            있어요(예: 파란 장미). 단, 마일섬 하이브리드는 1.2 업데이트 이후 새로 못
-            얻으니 <strong>예전에 얻어둔 꽃</strong> 기준입니다.
+            <strong>맞아요 — 마일섬에서 얻은 꽃으로 시작하면 원하는 색을 훨씬 빨리
+            얻습니다.</strong> 마일섬 하이브리드는 유전자형이 우월해서 교배 단계가 확
+            줄어요(예: 파란 장미 3단계 → 1단계). 단, 마일섬 하이브리드 자체는 1.2
+            업데이트 이후 새로 못 나오니 <strong>예전에 얻어둔 꽃</strong>이 있을 때 쓰는
+            경로입니다.
           </p>
         )}
 
@@ -208,7 +242,7 @@ export function FlowerGuide({
                     : 'border-slate-200 bg-white text-slate-500 hover:bg-slate-50'
                 }`}
               >
-                <Petal color={p.color} size={18} />
+                <FlowerIcon species={species} color={p.color} size={20} />
                 {COLOR_META[p.color].label}
                 {owned && <Check size={13} className="text-emerald-500" />}
               </button>
@@ -219,7 +253,7 @@ export function FlowerGuide({
           <span className="font-bold text-slate-500">씨앗 색:</span>
           {[...seeds].map((c) => (
             <span key={c} className="inline-flex items-center gap-0.5">
-              <Petal color={c} size={12} />
+              <FlowerIcon species={species} color={c} size={14} />
               {COLOR_META[c].label}
             </span>
           ))}
@@ -263,7 +297,7 @@ export function FlowerGuide({
                 >
                   <div className="flex items-center justify-between">
                     <span className="flex items-center gap-1.5 font-bold text-slate-800 text-sm">
-                      <Petal color={p.color} size={20} />
+                      <FlowerIcon species={species} color={p.color} size={24} />
                       {COLOR_META[p.color].label}
                     </span>
                     <span
@@ -285,7 +319,7 @@ export function FlowerGuide({
                   ) : (
                     <ol className="space-y-1.5">
                       {p.steps.map((s, i) => (
-                        <StepRow key={i} step={s} idx={i} originOf={originOf} />
+                        <StepRow key={i} species={species} step={s} idx={i} originOf={originOf} />
                       ))}
                     </ol>
                   )}
