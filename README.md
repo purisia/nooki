@@ -10,7 +10,8 @@
   - 시드 데이터의 `N단계` 표기와 Nookipedia 동기화분의 영문(`Tiny`~`Huge`) 표기를 동일 카테고리로 정규화
 - **🖼️ 실물 도감 이미지 · #도감번호 · ✨희귀도** 카드 표시 + 희귀도 필터
   - Nookipedia Cargo의 `image` / `number` / `rarity` 컬럼을 sync 시 신규·기존 종 모두에 보강(backfill)
-- **🔗 관련 링크** 탭 — 꽃 교배 도구(Garden Science, aiterusawato 유전자형 표)와 데이터 출처 바로가기
+- **🌸 꽃 교배** 탭 — 가진 색을 체크하면 없는 색의 가장 빠른 교배 경로 안내(유전자형 기반, 보유 색은 로그인 시 기기 간 동기화)
+- **🏝️ 마일섬 / 🪑 기능성 가구 / 🔗 관련 링크** 탭
 - **🏛️ 미기증만 보기** 토글로 앞으로 잡을 종만 추리기
 - 박물관 기증 체크 영속화:
   - 비로그인 → 브라우저 쿠키 (1년 유지)
@@ -94,7 +95,7 @@ Google 로그인 + 다기기 기증 데이터 동기화를 켜기 위한 단계�
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{uid}/donations/{doc} {
+    match /users/{uid}/{collection}/{doc} {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
   }
@@ -102,7 +103,7 @@ service cloud.firestore {
 ```
 
 이 규칙은 다음을 보장합니다:
-- 로그인된 본인의 `users/{내UID}/donations/state` 문서만 읽기/쓰기 가능
+- 로그인된 본인의 `users/{내UID}/...` 하위 문서(박물관 기증 `donations/state`, 꽃 보유 `flowers/state`)만 읽기/쓰기 가능
 - 다른 사용자의 데이터는 절대 못 봄 / 못 씀
 - 비로그인 상태에서는 어떤 접근도 거부됨
 
