@@ -378,6 +378,12 @@ export interface PathStep {
   result: string; // 목표(자식) 유전자형
   resultColor: FlowerColor;
   prob: number; // 이 교배에서 result 가 나올 확률
+  /**
+   * 이 단계의 부모 중, 앞 단계에서 "같은 색이 여러 유전자형으로 섞여 나온" 꽃을
+   * 써야 하는 경우 true. (예: 하양×빨강은 빨강 두 종을 반반 내므로, 그 빨강을
+   * 부모로 쓰면 겉보기 같은 색이라 어느 게 맞는지 헷갈릴 수 있음 → 주의 표시)
+   */
+  ambiguousParent?: boolean;
 }
 
 export interface ColorPath {
@@ -477,19 +483,29 @@ export function fastestPaths(
         const ra = reached.get(a)!;
         const rb = reached.get(b)!;
         const baseProb = ra.totalProb * rb.totalProb;
-        const baseDepth = Math.max(ra.steps.length, rb.steps.length);
 
         for (const [childGeno, childProb] of hybridize(a, b)) {
           if (childProb <= 0) continue;
-          const newDepth = baseDepth + 1;
           const newTotal = baseProb * childProb;
           const existing = reached.get(childGeno);
 
-          // 더 적은 세대, 또는 같은 세대면 더 높은 확률일 때만 갱신
-          const better =
-            !existing ||
-            newDepth < existing.steps.length ||
-            (newDepth === existing.steps.length && newTotal > existing.totalProb);
+          const candidateStep: PathStep = {
+            parentA: a,
+            parentB: b,
+            parentAColor: table[a],
+            parentBColor: table[b],
+            result: childGeno,
+            resultColor: table[childGeno],
+            prob: childProb,
+          };
+          const candidate: Reached = {
+            geno: childGeno,
+            steps: [...maxPath(ra, rb), candidateStep],
+            totalProb: newTotal,
+          };
+
+          // 모호성 0(헷갈림 없는) 경로를 우선해, 더 길어도 확실한 길을 채택.
+          const better = !existing || isBetterPath(species, candidate, existing);
           if (!better) continue;
 
           const step: PathStep = {
@@ -514,17 +530,13 @@ export function fastestPaths(
     frontier = newlyImproved;
   }
 
-  // 색상별 최적 경로 선정
+  // 색상별 최적 경로 선정: 단계 수 ↓ → 모호성 ↓ → 확률 ↑
   const colorOrder = Object.keys(COLOR_META) as FlowerColor[];
   const best = new Map<FlowerColor, Reached>();
   for (const node of reached.values()) {
     const color = pathColor(species, node.geno);
     const cur = best.get(color);
-    const better =
-      !cur ||
-      node.steps.length < cur.steps.length ||
-      (node.steps.length === cur.steps.length && node.totalProb > cur.totalProb);
-    if (better) best.set(color, node);
+    if (!cur || isBetterPath(species, node, cur)) best.set(color, node);
   }
 
   const startSet = new Set(startGenos);
@@ -536,11 +548,85 @@ export function fastestPaths(
       color,
       fromSeed: startSet.has(node.geno),
       genotype: node.geno,
-      steps: topoSortSteps(node.steps, startSet),
+      steps: markAmbiguity(species, topoSortSteps(node.steps, startSet), startSet),
       totalProb: node.totalProb,
     });
   }
   return out;
+}
+
+/**
+ * 각 단계 부모가 "앞 단계에서 같은 색 여러 유전자형으로 섞여 나온" 꽃이면
+ * ambiguousParent=true 로 표시(어느 꽃을 골라야 할지 헷갈리는 단계 경고용).
+ */
+function markAmbiguity(
+  species: FlowerSpecies,
+  steps: PathStep[],
+  startSet: Set<string>
+): PathStep[] {
+  const table = PHENOTYPES[species];
+  // geno → 그 geno 를 만든 단계가 같은 색을 몇 종 내는지
+  const sameColorCount = new Map<string, number>();
+  for (const s of steps) {
+    const color = table[s.result];
+    let n = 0;
+    for (const [g, p] of hybridize(s.parentA, s.parentB)) {
+      if (p > 0 && table[g] === color) n++;
+    }
+    sameColorCount.set(s.result, n);
+  }
+  const isAmbig = (geno: string) =>
+    !startSet.has(geno) && (sameColorCount.get(geno) ?? 1) > 1;
+  return steps.map((s) => ({
+    ...s,
+    ambiguousParent: isAmbig(s.parentA) || isAmbig(s.parentB),
+  }));
+}
+
+/**
+ * 경로 모호성: 중간 결과를 다음 단계 부모로 재사용하는데, 그 결과를 만든 교배가
+ * 같은 색을 여러 유전자형으로 섞어 내면(겉보기 같은 색이라 구분 불가) +1.
+ * 예: 아네모네 "하양×빨강"은 빨강 100·101을 반반 내므로, 그 빨강을 부모로 쓰면 모호.
+ * (satogu 정석은 파랑을 경유해 특수 빨강을 100%로 만들어 모호성 0)
+ */
+function pathAmbiguity(species: FlowerSpecies, steps: PathStep[]): number {
+  const table = PHENOTYPES[species];
+  const usedAsParent = new Set<string>();
+  for (const s of steps) {
+    usedAsParent.add(s.parentA);
+    usedAsParent.add(s.parentB);
+  }
+  let amb = 0;
+  for (const s of steps) {
+    if (!usedAsParent.has(s.result)) continue; // 재사용 안 되면 모호성 무관
+    const color = table[s.result];
+    let sameColor = 0;
+    for (const [g, p] of hybridize(s.parentA, s.parentB)) {
+      if (p > 0 && table[g] === color) sameColor++;
+    }
+    if (sameColor > 1) amb++;
+  }
+  return amb;
+}
+
+/**
+ * node 가 cur 보다 더 좋은 경로인가.
+ * 모호성 0 경로(헷갈림 없이 확실히 되는 길)를 최우선으로 선호하고,
+ * 그 안에서 단계 수 ↓ → 확률 ↑. 모호성을 못 없애면 단계 수 ↓ → 모호성 ↓ → 확률 ↑.
+ *
+ * 이렇게 하면 아네모네 보라처럼 "겉보기 같은 색이라 헷갈리는" 2단계 경로 대신
+ * satogu 정석(파랑 경유, 3단계지만 매 단계가 확실)을 고른다.
+ */
+function isBetterPath(species: FlowerSpecies, node: Reached, cur: Reached): boolean {
+  const na = pathAmbiguity(species, node.steps);
+  const ca = pathAmbiguity(species, cur.steps);
+  const nClean = na === 0;
+  const cClean = ca === 0;
+  if (nClean !== cClean) return nClean; // 모호성 0 경로 우선
+  if (node.steps.length !== cur.steps.length)
+    return node.steps.length < cur.steps.length;
+  if (na !== ca) return na < ca;
+  return node.totalProb > cur.totalProb;
 }
 
 // 두 부모 경로를 합쳐 더 긴 쪽을 기준으로 잡되, 짧은 쪽 단계도 포함(중복 제거).
