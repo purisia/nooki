@@ -95,7 +95,7 @@ Google 로그인 + 다기기 기증 데이터 동기화를 켜기 위한 단계�
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{uid}/{collection}/{doc} {
+    match /users/{uid}/donations/{doc} {
       allow read, write: if request.auth != null && request.auth.uid == uid;
     }
   }
@@ -103,7 +103,7 @@ service cloud.firestore {
 ```
 
 이 규칙은 다음을 보장합니다:
-- 로그인된 본인의 `users/{내UID}/...` 하위 문서(박물관 기증 `donations/state`, 꽃 보유 `flowers/state`)만 읽기/쓰기 가능
+- 로그인된 본인의 `users/{내UID}/donations/*` 문서(박물관 기증 `donations/state`, 꽃 보유 `donations/flowerColors`)만 읽기/쓰기 가능
 - 다른 사용자의 데이터는 절대 못 봄 / 못 씀
 - 비로그인 상태에서는 어떤 접근도 거부됨
 
