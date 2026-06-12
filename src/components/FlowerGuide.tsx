@@ -128,6 +128,12 @@ function StepRow({
       <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 rounded px-1">
         {(step.prob * 100).toFixed(step.prob < 0.1 ? 1 : 0)}%
       </span>
+      {step.ambiguousParent && (
+        <span className="w-full text-[10px] text-amber-700 bg-amber-50 rounded px-1.5 py-0.5 mt-0.5">
+          ⚠️ 앞 단계에서 같은 색이 섞여 나와요. 겉보기로는 구분이 안 되니, 이 부모 꽃은
+          여러 송이 길러 교배해보며 맞는 걸 골라야 합니다.
+        </span>
+      )}
     </li>
   );
 }
