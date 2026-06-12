@@ -274,16 +274,65 @@ function pathColor(species: FlowerSpecies, geno: string): FlowerColor {
  * 씨앗에서 출발해 도달 가능한 유전자형들을 BFS 로 확장하고,
  * 색상별로 "가장 빠른(세대 최소·확률 최대)" 경로를 고른다.
  */
-export function fastestPaths(species: FlowerSpecies): ColorPath[] {
+export type StartStock = 'seed' | 'island';
+
+/**
+ * 마일섬(미스터리 투어)에서 실제로 스폰되는 하이브리드 색.
+ * 마일섬 하이브리드는 "그 색의 가장 우성(테이블상 마지막) 유전자형"을 가져,
+ * 씨앗 꽃과 색이 같아도 유전자형이 달라 보라/파랑 등 고차 하이브리드를 훨씬
+ * 빨리 만드는 재료가 된다. (1.2 업데이트 이후 신규 입수 불가 — 보유분 활용)
+ *
+ * 스폰 색 출처: AC Flower Factory / Nookipedia(미스터리섬 하이브리드).
+ * 장미만 스폰 색이 분홍·주황(드물게 검정 등)이며, 여기서는 보수적으로
+ * 정설로 정리된 색만 포함한다.
+ */
+const ISLAND_SPAWN_COLORS: Record<FlowerSpecies, FlowerColor[]> = {
+  rose: ['pink', 'orange'],
+  tulip: ['black', 'orange', 'pink'],
+  pansy: ['blue', 'orange'],
+  cosmo: ['pink', 'orange'],
+  lily: ['black', 'pink', 'orange'],
+  hyacinth: ['blue', 'pink', 'orange'],
+  windflower: ['blue', 'pink'],
+  mum: ['purple', 'pink'],
+};
+
+/**
+ * 마일섬 하이브리드의 유전자형(색 → 가장 우성 유전자형).
+ * 스폰되는 색만, 각 색에서 "가장 우성(사전순 마지막 = 2가 많은)" 유전자형.
+ */
+export function islandGenotypes(species: FlowerSpecies): Record<string, FlowerColor> {
+  const table = PHENOTYPES[species];
+  const spawn = new Set(ISLAND_SPAWN_COLORS[species]);
+  const byColor = new Map<FlowerColor, string>();
+  for (const geno of Object.keys(table)) {
+    const color = table[geno];
+    if (!spawn.has(color)) continue;
+    const cur = byColor.get(color);
+    if (!cur || geno > cur) byColor.set(color, geno);
+  }
+  const out: Record<string, FlowerColor> = {};
+  for (const [color, geno] of byColor) out[geno] = color;
+  return out;
+}
+
+export function fastestPaths(
+  species: FlowerSpecies,
+  stock: StartStock = 'seed'
+): ColorPath[] {
   const table = PHENOTYPES[species];
   const seeds = [...new Set(Object.values(SEEDS[species]).filter(Boolean))] as string[];
-  const seedSet = new Set(seeds);
+  // 마일섬 모드: 씨앗 + 마일섬 하이브리드 유전자형을 출발점(depth 0)으로.
+  const islandSet = new Set(
+    stock === 'island' ? Object.keys(islandGenotypes(species)) : []
+  );
+  const startGenos = [...new Set([...seeds, ...islandSet])];
 
   // geno → 최단/최고확률 경로
   const reached = new Map<string, Reached>();
-  for (const s of seeds) reached.set(s, { geno: s, steps: [], totalProb: 1 });
+  for (const s of startGenos) reached.set(s, { geno: s, steps: [], totalProb: 1 });
 
-  let frontier = new Set(seeds);
+  let frontier = new Set(startGenos);
   const MAX_GENERATIONS = 8;
 
   for (let gen = 0; gen < MAX_GENERATIONS; gen++) {
@@ -350,15 +399,16 @@ export function fastestPaths(species: FlowerSpecies): ColorPath[] {
     if (better) best.set(color, node);
   }
 
+  const startSet = new Set(startGenos);
   const out: ColorPath[] = [];
   for (const color of colorOrder) {
     const node = best.get(color);
     if (!node) continue;
     out.push({
       color,
-      fromSeed: seedSet.has(node.geno),
+      fromSeed: startSet.has(node.geno),
       genotype: node.geno,
-      steps: topoSortSteps(node.steps, seedSet),
+      steps: topoSortSteps(node.steps, startSet),
       totalProb: node.totalProb,
     });
   }
