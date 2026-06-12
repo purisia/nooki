@@ -56,15 +56,20 @@ export const COLOR_META: Record<FlowerColor, { label: string; hex: string }> = {
   green: { label: '초록', hex: '#5cae73' },
 };
 
-export const SPECIES_META: { id: FlowerSpecies; label: string; emoji: string }[] = [
-  { id: 'rose', label: '장미', emoji: '🌹' },
-  { id: 'tulip', label: '튤립', emoji: '🌷' },
-  { id: 'pansy', label: '팬지', emoji: '🌼' },
-  { id: 'cosmo', label: '코스모스', emoji: '🌸' },
-  { id: 'lily', label: '백합', emoji: '⚜️' },
-  { id: 'hyacinth', label: '히아신스', emoji: '🌺' },
-  { id: 'windflower', label: '아네모네', emoji: '🌷' },
-  { id: 'mum', label: '국화', emoji: '🏵️' },
+export const SPECIES_META: {
+  id: FlowerSpecies;
+  label: string;
+  emoji: string;
+  repColor: FlowerColor;
+}[] = [
+  { id: 'rose', label: '장미', emoji: '🌹', repColor: 'red' },
+  { id: 'tulip', label: '튤립', emoji: '🌷', repColor: 'red' },
+  { id: 'pansy', label: '팬지', emoji: '🌼', repColor: 'yellow' },
+  { id: 'cosmo', label: '코스모스', emoji: '🌸', repColor: 'red' },
+  { id: 'lily', label: '백합', emoji: '⚜️', repColor: 'white' },
+  { id: 'hyacinth', label: '히아신스', emoji: '🌺', repColor: 'red' },
+  { id: 'windflower', label: '아네모네', emoji: '🌷', repColor: 'red' },
+  { id: 'mum', label: '국화', emoji: '🏵️', repColor: 'red' },
 ];
 
 // 꽃 종류별 영문 복수형(Nookipedia 파일명 규칙용).
