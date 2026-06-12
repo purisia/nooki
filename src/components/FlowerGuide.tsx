@@ -3,6 +3,7 @@ import { Check, ArrowRight } from 'lucide-react';
 import {
   SPECIES_META,
   COLOR_META,
+  SEEDS,
   fastestPaths,
   seedColors,
   type FlowerSpecies,
@@ -36,25 +37,62 @@ function difficulty(steps: number): { label: string; cls: string } {
   return { label: '어려움', cls: 'bg-rose-100 text-rose-700' };
 }
 
-function StepRow({ step, idx }: { step: ColorPath['steps'][number]; idx: number }) {
+const CIRCLED = ['①', '②', '③', '④', '⑤', '⑥'];
+
+/** 부모 유전자형의 출처: 씨앗인지, 아니면 몇 번 단계에서 만든 것인지. */
+function OriginTag({ origin }: { origin: string }) {
+  const isSeed = origin === '씨앗';
+  return (
+    <span
+      className={`text-[9px] font-bold px-1 py-px rounded ${
+        isSeed ? 'bg-slate-100 text-slate-500' : 'bg-pink-100 text-pink-700'
+      }`}
+    >
+      {origin}
+    </span>
+  );
+}
+
+function Parent({
+  color,
+  origin,
+}: {
+  color: FlowerColor;
+  origin: string;
+}) {
+  return (
+    <span className="inline-flex items-center gap-1">
+      <Petal color={color} size={14} />
+      {COLOR_META[color].label}
+      <OriginTag origin={origin} />
+    </span>
+  );
+}
+
+function StepRow({
+  step,
+  idx,
+  originOf,
+}: {
+  step: ColorPath['steps'][number];
+  idx: number;
+  originOf: (geno: string) => string;
+}) {
   return (
     <li className="flex items-center gap-1.5 flex-wrap text-xs">
-      <span className="shrink-0 w-4 h-4 rounded-full bg-slate-200 text-slate-600 text-[10px] font-bold flex items-center justify-center">
+      <span className="shrink-0 w-5 h-5 rounded-full bg-pink-500 text-white text-[10px] font-bold flex items-center justify-center">
         {idx + 1}
       </span>
-      <span className="inline-flex items-center gap-1">
-        <Petal color={step.parentAColor} size={14} />
-        {COLOR_META[step.parentAColor].label}
-      </span>
+      <Parent color={step.parentAColor} origin={originOf(step.parentA)} />
       <span className="text-slate-400">×</span>
-      <span className="inline-flex items-center gap-1">
-        <Petal color={step.parentBColor} size={14} />
-        {COLOR_META[step.parentBColor].label}
-      </span>
+      <Parent color={step.parentBColor} origin={originOf(step.parentB)} />
       <ArrowRight size={12} className="text-slate-400" />
       <span className="inline-flex items-center gap-1 font-bold text-slate-800">
         <Petal color={step.resultColor} size={14} />
         {COLOR_META[step.resultColor].label}
+        <span className="text-[9px] font-bold px-1 py-px rounded bg-pink-100 text-pink-700">
+          {CIRCLED[idx] ?? `${idx + 1}`}
+        </span>
       </span>
       <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-50 rounded px-1">
         {(step.prob * 100).toFixed(step.prob < 0.1 ? 1 : 0)}%
@@ -162,6 +200,14 @@ export function FlowerGuide({
             {missing.map((p) => {
               const diff = difficulty(p.steps.length);
               const isSeed = seeds.has(p.color);
+              // 유전자형 → 출처 라벨. 씨앗 유전자형이면 "씨앗", 아니면 그 결과를
+              // 만든 단계의 동그라미 번호. (같은 '빨강'이라도 씨앗/특수 구분)
+              const seedGenos = new Set(Object.values(SEEDS[species]));
+              const originOf = (geno: string): string => {
+                if (seedGenos.has(geno)) return '씨앗';
+                const stepIdx = p.steps.findIndex((s) => s.result === geno);
+                return stepIdx >= 0 ? CIRCLED[stepIdx] ?? `${stepIdx + 1}` : '씨앗';
+              };
               return (
                 <div
                   key={p.color}
@@ -187,7 +233,7 @@ export function FlowerGuide({
                   ) : (
                     <ol className="space-y-1.5">
                       {p.steps.map((s, i) => (
-                        <StepRow key={i} step={s} idx={i} />
+                        <StepRow key={i} step={s} idx={i} originOf={originOf} />
                       ))}
                     </ol>
                   )}
@@ -197,8 +243,11 @@ export function FlowerGuide({
           </div>
         )}
         <p className="text-[10px] text-slate-400 mt-3 leading-relaxed">
-          확률은 한 번 교배 시 그 색이 나올 확률입니다. 낮을수록 여러 번 시도가
-          필요해요. 각 단계의 부모는 씨앗이거나 앞 단계 결과입니다.
+          <span className="font-bold text-slate-500">씨앗</span> = 상점·마일섬 꽃,{' '}
+          <span className="font-bold text-pink-600">①②③</span> = 그 번호 단계에서 만든
+          꽃을 부모로 씁니다. 같은 색이라도 출처(유전자형)가 달라요 — 예: 같은 “빨강”도
+          씨앗 빨강과 <span className="text-pink-600 font-bold">②</span> 빨강은 다릅니다.
+          확률이 낮을수록 여러 번 시도가 필요합니다.
         </p>
       </div>
 
